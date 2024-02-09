@@ -9,8 +9,9 @@ require('mason-lspconfig').setup({
         'eslint',
         'lua_ls',
         'rust_analyzer',
-        'csharp_ls',
+        'csharp_ls@0.11.0',
     },
+    automatic_installation = true,
     handlers = {
         lsp.default_setup,
     },
