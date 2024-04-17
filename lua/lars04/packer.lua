@@ -50,6 +50,30 @@ return require('packer').startup(function(use)
   }
 
   use {
+       'folke/trouble.nvim',
+       version = '2.*',
+       --requires = { 'nvim-tree/nvim-web-devicons' },
+       config = function()
+            require("trouble").setup({
+                icons = false,
+            })
+
+            vim.keymap.set("n", "<leader>tt", function()
+                require("trouble").toggle()
+            end)
+
+            vim.keymap.set("n", "[t", function()
+                require("trouble").next({skip_groups = true, jump = true});
+            end)
+
+            vim.keymap.set("n", "]t", function()
+                require("trouble").previous({skip_groups = true, jump = true});
+            end)
+
+        end
+  }
+
+  use {
       'smoka7/hop.nvim',
       tag = '*', -- optional but strongly recommended
       config = function()
