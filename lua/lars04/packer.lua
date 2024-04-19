@@ -14,22 +14,24 @@ return require('packer').startup(function(use)
   }
 
   use({ 'rose-pine/neovim',
-  as = 'rose-pine', 
+  as = 'rose-pine',
   config = function()
-	require('rose-pine').setup({
-            disable_background = true,
-            styles = {
-                italic = false,
-            },
-        })
+    require('rose-pine').setup({
+      disable_background = true,
+      disable_italics = true,
+      styles = {
+        italic = false,
+      },
+    })
 
-        vim.cmd("colorscheme rose-pine")
-        ColorMyPencils()
-	end
+    vim.cmd("colorscheme rose-pine")
+    ColorMyPencils()
+    DisableItalics()
+  end
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')  	
+  use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -53,7 +55,7 @@ return require('packer').startup(function(use)
 
           -- Snippets
           {'L3MON4D3/LuaSnip'},
-          {'rafamadriz/friendly-snippets'} 
+          {'rafamadriz/friendly-snippets'}
       }
   }
 
