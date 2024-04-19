@@ -16,8 +16,16 @@ return require('packer').startup(function(use)
   use({ 'rose-pine/neovim',
   as = 'rose-pine', 
   config = function()
-	  vim.cmd('colorscheme rose-pine')
-  end
+	require('rose-pine').setup({
+            disable_background = true,
+            styles = {
+                italic = false,
+            },
+        })
+
+        vim.cmd("colorscheme rose-pine")
+        ColorMyPencils()
+	end
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
