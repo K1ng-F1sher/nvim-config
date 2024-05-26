@@ -41,4 +41,3 @@ luac.out
 
 # Compiled packer files
 packer_compiled.lua
-plugin/
