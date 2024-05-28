@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  use { 'fgheng/winbar.nvim' }
+  use({ 'SmiteshP/nvim-navic', as = 'nvim-navic' })
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v3.x',
