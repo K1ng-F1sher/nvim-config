@@ -1,8 +1,8 @@
 require('winbar').setup({
     enabled = true,
 
-    show_file_path = false,
-    show_symbols = true,
+    show_file_path = true,
+    show_symbols = false,
 
     colors = {
         path = '', -- You can customize colors like #c946fd
