@@ -5,14 +5,9 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use ('wbthomason/packer.nvim')
 
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
+  -- Theme
   use({ 'rose-pine/neovim',
   as = 'rose-pine',
   config = function()
@@ -28,14 +23,39 @@ return require('packer').startup(function(use)
   end
   })
 
+  -- (File) Navigation
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
-  use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use('theprimeagen/harpoon')
+  use {
+    branch = "v3.x",
+    "nvim-neo-tree/neo-tree.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      --"3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  }
   use { 'fgheng/winbar.nvim' }
   use({ 'SmiteshP/nvim-navic', as = 'nvim-navic' })
+  use {
+      'smoka7/hop.nvim',
+      tag = '*', -- optional but strongly recommended
+      config = function()
+          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      end
+  }
+
+  -- LSP
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v3.x',
@@ -62,7 +82,7 @@ return require('packer').startup(function(use)
   use {
        'folke/trouble.nvim',
        version = '2.*',
-       --requires = { 'nvim-tree/nvim-web-devicons' },
+       requires = { 'nvim-tree/nvim-web-devicons' },
        config = function()
             require("trouble").setup({
                 icons = false,
@@ -81,15 +101,6 @@ return require('packer').startup(function(use)
             end)
 
         end
-  }
-
-  use {
-      'smoka7/hop.nvim',
-      tag = '*', -- optional but strongly recommended
-      config = function()
-          -- you can configure Hop the way you like here; see :h hop-config
-          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-      end
   }
 
 end)
