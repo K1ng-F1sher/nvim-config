@@ -36,14 +36,14 @@ return require('packer').startup(function(use)
 
   use('theprimeagen/harpoon')
   use {
-    branch = "v3.x",
     "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
       --"3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
+    },
   }
   use { 'fgheng/winbar.nvim' }
   use({ 'SmiteshP/nvim-navic', as = 'nvim-navic' })

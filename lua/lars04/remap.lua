@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", function() vim.cmd("Neotree position=current") end)
 vim.keymap.set("n", "<leader>e", function()
   vim.cmd("Neotree toggle")
 end)
