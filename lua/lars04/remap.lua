@@ -1,31 +1,35 @@
-vim.keymap.set("n", "<leader>pv", function() vim.cmd("Neotree position=current") end)
-vim.keymap.set("n", "<leader>e", function()
+local map = vim.keymap.set
+
+-- Explorer
+map("n", "<leader>pv", function() vim.cmd("Neotree position=current") end)
+map("n", "<leader>e", function()
   vim.cmd("Neotree toggle")
 end)
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Editing
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "<C-a>", "ggVG")
-vim.keymap.set("n", "<C-_>", "Vgc")
-vim.keymap.set("v", "<C-_>", "gc")
+map("n", "<C-a>", "ggVG")
+map({ "n", "v" }, "<leader>y", "\"*y")
+map({ "n", "v" }, "<leader>p", "\"*p")
 
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+map("n", "<leader>f", vim.lsp.buf.format)
 
-vim.keymap.set({"n", "v"}, "<leader>p", "\"*p")
-vim.keymap.set({"n", "v"}, "<leader>y", "\"*y")
+-- Commenting (can't get it to work yet, "gc" works tho)
+map("n", "<C-_>", "Vgc")
+map("v", "<C-_>", "gc")
 
---vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+-- Navigating
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
 
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- Exiting
+map("i", "<C-c>", "<Esc>")
+map("n", "Q", "<nop>")
 
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+map("n", "<leader><leader>", function()
+  vim.cmd("so")
 end)
