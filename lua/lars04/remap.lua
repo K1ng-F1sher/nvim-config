@@ -1,11 +1,5 @@
 local map = vim.keymap.set
 
--- Explorer
-map("n", "<leader>pv", function() vim.cmd("Neotree position=current") end)
-map("n", "<leader>e", function()
-  vim.cmd("Neotree toggle")
-end)
-
 -- Editing
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
@@ -29,7 +23,3 @@ map("n", "N", "Nzzzv")
 -- Exiting
 map("i", "<C-c>", "<Esc>")
 map("n", "Q", "<nop>")
-
-map("n", "<leader><leader>", function()
-  vim.cmd("so")
-end)
