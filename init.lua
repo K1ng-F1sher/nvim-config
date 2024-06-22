@@ -90,8 +90,8 @@ require('lazy').setup({
 
   {
     'folke/trouble.nvim',
-    version = '2.*',
-    requires = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+
     config = function()
       require("trouble").setup({
         icons = true,
