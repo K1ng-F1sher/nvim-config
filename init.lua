@@ -13,8 +13,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.maplocalleader = ' '
 
 
 require('lazy').setup({
@@ -91,30 +91,27 @@ require('lazy').setup({
       }
   },
 
-  -- {
-  --      'folke/trouble.nvim',
-  --      version = '2.*',
-  --      dependencies = { 'nvim-tree/nvim-web-devicons' },
-  --      config = function()
-  --           require("trouble").setup({
-  --               icons = false,
-  --           })
-  --
-  --           vim.keymap.set("n", "<leader>tt", function()
-  --               require("trouble").toggle()
-  --           end)
-  --
-  --           vim.keymap.set("n", "[t", function()
-  --               require("trouble").next({skip_groups = true, jump = true});
-  --           end)
-  --
-  --           vim.keymap.set("n", "]t", function()
-  --               require("trouble").previous({skip_groups = true, jump = true});
-  --           end)
-  --
-  --       end
-  -- },
+  {
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup({
+                icons = false,
+            })
 
+            vim.keymap.set("n", "<leader>tt", function()
+                require("trouble").toggle()
+            end)
+
+            vim.keymap.set("n", "<leader>tn", function()
+                require("trouble").next({skip_groups = true, jump = true});
+            end)
+
+            vim.keymap.set("n", "<leader>tp", function()
+                require("trouble").previous({skip_groups = true, jump = true});
+            end)
+
+        end
+    },
 })
 
 
