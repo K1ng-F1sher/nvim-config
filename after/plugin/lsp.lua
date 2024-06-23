@@ -9,7 +9,7 @@ require('mason-lspconfig').setup({
         'tsserver',
         'eslint',
         'lua_ls',
-        'csharp_ls',
+        -- 'csharp_ls',
     },
     automatic_installation = true,
     handlers = {
