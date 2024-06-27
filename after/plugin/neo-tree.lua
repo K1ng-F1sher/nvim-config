@@ -10,6 +10,6 @@ require("neo-tree").setup({
 })
 
 vim.keymap.set("n", "<leader>e", function() vim.cmd("Neotree position=current") end)
-vim.keymap.set("n", "<leader>x", function()
+vim.keymap.set("n", "<leader>v", function()
   vim.cmd("Neotree toggle")
 end)

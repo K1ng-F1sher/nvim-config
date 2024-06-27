@@ -3,12 +3,12 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 require('mason').setup({})
+
 require('mason-lspconfig').setup({
     ensure_installed = {
         'tsserver',
         'eslint',
         'lua_ls',
---        'csharp_ls@0.11.0',
     },
     automatic_installation = true,
     handlers = {
@@ -62,3 +62,4 @@ lsp.on_attach(function(_, bufnr)
 end)
 
 lsp.setup()
+
