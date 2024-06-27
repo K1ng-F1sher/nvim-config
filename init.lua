@@ -16,30 +16,32 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 
   -- Theme
-  { 'rose-pine/neovim',
-  as = 'rose-pine',
-  config = function()
-    require('rose-pine').setup({
-      disable_background = true,
-      disable_italics = true,
-      styles = {
-        italic = false,
-      },
-    })
+  {
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+      require('rose-pine').setup({
+        disable_background = true,
+        disable_italics = true,
+        styles = {
+          italic = false,
+        },
+      })
 
-    vim.cmd("colorscheme rose-pine")
-  end
+      vim.cmd("colorscheme rose-pine")
+    end
   },
 
   -- (File) Navigation
-  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'nvim-treesitter/playground',
   'mbbill/undotree',
   'tpope/vim-fugitive',
 
   {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
-	  dependencies = {'nvim-lua/plenary.nvim'}
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.3',
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
   'theprimeagen/harpoon',
@@ -55,37 +57,37 @@ require('lazy').setup({
     },
   },
   'fgheng/winbar.nvim',
-  { 'SmiteshP/nvim-navic'},
+  { 'SmiteshP/nvim-navic' },
   {
-      'smoka7/hop.nvim',
-      -- tag = '*', -- optional but strongly recommended
-      config = function()
-          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-      end
+    'smoka7/hop.nvim',
+    -- tag = '*', -- optional but strongly recommended
+    config = function()
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
   },
 
   -- LSP
   {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v3.x',
-      dependencies = {
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},
-          {'williamboman/mason.nvim'},
-          {'williamboman/mason-lspconfig.nvim'},
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
+    dependencies = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
-          -- Autocompletion
-          {'hrsh7th/nvim-cmp'},
-          {'hrsh7th/cmp-buffer'},
-          {'hrsh7th/cmp-path'},
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'hrsh7th/cmp-nvim-lua'},
-          {'saadparwaiz1/cmp_luasnip'},
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'saadparwaiz1/cmp_luasnip' },
 
-          -- Snippets
-          {'L3MON4D3/LuaSnip'},
-          {'rafamadriz/friendly-snippets'}
-      }
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' }
+    }
   },
 
   {
@@ -94,7 +96,7 @@ require('lazy').setup({
 
     config = function()
       require("trouble").setup({
-        icons = true,
+        icons = false,
       })
 
       vim.keymap.set("n", "<leader>tt", function()
@@ -102,15 +104,12 @@ require('lazy').setup({
       end)
 
       vim.keymap.set("n", "[t", function()
-        require("trouble").next({skip_groups = true, jump = true});
+        require("trouble").next({ skip_groups = true, jump = true });
       end)
 
       vim.keymap.set("n", "]t", function()
-        require("trouble").previous({skip_groups = true, jump = true});
+        require("trouble").previous({ skip_groups = true, jump = true });
       end)
-
     end
-    },
+  },
 })
-
-
