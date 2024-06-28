@@ -31,15 +31,6 @@ cmp.setup({
     },
 })
 
-local navic = require('nvim-navic')
-
-lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({buffer = bufnr})
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
-    end
-end)
-
 lsp.set_preferences({
     sign_icons = { }
 })

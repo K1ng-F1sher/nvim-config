@@ -35,6 +35,7 @@ require('lazy').setup({
   -- (File) Navigation
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'nvim-treesitter/playground',
+  'nvim-treesitter/nvim-treesitter-context',
   'mbbill/undotree',
   'tpope/vim-fugitive',
 
@@ -56,8 +57,6 @@ require('lazy').setup({
       --"3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
   },
-  'fgheng/winbar.nvim',
-  { 'SmiteshP/nvim-navic' },
   {
     'smoka7/hop.nvim',
     -- tag = '*', -- optional but strongly recommended
