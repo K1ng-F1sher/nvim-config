@@ -1,6 +1,3 @@
-require("lars04.set")
-require("lars04.remap")
-
 vim.cmd [[
 augroup highlight_yank
     autocmd!
@@ -32,3 +29,4 @@ vim.api.nvim_create_user_command("ClearShada", function()
   end,
   { desc = "Clears all the .tmp shada files" }
 )
+
