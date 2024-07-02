@@ -1,7 +1,5 @@
 return {
 
-  -- (File) Navigation
-  'mbbill/undotree',
   'tpope/vim-fugitive',
 
   {
