@@ -5,6 +5,18 @@ augroup highlight_yank
 augroup END
 ]]
 
+function DisableItalics()
+  local hl_groups = vim.api.nvim_get_hl(0, {})
+
+  for key, hl_group in pairs(hl_groups) do
+    if hl_group.italic then
+      vim.api.nvim_set_hl(0, key, vim.tbl_extend("force", hl_group, { italic = false }))
+    end
+  end
+end
+
+DisableItalics()
+
 -- Workaround for deleting old SHADA files. Link: https://github.com/neovim/neovim/issues/8587
 vim.api.nvim_create_user_command("ClearShada", function()
     local shada_path = vim.fn.expand(vim.fn.stdpath('data') .. "/shada")
@@ -29,4 +41,3 @@ vim.api.nvim_create_user_command("ClearShada", function()
   end,
   { desc = "Clears all the .tmp shada files" }
 )
-
