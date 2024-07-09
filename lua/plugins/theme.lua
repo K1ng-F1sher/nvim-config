@@ -1,5 +1,4 @@
 return {
-  -- Theme
   {
     'rose-pine/neovim',
     as = 'rose-pine',
@@ -21,7 +20,17 @@ return {
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
       end
-
     end
   },
+  {
+    'Mofiqul/vscode.nvim',
+    as = 'vscode',
+  },
+  {
+    "folke/tokyonight.nvim",
+    as = 'tokyonight',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  }
 }
