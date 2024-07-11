@@ -1,12 +1,21 @@
-require("lars04.set")
-require("lars04.remap")
-
 vim.cmd [[
 augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
 augroup END
 ]]
+
+function DisableItalics()
+  local hl_groups = vim.api.nvim_get_hl(0, {})
+
+  for key, hl_group in pairs(hl_groups) do
+    if hl_group.italic then
+      vim.api.nvim_set_hl(0, key, vim.tbl_extend("force", hl_group, { italic = false }))
+    end
+  end
+end
+
+DisableItalics()
 
 -- Workaround for deleting old SHADA files. Link: https://github.com/neovim/neovim/issues/8587
 vim.api.nvim_create_user_command("ClearShada", function()

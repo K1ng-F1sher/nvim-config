@@ -32,3 +32,14 @@ vim.opt.colorcolumn = "120"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    signs = {
+      severity = { min = vim.diagnostic.severity.HINT }
+    },
+    virtual_text = {
+      severity = { min = vim.diagnostic.severity.WARN }
+    },
+  }
+)
