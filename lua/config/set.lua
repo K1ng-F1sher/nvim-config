@@ -33,6 +33,10 @@ vim.opt.colorcolumn = "120"
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.loaded_netrw = 1
+
+vim.g.loaded_netrwPlugin = 1
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     signs = {
