@@ -52,9 +52,6 @@ return
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
       },
-    })
-
-    lsp.set_preferences({
       sign_icons = {}
     })
 
