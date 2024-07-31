@@ -12,8 +12,6 @@ return {
         },
       })
 
-      vim.cmd("colorscheme rose-pine")
-
       function ColorMyPencils(color)
         color = color or "rose-pine"
         vim.cmd.colorscheme(color)
@@ -46,6 +44,9 @@ return {
           floats = "dark",             -- style for floating windows
         },
       })
+
+      vim.cmd("colorscheme tokyonight")
+
     end
   }
 }
