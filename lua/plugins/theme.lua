@@ -35,6 +35,7 @@ return {
         terminal_colors = true,         -- Configure the colors used when opening a `:terminal` in Neovim
         disable_background = true,
         styles = {
+          italic = false,
           -- Style to be applied to different syntax groups
           -- Value is any valid attr-list value for `:help nvim_set_hl`
           comments = { italic = false },
