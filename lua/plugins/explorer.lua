@@ -16,7 +16,7 @@ return {
         }
       )
 
-      vim.keymap.set("n", "<leader>m", "<cmd>lua MiniFiles.open()<CR>")
+      -- vim.keymap.set("n", "<leader>m", "<cmd>lua MiniFiles.open()<CR>")
       vim.keymap.set("n", "-", "<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>")
 
       vim.api.nvim_create_autocmd('User', {

@@ -22,8 +22,13 @@ return
     })
 
     vim.keymap.set("n", "<leader>e", function() vim.cmd("Neotree position=current") end)
-    vim.keymap.set("n", "<leader>v", function()
-      vim.cmd("Neotree toggle")
-    end)
-  end
+  end,
+  opts = {
+    event_handlers = { {
+      event = "neo_tree_buffer_enter", -- neo_tree_buffer_enter 
+      handler = function()
+        vim.cmd("setrelativenumber")
+      end,
+    } },
+  },
 }
