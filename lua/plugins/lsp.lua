@@ -67,7 +67,7 @@ return
       vim.keymap.set("n", "[d", function() vim.diagnostics.goto_next() end, opts)
       vim.keymap.set("n", "]d", function() vim.diagnostics.goto_prev() end, opts)
       vim.keymap.set("n", "<leader>vc", function() vim.lsp.buf.code_action() end, opts)
-      vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+      vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
       vim.keymap.set("n", "<leader>vh", function() vim.lsp.buf.signature_help() end, opts)
     end)
 
