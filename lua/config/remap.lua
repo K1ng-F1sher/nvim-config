@@ -7,8 +7,8 @@ map('i', '<C-H>', '<C-W>', {noremap = true}) -- Sets <C-BS> to <C-W>
 
 map("n", "<C-a>", "ggVG")
 map("v", "y", "ygv<esc>", { remap = true })
-map({ "n", "v" }, "<leader>y", "\"*y")
-map({ "n", "v" }, "<leader>p", "\"*p")
+map({ "n", "v" }, "<leader>y", "\"*y") -- copy to clipboard
+map({ "n", "v" }, "<leader>p", "\"*p") -- paste from clipboard (although <C-v> or <C-S-v> usually work)
 
 map("n", "<leader>f", vim.lsp.buf.format)
 
