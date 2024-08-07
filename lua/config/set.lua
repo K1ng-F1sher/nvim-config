@@ -42,7 +42,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     signs = {
-      severity = { min = vim.diagnostic.severity.HINT }
+      severity = { min = vim.diagnostic.severity.INFO }
     },
     underline = {
       severity = { min = vim.diagnostic.severity.INFO }
