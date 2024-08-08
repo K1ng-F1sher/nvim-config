@@ -1,3 +1,15 @@
+local centerCallback = function()
+    vim.api.nvim_create_autocmd("CursorMoved", {
+        once = true,
+        callback = function()
+            if vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" then
+                vim.cmd("norm! zz")
+            end
+        end,
+    })
+    vim.cmd("Telescope lsp_definitions")
+end
+
 return
 {
   'nvim-telescope/telescope.nvim',
@@ -11,7 +23,7 @@ return
     vim.keymap.set('n', ';', builtin.resume, {})
     vim.keymap.set('n', 'gr', builtin.lsp_references, {})
     vim.keymap.set('n', 'gi', builtin.lsp_implementations, {})
-    vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
+    vim.keymap.set('n', 'gd', centerCallback, {})
     vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, {})
     vim.keymap.set('n', 'gq', builtin.quickfix, {})
     vim.keymap.set('n', '<leader>ps', function()
