@@ -1,13 +1,12 @@
 local centerCallback = function()
-    vim.api.nvim_create_autocmd("CursorMoved", {
-        once = true,
-        callback = function()
-            if vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" then
-                vim.cmd("norm! zz")
-            end
-        end,
-    })
-    vim.cmd("Telescope lsp_definitions")
+  vim.api.nvim_create_autocmd("CursorMoved", {
+    once = true,
+    callback = function()
+      if vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" then
+        vim.cmd("norm! zz")
+      end
+    end,
+  })
 end
 
 return
@@ -21,9 +20,15 @@ return
     vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
     vim.keymap.set('n', '<C-p>', builtin.git_files, {})
     vim.keymap.set('n', ';', builtin.resume, {})
-    vim.keymap.set('n', 'gr', builtin.lsp_references, {})
+    vim.keymap.set('n', 'gr', function()
+      centerCallback()
+      builtin.lsp_references()
+    end, {})
     vim.keymap.set('n', 'gi', builtin.lsp_implementations, {})
-    vim.keymap.set('n', 'gd', centerCallback, {})
+    vim.keymap.set('n', 'gd', function()
+      centerCallback()
+      builtin.lsp_definitions()
+    end, {})
     vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, {})
     vim.keymap.set('n', 'gq', builtin.quickfix, {})
     vim.keymap.set('n', '<leader>ps', function()
