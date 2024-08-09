@@ -18,6 +18,9 @@ return
     require('telescope').setup {
       defaults = {
         mappings = {
+          i = {
+            ["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
+          },
           n = {
             ["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
           }
