@@ -16,23 +16,22 @@ return
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-    vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
-    vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+    vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
+    vim.keymap.set('n', '<C-p>', builtin.find_files, {})
     vim.keymap.set('n', ';', builtin.resume, {})
     vim.keymap.set('n', 'gr', function()
       centerCallback()
       builtin.lsp_references()
-    end, {})
+    end, { desc = "Show a list of all references and center when selecting one of them" })
     vim.keymap.set('n', 'gi', builtin.lsp_implementations, {})
     vim.keymap.set('n', 'gd', function()
       centerCallback()
       builtin.lsp_definitions()
-    end, {})
+    end, { desc = "Show a list of all definitions and center when selecting one of them" })
     vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, {})
     vim.keymap.set('n', 'gq', builtin.quickfix, {})
-    vim.keymap.set('n', '<leader>ps', function()
-      builtin.grep_string({ search = vim.fn.input("Grep > ") });
-    end)
+    -- vim.keymap.set('n', '<leader>ps', function()
+    --   builtin.grep_string({ search = vim.fn.input("Grep > ") });
+    -- end)
   end
 }
