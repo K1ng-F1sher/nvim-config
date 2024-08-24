@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -9,12 +12,13 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+vim.opt.conceallevel = 0 -- JSON files should always show quotes
 
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = vim.fn.expand('~/.nvim/undodir')
+vim.opt.undodir = vim.fn.expand('~/.nvim/undodir') -- vim doesn't parse ~ as a path when used in a string.
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -32,32 +36,28 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "120"
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.g.loaded_netrw = 1
-
 vim.g.loaded_netrwPlugin = 1
 
-if vim.fn.executable('pwsh') == 1 then
-    vim.o.shell = 'pwsh'
-else
-    vim.o.shell = 'powershell'
-end
-
 -- Shell settings
--- Setting shell command flags
-vim.o.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
-
--- Setting shell redirection
-vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
-
--- Setting shell pipe
-vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
-
--- Setting shell quote options
-vim.o.shellquote = ''
-vim.o.shellxquote = ''
+-- if vim.fn.executable('pwsh') == 1 then
+--     vim.o.shell = 'pwsh'
+-- else
+--     vim.o.shell = 'powershell'
+-- end
+--
+-- -- Setting shell command flags
+-- vim.o.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
+--
+-- -- Setting shell redirection
+-- vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
+--
+-- -- Setting shell pipe
+-- vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
+--
+-- -- Setting shell quote options
+-- vim.o.shellquote = ''
+-- vim.o.shellxquote = ''
 
 -- LSP settings
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
