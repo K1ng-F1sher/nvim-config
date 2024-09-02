@@ -12,13 +12,12 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
-vim.opt.conceallevel = 0 -- JSON files should always show quotes
 
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = vim.fn.expand('~/.nvim/undodir') -- vim doesn't parse ~ as a path when used in a string.
+vim.opt.undodir = vim.fn.expand("~/.nvim/undodir") -- vim doesn't parse ~ as a path when used in a string.
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -60,22 +59,20 @@ vim.g.loaded_netrwPlugin = 1
 -- vim.o.shellxquote = ''
 
 -- LSP settings
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    signs = {
-      severity = { min = vim.diagnostic.severity.INFO }
-    },
-    underline = {
-      severity = { min = vim.diagnostic.severity.INFO }
-    },
-    virtual_text = {
-      severity = { min = vim.diagnostic.severity.WARN }
-    },
-  }
-)
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+	signs = {
+		severity = { min = vim.diagnostic.severity.INFO },
+	},
+	underline = {
+		severity = { min = vim.diagnostic.severity.INFO },
+	},
+	virtual_text = {
+		severity = { min = vim.diagnostic.severity.WARN },
+	},
+})
 
 local signs = { Error = "󰅚 ", Warn = "󰀪 ", Info = " ", Hint = "󰌶 " }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
