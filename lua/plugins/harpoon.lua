@@ -24,7 +24,7 @@ return {
 		{
 			"<C-h>",
 			function()
-				require("harpoon").ui:toggle_quick_menu(require("harpoon").list())
+				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 			end,
 			desc = "",
 		},
