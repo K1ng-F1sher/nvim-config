@@ -1,5 +1,33 @@
 return {
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    lazy = false,
+    config = function()
+      require("neo-tree").setup({
+        filesystem = {
+          hijack_netrw_behavior = "open_current",
+          window = {
+            mappings = {
+              ["-"] = "navigate_up",
+            }
+          },
+        },
+      })
+
+      vim.keymap.set("n", "<leader>e", function()
+        vim.cmd("Neotree position=current")
+        vim.cmd("set rnu")
+      end)
+    end,
+  },
+
+  {
     'echasnovski/mini.files',
     version = '*',
     config = function()
