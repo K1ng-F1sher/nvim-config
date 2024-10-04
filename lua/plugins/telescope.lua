@@ -47,8 +47,5 @@ return
     end, { desc = "Show a list of all definitions and center when selecting one of them" })
     vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, {})
     vim.keymap.set('n', 'gq', builtin.quickfix, {})
-    -- vim.keymap.set('n', '<leader>ps', function()
-    --   builtin.grep_string({ search = vim.fn.input("Grep > ") });
-    -- end)
   end
 }

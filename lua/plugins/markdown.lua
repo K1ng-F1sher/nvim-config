@@ -1,32 +1,30 @@
 return {
-	"OXY2DEV/markview.nvim",
-	lazy = false,
-	ft = "markdown",
+  "OXY2DEV/markview.nvim",
+  lazy = false,
+  ft = "markdown",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    local markview = require("markview")
+    local presets = require("markview.presets")
 
-	dependencies = {
-		-- You may not need this if you don't lazy load
-		-- Or if the parsers are in your $RUNTIMEPATH
-		"nvim-treesitter/nvim-treesitter",
-		"nvim-tree/nvim-web-devicons",
-	},
-	config = function()
-		local markview = require("markview")
-		local presets = require("markview.presets")
+    require("markview").setup({
+      modes = { "n", "i", "no", "c" },
 
-		require("markview").setup({
-			modes = { "n", "i", "no", "c" },
+      hybrid_modes = { "i" },
 
-			hybrid_modes = { "i" },
+      -- This is nice to have
+      callbacks = {
+        on_enable = function(_, win)
+          vim.wo[win].conceallevel = 2
+          vim.wo[win].concealcursor = "c"
+        end,
+      },
+    })
 
-			-- This is nice to have
-			callbacks = {
-				on_enable = function(_, win)
-					vim.wo[win].conceallevel = 2
-					vim.wo[win].concealcursor = "c"
-				end,
-			},
-		})
-		-- vim.o.conceallevel = 0
-		vim.cmd("Markview enableAll")
-	end,
+    vim.cmd("Markview enableAll")
+  end,
 }
