@@ -4,9 +4,11 @@ return {
     version = "*",
     config = true,
     opts = {
-
-    open_mapping = [[<c-t>]],
-    direction = "horizontal",
-  },
+      open_mapping = [[<c-t>]],
+      direction = "horizontal",
+    },
+    keys = {
+      "<C-t>"
+    },
   },
 }
