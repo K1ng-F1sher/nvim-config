@@ -4,7 +4,7 @@ vim.g.maplocalleader = " "
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.rnu = true
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
