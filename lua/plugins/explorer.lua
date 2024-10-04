@@ -8,49 +8,52 @@ return {
       "MunifTanjim/nui.nvim",
     },
     lazy = false,
-    config = function()
-      require("neo-tree").setup({
-        filesystem = {
-          hijack_netrw_behavior = "open_current",
-          window = {
-            mappings = {
-              ["-"] = "navigate_up",
-            }
-          },
+    cmd = "Neotree",
+    opts = {
+      filesystem = {
+        hijack_netrw_behavior = "open_current",
+        window = {
+          mappings = {
+            ["-"] = "navigate_up",
+          }
         },
-      })
+        event_handlers = {
+          event = "neo_tree_buffer_enter",
+          handler = function()
+            vim.cmd("set rnu") -- This doesn't seem to work.
+          end,
+        },
+      },
 
       vim.keymap.set("n", "<leader>e", function()
         vim.cmd("Neotree position=current")
         vim.cmd("set rnu")
       end)
-    end,
+    },
   },
 
   {
     'echasnovski/mini.files',
     version = '*',
-    config = function()
-      require('mini.files').setup(
-        {
-          mappings = {
-            close = "<C-c>",
-            go_in_plus = "<CR>",
-          },
-          options = {
-            -- Whether to use for editing directories
-            use_as_default_explorer = false,
-          },
-        }
-      )
-
-      -- vim.keymap.set("n", "<leader>m", "<cmd>lua MiniFiles.open()<CR>")
-      vim.keymap.set("n", "-", "<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>")
+    opts = {
+      mappings = {
+        close = "<C-c>",
+        go_in_plus = "<CR>",
+      },
+      options = {
+        use_as_default_explorer = false,
+      },
 
       vim.api.nvim_create_autocmd('User', {
         pattern = 'MiniFilesWindowUpdate',
         callback = function(args) vim.wo[args.data.win_id].relativenumber = true end,
       })
-    end
+    },
+    keys = {
+      {
+        "-",
+        "<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>"
+      },
+    }
   },
 }
