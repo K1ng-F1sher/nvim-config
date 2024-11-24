@@ -60,21 +60,21 @@ vim.g.loaded_netrwPlugin = 1
 
 -- LSP settings
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-	signs = {
-		severity = { min = vim.diagnostic.severity.INFO },
-	},
-	underline = {
-		severity = { min = vim.diagnostic.severity.INFO },
-	},
-	virtual_text = {
-		severity = { min = vim.diagnostic.severity.WARN },
-	},
+    signs = {
+        severity = { min = vim.diagnostic.severity.INFO },
+    },
+    underline = {
+        severity = { min = vim.diagnostic.severity.INFO },
+    },
+    virtual_text = {
+        severity = { min = vim.diagnostic.severity.WARN },
+    },
 })
 
 local signs = { Error = "󰅚 ", Warn = "󰀪 ", Info = " ", Hint = "󰌶 " }
 for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 -- Show short highlight when yanking
@@ -86,4 +86,4 @@ augroup END
 ]])
 
 -- Workaround for Shada files not being cleared:
-vim.cmd("autocmd VimLeave * lua ClearShada()")
+vim.cmd("autocmd VimLeavePre * ClearShada")
