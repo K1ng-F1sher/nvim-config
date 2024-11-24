@@ -47,13 +47,13 @@ return {
 			end,
 		},
 		{
-			"<C-n>",
+			"<C-m>",
 			function()
 				require("harpoon"):list():select(4)
 			end,
 		},
 		{
-			"<C-m>",
+			"<C-n>",
 			function()
 				require("harpoon"):list():select(5)
 			end,
