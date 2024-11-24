@@ -7,7 +7,6 @@ return {
 
 		-- REQUIRED
 		harpoon:setup()
-		-- REQUIRED
 
 		vim.keymap.set("n", "<C-c>", function()
 			harpoon.ui:close_menu()
@@ -26,7 +25,6 @@ return {
 			function()
 				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 			end,
-			desc = "",
 		},
 		{
 			"<C-j>",
