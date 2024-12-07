@@ -16,7 +16,7 @@ return {
         ":G log --all --graph --decorate --oneline<CR><C-w>o",
         { desc = "Show a tree of commit history" }
       )
-      vim.keymap.set("n", "<leader>gpom", ":G pull origin main<CR>")
+      -- vim.keymap.set("n", "<leader>gpom", ":G pull origin main<CR>")
       vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit<CR><C-w>l", {
         desc =
         "Get the two-way diff view for the current buffer and focus the split with new changes. Easiest way to exit: `<C-w>o`",
