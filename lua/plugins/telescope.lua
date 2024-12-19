@@ -15,6 +15,7 @@ return {
 	dependencies = {
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
+			-- If the line below doesn't work, cd to %LOCALAPPDATA%/nvim-data/lazy/telescope-fzf and execute `make`
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 			config = function()
 				require("telescope").load_extension("fzf")
@@ -29,13 +30,11 @@ return {
 				mappings = {
 					i = {
 						["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
-						["<C-BS"] = { "<C-w>" },
 						["<BS>"] = false,
-						["<C-u>"] = false,
+						["<C-u>"] = false, -- <C-u> now clears the prompt.
 					},
 					n = {
 						["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
-						["<C-BS"] = { "<C-w>" },
 					},
 				},
 			},
