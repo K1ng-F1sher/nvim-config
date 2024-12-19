@@ -25,12 +25,17 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
+				path_display = { "smart" },
 				mappings = {
 					i = {
 						["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
+						["<C-BS"] = { "<C-w>" },
+						["<BS>"] = false,
+						["<C-u>"] = false,
 					},
 					n = {
 						["<CR>"] = require("telescope.actions").select_default + require("telescope.actions").center,
+						["<C-BS"] = { "<C-w>" },
 					},
 				},
 			},
