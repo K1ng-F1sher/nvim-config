@@ -7,7 +7,7 @@ return {
       vim.keymap.set("n", "<leader>ga", ":G add .<CR>")
       vim.keymap.set("n", "<leader>gc", ":G commit -m ''<Left>")
       vim.keymap.set("n", "<leader>gq", ":G commit . -m ''<Left>", { desc = "Remember by 'Git Quick commit'." })
-      vim.keymap.set("n", "<leader>gp", ":G push<CR>")
+      vim.keymap.set("n", "<leader>gp", ":G push<CR>", { silent = true })
       vim.keymap.set(
         "n",
         "<leader>gl",
