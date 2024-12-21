@@ -32,6 +32,9 @@ return {
 
       telescope.setup({
         defaults = {
+          layout_config = {
+            horizontal = { width = 0.95, height = 0.95 }
+          },
           path_display = { "smart" },
           mappings = {
             i = {
@@ -43,6 +46,14 @@ return {
               ["<CR>"] = actions.select_default + actions.center,
             },
           },
+        },
+        pickers = {
+          find_files = {
+            prompt_prefix = "file > "
+          },
+          live_grep = {
+            prompt_prefix = "grep > "
+          }
         },
         extensions = {
           advanced_git_search = {
