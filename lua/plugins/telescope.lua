@@ -39,8 +39,6 @@ return {
           mappings = {
             i = {
               ["<CR>"] = actions.select_default + actions.center,
-              ["<BS>"] = false,
-              ["<C-u>"] = false, -- <C-u> now clears the prompt.
             },
             n = {
               ["<CR>"] = actions.select_default + actions.center,
@@ -56,6 +54,10 @@ return {
           }
         },
         extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+            },
+          },
           advanced_git_search = {
             browse_command = "GBrowse {commit_hash}",
             diff_plugin = "fugitive",                -- one of fugitive or diffview
@@ -67,19 +69,11 @@ return {
               copy_commit_hash = "<C-y>",
               show_entire_commit = "<C-e>",
             },
-            telescope_theme = {
-              function_name_1 = {
-                -- Theme options
-              },
-              function_name_2 = "dropdown",
-              -- e.g. realistic example
-              show_custom_functions = {
-                layout_config = { width = 0.4, height = 0.4 },
-              },
-            }
           }
         }
       })
+
+      require("telescope").load_extension("ui-select")
 
       vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
       vim.keymap.set("n", "<C-p>", builtin.find_files, {})
@@ -120,5 +114,8 @@ return {
         desc = "AdvancedGitSearch through git commit history",
       }
     },
+  },
+  {
+    { 'nvim-telescope/telescope-ui-select.nvim' }
   }
 }
