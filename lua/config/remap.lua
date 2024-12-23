@@ -10,7 +10,7 @@ map("i", "<C-H>", "<C-W>", { noremap = true, desc = "sets <C-BS> to <C-W>" })
 map("n", "<leader>f", vim.lsp.buf.format)
 
 map("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { desc = "find and RePlace word under cursor" })
+    { desc = "find and RePlace word under cursor" })
 
 -----------------
 --- Clipboard ---
@@ -48,3 +48,4 @@ map("n", "<leader>rc", "<cmd>set conceallevel=0<CR>", { desc = "Reset Conceallev
 ---------------
 map("i", "<C-c>", "<Esc>")
 map("n", "Q", "<nop>")
+map("t", "<C-c><C-c>", "<c-\\><c-n>", { desc = "exit terminal mode" })
