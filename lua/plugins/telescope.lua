@@ -64,7 +64,7 @@ return {
             show_builtin_git_pickers = false,
             entry_default_author_or_date = "author", -- one of "author" or "date"
             keymaps = {
-              toggle_date_author = "<C-w>",
+              toggle_date_author = "<C-a>",
               open_commit_in_browser = "<C-o>",
               copy_commit_hash = "<C-y>",
               show_entire_commit = "<C-e>",
