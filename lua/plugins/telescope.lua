@@ -47,7 +47,6 @@ return {
         },
         pickers = {
           find_files = {
-            hidden = true,
             prompt_prefix = "file > "
           },
           live_grep = {
@@ -93,6 +92,7 @@ return {
         builtin.lsp_definitions()
       end, { desc = "Show a list of all definitions and center when selecting one of them" })
       vim.keymap.set("n", "gt", builtin.lsp_type_definitions, {})
+      vim.keymap.set("n", "gs", builtin.treesitter, { desc = "Go to Symbols" })
       vim.keymap.set("n", "gq", builtin.quickfix, {})
     end,
   },
