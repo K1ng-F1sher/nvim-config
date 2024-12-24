@@ -47,6 +47,7 @@ return {
         },
         pickers = {
           find_files = {
+            hidden = true,
             prompt_prefix = "file > "
           },
           live_grep = {
