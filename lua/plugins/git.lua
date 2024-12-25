@@ -7,9 +7,10 @@ return {
       vim.keymap.set("n", "<leader>gc", ":G commit -m ''<Left>")
       vim.keymap.set("n", "<leader>gq", ":G commit . -m ''<Left>", { desc = "Remember by 'Git Quick commit'." })
       vim.keymap.set("n", "<leader>gp", ":G push<CR>", { silent = true })
+      vim.keymap.set("n", "<leader>gl", ":G pull<CR>", { silent = true })
       vim.keymap.set(
         "n",
-        "<leader>gl",
+        "<leader>gt",
         ":G log --all --graph --decorate --oneline<CR><C-w>o",
         { silent = true, desc = "Show a tree of commit history" }
       )
