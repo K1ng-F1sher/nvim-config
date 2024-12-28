@@ -1,0 +1,93 @@
+# (Want) to do
+-  [Better git log](https://github.com/rbong/vim-flog)
+- Investigate vim not exiting correctly: log file in `C:\Users\lars04\AppData\Local\nvim-data`
+- SQL in vim: http://www.lazyvim.org/extras/lang/sql
+- Read into quickfix list
+- [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+    	- especially for specifying `hidden = true`
+- Keep an eye on [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
+- Keep an eye on [fzf-lua]()
+- C#/JS/TS snippets
+- Debugger
+- Implement vim for Obsidian
+- Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
+
+# Documentation
+- [Grok VI](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
+- Practical vim [book](https://www.bol.com/nl/nl/p/practical-vim/9200000090251005/)
+- [Vimcasts on fugitive](http://vimcasts.org/categories/git/)
+- [Awesome Neovim (list of plugins per feature)](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#terminal-integration)
+
+# Done (in reverse chronological order)
+- Reimplemented PS as shell inside nvim
+- Telescope: 
+	    - Smart path. 
+	    - Added git_status keymap: `<leader>gs`
+	    - Added [git advanced search](https://github.com/aaronhallaert/advanced-git-search.nvim) to telescope. Mapped to `<leader>gh`. 
+	    - Different UI for code actions: [here](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- Silenced some git commands.
+- Reimplemented hybrid mode for markview and created a remap for resetting the conceallevel: `<leader>rc`
+- Undotree; don't show diff and autofocus.
+- Neo-tree: added expand all and disabled backspace
+- Hop: changed HopWord remap to `<leader>s`
+- Added [leap](https://github.com/ggandor/leap.nvim) and made `S` the keymap.
+- Bug: conceallevel is set to !0 by the markdown plugin when editing a .md file. This makes json files harder to edit. Possible fix: on buffer leave set conceallevel to 0. Filed bug [here](https://github.com/OXY2DEV/markview.nvim/issues/206) For now removed hybrid mode from config.
+- Still sometimes the terminal doesn't clear due to too many shada temp files. Tried an auto cmd on VimLeave.
+    - As of now, the terminal is also not cleared, but the shada temp files don't stack up anymore
+- Commenting HTML tags in TSX/JSX: https://github.com/folke/ts-comments.nvim
+- Added  indentation lines: https://github.com/lukas-reineke/indent-blankline.nvim, also reset tab width to 4.
+- Find out how to set undotree like Prime [here](https://sidneyliebrand.medium.com/vim-tip-persistent-undo-2fc78a2973a7)? Tried [here](https://www.reddit.com/r/neovim/comments/1fzgnr3/what_do_you_think_about_neo_vim_on_windows/)
+- Added GBrowse for Github and AzureDevops
+- Neotree: Event waarop line numbers aangezet kunnen worden: neo_tree_buffer_enter. Fixed, except on initial load, then press `<leader>e` to show line numbers.
+- Added remaps for git actions
+- Added mini.surround for changing surrounding characters
+- Better use of lazy config
+- Implemented git signs
+- Added pwsh lsp. Got config from [here](https://medium.com/@kacpermichta33/powershell-development-in-neovim-23ed44d453b4)
+- Prettier formatter, ideas were:
+    	- Prettier recommends ALE or NeoFormat or vim-prettier
+    		- tried neoformat, couldn't get it to work on first attempt
+    	- lazyvim uses stevearc/conform.nvim
+    	- should also work: https://github.com/lukas-reineke/lsp-format.nvim
+    	- none-ls is a basically a copy of the archived null-ls, which has some examples:
+    		- https://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save
+    		- https://gist.github.com/majamin/71c19bc463fdbdd55388a1c0e3398c73
+    	- https://www.youtube.com/watch?v=b7OguLuaYvE YT showing null-ls
+    	- Try this: `:%!npx prettier --stdin-filepath %`
+    	- **In the end I used conform.nvim** [this](https://www.josean.com/posts/neovim-linting-and-formatting) was a great source for the config.
+        - Set `vim.opt.conceallevel = 0` to show quotes in JSON files.
+- Delete to void register with `<leader>d`, and same with `<leader>p`
+- PS as terminal in vim: [source](https://github.com/LazyVim/LazyVim/issues/2151) and [link](https://www.reddit.com/r/neovim/comments/1crdv93/neovim_on_windows_using_windows_terminal_and/)
+- Properly set undodir, so undotree really works with history from 'days upon days ago'.
+	    - Undid it, as it was buggy with undotree.
+        - Redid, disabled the history split
+- Added `zz` after telescope actions [link1](https://github.com/nvim-telescope/telescope.nvim/issues/2115), [link2](https://www.reddit.com/r/neovim/comments/1dpmlhy/comment/lanjro0/)
+- Add `$env:TERM='xterm-256color'` to PROFILE
+- Added `<leader>pg` for live_grep in project
+- Find an `F2` equivalent: `<leader>rn`
+- In windows terminal > Settings > Actions > removed Ctrl+V keymap for pasting so visual block mode is available in nvim.
+- Also added smartcase (only case sensitive on queries with uppercase characters)
+- set ignorecase to true for searching text value. Use `\C` anywhere in the search query to search case sensitive.
+- Added [TreeSJ](https://github.com/Wansmer/treesj)
+- `:ls` to show opened buffers. A `+` sign indicates unsaved changes.
+- Remapped Ctrl+Shift+v for pasting text in terminal (Ctrl+v by default). Can now use `<C-v>` for entering visual block mode.
+- Installed mini.files with config gotten from: [link](https://www.reddit.com/r/neovim/comments/14g36rs/minifiles_navigate_and_manipulate_file_system/)
+- `git config --system core.longpaths true` op werk-pc
+- Icons for errors/warnings
+- Resolve NETRW flickering before showing neo-tree: https://github.com/nvim-neo-tree/neo-tree.nvim/issues/1247
+- Merged configs for all plugins.
+- Exit Harpoon with `<C-C>`, issued [here](https://github.com/ThePrimeagen/harpoon/issues/609) . Moved to Harpoon2, which has the `close_menu` function.
+- Fixed Trouble
+- Added lualine
+- Show namespace/class/method at the top of page. Removed winbar. Got treesitter-context.
+- Implemented lazy.nvim
+- Show types in some way (like on hover in vscode) [repo](https://github.com/simrat39/inlay-hints.nvim) and [YT vid](https://www.youtube.com/watch?v=DYaTzkw3zqQ) Use `K`
+- Explorer tree: got neo-tree.
+- comment plugin [link](https://vi.stackexchange.com/questions/41873/how-to-comment-in-vim#:~:text=Select%20several%20lines%20in%20visual,%2DSlash%20to%20comment%2Funcomment.)  nvim 0.10 now has `gc` implemented in visual mode.
+- Autoformat, use `<leader>f`
+- Larger harpoon window [link](https://www.reddit.com/r/neovim/comments/169zxkn/is_it_possible_to_make_harpoon_open_on_a_bigger/) (default in harpoon2)
+- `<ENTER>` to choose autocomplete rather than `<C-y>`. Solved in lsp config.
+- Quick Actions like in vscode: lsp config! (code actions). Also show type with `<S-k>`
+- Solved italics being shown [link](https://www.reddit.com/r/neovim/comments/1ayub43/disable_all_italics_in_nvim_lazyvim_distro/)
+- Removed C# from lsp.lua to decrease startup time.
+
