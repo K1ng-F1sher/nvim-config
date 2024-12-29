@@ -1,6 +1,7 @@
 # (Want) to do
 -  [Better git log](https://github.com/rbong/vim-flog)
-- Investigate vim not exiting correctly: log file in `C:\Users\lars04\AppData\Local\nvim-data`
+-  Snacks dashboard 
+- Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - SQL: [link](http://www.lazyvim.org/extras/lang/sql)
 - Read into quickfix list
 - Now trying markdown-preview.nvim. Let's see if it's working
