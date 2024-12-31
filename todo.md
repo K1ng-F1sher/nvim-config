@@ -1,9 +1,7 @@
 # (Want) to do
-- [Better git log](https://github.com/rbong/vim-flog)
 - Now trying markdown-preview.nvim. Let's see if it's working
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Telescope:
-    - `<leader>ls` for open buffers
     - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
         - especially for specifying `hidden = true`
 - Configure markdown formatting:
