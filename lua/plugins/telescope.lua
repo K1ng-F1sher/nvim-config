@@ -77,7 +77,7 @@ return {
 
       vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
       vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-      vim.keymap.set('n', '<leader>gb', builtin.buffers, { desc = 'Telescope buffers' })
+      vim.keymap.set('n', '<leader>ls', builtin.buffers, { desc = 'Telescope buffers' })
       vim.keymap.set("n", "<leader>gs", function() builtin.git_status() end, {})
       vim.keymap.set("n", ";", builtin.resume, {})
       vim.keymap.set("n", "gr", function()
