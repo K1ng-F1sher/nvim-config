@@ -1,16 +1,19 @@
 # (Want) to do
--  [Better git log](https://github.com/rbong/vim-flog)
--  Snacks dashboard 
+- [Better git log](https://github.com/rbong/vim-flog)
+- Now trying markdown-preview.nvim. Let's see if it's working
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
+- Telescope:
+    - `<leader>ls` for open buffers
+    - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+        - especially for specifying `hidden = true`
+- Configure markdown formatting:
+    - LSP/lint/prettier
+    - line wrap
 - SQL: [link](http://www.lazyvim.org/extras/lang/sql)
 - Read into quickfix list
-- Now trying markdown-preview.nvim. Let's see if it's working
-- [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
-    - especially for specifying `hidden = true`
+- C#/JS/TS snippets
 - Keep an eye on [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - Keep an eye on [fzf-lua]()
-- C#/JS/TS snippets
-- Debugger
 - Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
 
 # Documentation
@@ -18,6 +21,7 @@
 - Practical vim [book](https://www.bol.com/nl/nl/p/practical-vim/9200000090251005/)
 - [Vimcasts on fugitive](http://vimcasts.org/categories/git/)
 - [Awesome Neovim (list of plugins per feature)](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#terminal-integration)
+- [vimconf 2024](https://www.youtube.com/watch?v=TUzdcB_PFJA&list=PLhlaLyAlbLlq9xWf2xm_9p422GgqvATXk)
 
 # Done (in reverse chronological order)
 - Reimplemented PS as shell inside nvim
