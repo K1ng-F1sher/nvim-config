@@ -10,13 +10,14 @@ map("i", "<C-H>", "<C-W>", { noremap = true, desc = "sets <C-BS> to <C-W>" })
 map("n", "<leader>f", vim.lsp.buf.format)
 
 map("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "find and RePlace word under cursor" })
+  { desc = "find and RePlace word under cursor" })
 
 -----------------
 --- Clipboard ---
 -----------------
 map("n", "<C-a>", "ggVG")
 map("v", "y", "ygv<esc>", { remap = true, desc = "stay in visual mode after yanking" })
+map("n", "gy", "[v]", { desc = 'select recently pasted, yanked or changed text' })
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "copy to system clipboard" })
 map({ "n", "v" }, "<leader>d", '"_d', { desc = "delete and send the deleted text to the void register" })
 map({ "n", "v" }, "<leader>D", '"_D', { desc = "delete the rest of the line and send to the void register" })
