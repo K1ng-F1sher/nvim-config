@@ -25,6 +25,7 @@
 
 # Done (in reverse chronological order)
 
+- Added mini.ai
 - Implemented snacks dashboard
 - Reimplemented PS as shell inside nvim
 - Telescope:
