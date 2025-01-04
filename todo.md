@@ -13,6 +13,7 @@
 - C#/JS/TS snippets
 - Keep an eye on [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - Keep an eye on [fzf-lua]()
+- Keep an eye on [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 - Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
 
 # Documentation
