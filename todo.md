@@ -8,13 +8,17 @@
 - Configure markdown formatting:
   - LSP/lint/prettier
   - line wrap
+- mini.clue / which-key
 - SQL: [link](http://www.lazyvim.org/extras/lang/sql)
 - Read into quickfix list
 - C#/JS/TS snippets
-- Keep an eye on [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
-- Keep an eye on [fzf-lua]()
-- Keep an eye on [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 - Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
+
+# Keep an eye on 
+
+- [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
+- [fzf-lua]()
+- [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
 # Documentation
 
@@ -26,6 +30,7 @@
 
 # Done (in reverse chronological order)
 
+- Added zen mode
 - Added mini.ai
 - Implemented snacks dashboard
 - Reimplemented PS as shell inside nvim
