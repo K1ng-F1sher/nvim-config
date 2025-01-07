@@ -37,7 +37,7 @@
 - Implemented snacks dashboard
 - Reimplemented PS as shell inside nvim
 - Telescope:
-  - Smart path.
+  > - Smart path: evaluate in big project whether it's fast enough.
   - Added git_status keymap: `<leader>gs`
   - Added [git advanced search](https://github.com/aaronhallaert/advanced-git-search.nvim) to telescope. Mapped to `<leader>gh`.
   - Different UI for code actions: [here](https://github.com/nvim-telescope/telescope-ui-select.nvim)
