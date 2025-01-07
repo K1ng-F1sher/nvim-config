@@ -1,6 +1,7 @@
 # (Want) to do
 
 - Now trying markdown-preview.nvim. Let's see if it's working
+- have <c-l> mapped to <esc>A in insert mode. check Harpoon triggers to only work in normal mode. 
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Telescope:
   - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
