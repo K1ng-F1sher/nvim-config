@@ -24,10 +24,12 @@ return {
   {
     -- Enables `:GB` for Github
     "tpope/vim-rhubarb",
+    event = { "BufReadPre", "BufNewFile" },
   },
   {
     -- Enables `:GB` for Azure Devops
     "cedarbaum/fugitive-azure-devops.vim",
+    event = { "BufReadPre", "BufNewFile" },
   },
   {
     "lewis6991/gitsigns.nvim",
