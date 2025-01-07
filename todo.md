@@ -1,7 +1,6 @@
 # (Want) to do
 
 - Now trying markdown-preview.nvim. Let's see if it's working
-- have <c-l> mapped to <esc>A in insert mode. check Harpoon triggers to only work in normal mode. 
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Telescope:
   - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
@@ -9,13 +8,13 @@
 - Configure markdown formatting:
   - LSP/lint/prettier
   - line wrap
-- mini.clue / which-key
+- mini.clue / which-key?
 - SQL: [link](http://www.lazyvim.org/extras/lang/sql)
 - Read into quickfix list
 - C#/JS/TS snippets
 - Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
 
-# Keep an eye on 
+# Keep an eye on
 
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - [fzf-lua]()
@@ -31,6 +30,8 @@
 
 # Done (in reverse chronological order)
 
+- Added mini.pairs
+- Added global `Map` field for `vim.keymap.set`
 - Added zen mode
 - Added mini.ai
 - Implemented snacks dashboard
