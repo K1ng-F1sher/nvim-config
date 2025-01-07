@@ -12,7 +12,7 @@ return {
     -- REQUIRED
     harpoon:setup()
 
-    vim.keymap.set("n", "<C-c>", function()
+    Map("n", "<C-c>", function()
       harpoon.ui:close_menu()
     end)
   end,

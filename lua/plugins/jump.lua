@@ -4,7 +4,7 @@ return {
     version = "*",
     config = function()
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
-      vim.keymap.set("n", "<leader>s", "<cmd>HopWord<CR>", { noremap = false })
+      Map("n", "<leader>s", "<cmd>HopWord<CR>", { noremap = false })
     end,
     keys = {
       "<leader>s",
@@ -13,7 +13,7 @@ return {
   {
     "ggandor/leap.nvim",
     config = function()
-      vim.keymap.set('n', 'S', '<Plug>(leap)')
+      Map('n', 'S', '<Plug>(leap)')
     end,
     keys = {
       'S',

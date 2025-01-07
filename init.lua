@@ -1,3 +1,5 @@
+Map = vim.keymap.set
+
 require("config.set")
 require("config.remap")
 require("config.functions")

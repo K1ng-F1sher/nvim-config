@@ -31,7 +31,7 @@ return {
         },
       },
 
-      vim.keymap.set("n", "<leader>e", function()
+      Map("n", "<leader>e", function()
         vim.cmd("Neotree reveal position=current")
         vim.cmd("set rnu")
       end),
