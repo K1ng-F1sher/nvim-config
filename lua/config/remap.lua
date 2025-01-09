@@ -32,7 +32,6 @@ Map("v", "<C-_>", "gc", { remap = true })
 ------------------
 Map({ "n", "v" }, "H", "^", { remap = true, desc = "move to the start of the line with a sensible key" })
 Map({ "n", "v" }, "L", "$", { remap = true, desc = "move to the end of the line with a sensible key" })
-Map("i", "<C-h>", "<esc>I", { desc = "Move to the start of the line in insert mode" })
 Map("i", "<C-l>", "<esc>A", { desc = "Move to the end of the line in insert mode" })
 Map("n", "<C-d>", "<C-d>zz")
 Map("n", "<C-u>", "<C-u>zz")
