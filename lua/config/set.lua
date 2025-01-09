@@ -4,7 +4,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 vim.opt.nu = true
 vim.opt.rnu = true
@@ -45,9 +45,9 @@ vim.g.loaded_netrwPlugin = 1
 --- Shell settings ---
 ----------------------
 if vim.fn.executable('pwsh') == 1 then
-        vim.o.shell = 'pwsh'
+  vim.o.shell = 'pwsh'
 else
-        vim.o.shell = 'powershell'
+  vim.o.shell = 'powershell'
 end
 
 vim.o.shellcmdflag =
@@ -62,21 +62,21 @@ vim.o.shellxquote = ''
 --- LSP settings ---
 --------------------
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        signs = {
-                severity = { min = vim.diagnostic.severity.INFO },
-        },
-        underline = {
-                severity = { min = vim.diagnostic.severity.INFO },
-        },
-        virtual_text = {
-                severity = { min = vim.diagnostic.severity.WARN },
-        },
+  signs = {
+    severity = { min = vim.diagnostic.severity.INFO },
+  },
+  underline = {
+    severity = { min = vim.diagnostic.severity.INFO },
+  },
+  virtual_text = {
+    severity = { min = vim.diagnostic.severity.WARN },
+  },
 })
 
 local signs = { Error = "󰅚 ", Warn = "󰀪 ", Info = " ", Hint = "󰌶 " }
 for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 ----------------------
