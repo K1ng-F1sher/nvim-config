@@ -1,6 +1,7 @@
 # (Want) to do
 
 - Now trying markdown-preview.nvim. Let's see if it's working
+- Highlight current row number (I saw Folke having it)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Telescope:
   - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
@@ -23,6 +24,7 @@
 # Documentation
 
 - [Grok VI](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
+- [ValuableDev](https://thevaluable.dev/vim-commands-beginner/)
 - Practical vim [book](https://www.bol.com/nl/nl/p/practical-vim/9200000090251005/)
 - [Vimcasts on fugitive](http://vimcasts.org/categories/git/)
 - [Awesome Neovim (list of plugins per feature)](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#terminal-integration)
@@ -30,7 +32,7 @@
 
 # Done (in reverse chronological order)
 
-- Added mini.pairs
+- Added mini.pairs (still a bit unsure whether I'm happy with it)
 - Added global `Map` field for `vim.keymap.set`
 - Added zen mode
 - Added mini.ai
