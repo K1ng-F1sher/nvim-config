@@ -1,19 +1,16 @@
 # (Want) to do
 
 - Now trying markdown-preview.nvim. Let's see if it's working
-- Highlight current row number (I saw Folke having it)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Telescope:
   - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
     - especially for specifying `hidden = true`
 - Configure markdown formatting:
   - LSP/lint/prettier
-  - line wrap
 - mini.clue / which-key?
 - SQL: [link](http://www.lazyvim.org/extras/lang/sql)
 - Read into quickfix list
 - C#/JS/TS snippets
-- Other remaps: [link](https://github.com/RoryNesbitt/RNvim/blob/main/lua/rnvim/keymaps.lua#L44-L59)
 
 # Keep an eye on
 
@@ -32,6 +29,7 @@
 
 # Done (in reverse chronological order)
 
+- Turned on linewrap and linenumber in settings
 - Added mini.pairs (still a bit unsure whether I'm happy with it)
 - Added global `Map` field for `vim.keymap.set`
 - Added zen mode
