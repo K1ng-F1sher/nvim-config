@@ -18,11 +18,13 @@ return {
     dependencies = {
       {
         "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-live-grep-args.nvim",
         { "nvim-telescope/telescope-fzf-native.nvim", lazy = false },
         -- If the line below doesn't work, cd to %LOCALAPPDATA%/nvim-data/lazy/telescope-fzf and execute `make`
         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
         config = function()
           telescope.load_extension("fzf")
+          telescope.load_extension("live_grep_args")
         end,
       },
     },
@@ -51,6 +53,9 @@ return {
           },
           live_grep = {
             prompt_prefix = "grep > "
+          },
+          git_status = {
+            prompt_prefix = "git > "
           }
         },
         extensions = {
@@ -69,20 +74,23 @@ return {
               copy_commit_hash = "<C-y>",
               show_entire_commit = "<C-e>",
             },
+          },
+          live_grep_args = {
+            prompt_prefix = "grep > "
           }
         }
       })
 
       require("telescope").load_extension("ui-select")
 
-      Map("n", "<leader>lg", builtin.live_grep, {})
+      Map("n", "<leader>lg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
       Map("n", "<C-p>", builtin.find_files, {})
       Map('n', '<leader>ls', builtin.buffers, { desc = 'Telescope buffers' })
       Map("n", "<leader>gs", function() builtin.git_status() end, {})
       Map("n", ";", builtin.resume, {})
       Map("n", "gr", function()
         centerCallback()
-        builtin.lsp_references()
+        builtin.lsp_references({ show_line = false })
       end, { desc = "Show a list of all references and center when selecting one of them" })
       Map("n", "gi", function()
         centerCallback()
