@@ -2,9 +2,6 @@
 
 - Now trying markdown-preview.nvim. Let's see if it's working
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
-- Telescope:
-  - [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
-    - especially for specifying `hidden = true`
 - Configure markdown formatting:
   - LSP/lint/prettier
 - mini.clue / which-key?
@@ -15,7 +12,7 @@
 # Keep an eye on
 
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
-- [fzf-lua]()
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
 # Documentation
@@ -29,6 +26,8 @@
 
 # Done (in reverse chronological order)
 
+- Added [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
+- Added mapping for showing error messages: `gl`
 - Turned on linewrap and linenumber in settings
 - Added mini.pairs (still a bit unsure whether I'm happy with it)
 - Added global `Map` field for `vim.keymap.set`
