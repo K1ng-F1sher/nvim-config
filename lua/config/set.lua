@@ -23,6 +23,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = vim.fn.expand("~/.nvim/undodir") -- vim doesn't parse ~ as a path when used in a string.
 vim.opt.undofile = true
+vim.opt.undolevels = 10000
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

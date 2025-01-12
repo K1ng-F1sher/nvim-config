@@ -26,6 +26,7 @@
 
 # Done (in reverse chronological order)
 
+- Set `vim.opt.undolevels = 10000`, watch if it will ensure undotree show history for a longer time
 - Added [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
 - Added mapping for showing error messages: `gl`
 - Turned on linewrap and linenumber in settings
