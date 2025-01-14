@@ -48,4 +48,4 @@ Map("n", "<leader>rc", "<cmd>set conceallevel=0<CR>", { desc = "Reset Conceallev
 ---------------
 Map("i", "<C-c>", "<Esc>")
 Map("n", "Q", "<nop>")
-Map("t", "<C-c><C-c>", "<c-\\><c-n>", { desc = "exit terminal mode" })
+Map("t", "<C-q>", "<c-\\><c-n>", { desc = "exit terminal mode" })
