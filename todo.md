@@ -1,5 +1,7 @@
 # (Want) to do
 
+- Add [live-rename](https://github.com/saecki/live-rename.nvim)
+- Close floating windows with `<C-c>`
 - Now trying markdown-preview.nvim. Let's see if it's working
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Configure markdown formatting:
