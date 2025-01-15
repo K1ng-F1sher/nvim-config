@@ -83,11 +83,11 @@ return {
 
       require("telescope").load_extension("ui-select")
 
-      Map("n", "<leader>lg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
-      Map("n", "<C-p>", builtin.find_files, {})
+      -- Map("n", "<leader>lg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
+      -- Map("n", "<C-p>", builtin.find_files, {})
       Map('n', '<leader>ls', builtin.buffers, { desc = 'Telescope buffers' })
       Map("n", "<leader>gs", function() builtin.git_status() end, {})
-      Map("n", ";", builtin.resume, {})
+      -- Map("n", ";", builtin.resume, {})
       Map("n", "gr", function()
         centerCallback()
         builtin.lsp_references({ show_line = false })

@@ -5,7 +5,6 @@ return
   priority = 1000,
   ---@type snacks.Config
   opts = {
-    words = {},
     dashboard = {
       sections = {
         { section = "header" },
@@ -27,8 +26,25 @@ return
         { section = "startup" },
       },
     },
+    picker = {
+      win = {
+        input = {
+          keys = {
+            ["<C-c>"] = { "close", mode = { "n", "i" } },
+          }
+        }
+      }
+    },
+    words = {},
   },
   keys = {
+    -- picker
+    { "<C-p>",      function() Snacks.picker.files() end,      desc = "Find Files" },
+    { "<leader>lg", function() Snacks.picker.grep() end,       desc = "Grep" },
+    { ";",          function() Snacks.picker.resume() end,     desc = "Resume" },
+    { "<leader>gc", function() Snacks.picker.git_log() end,    desc = "Git Log" },
+    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
+    -- words
     {
       ']]',
       function()
