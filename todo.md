@@ -1,8 +1,10 @@
 # (Want) to do
 
+- Snacks pickers!
 - Add [live-rename](https://github.com/saecki/live-rename.nvim)
 - Close floating windows with `<C-c>`
-- Now trying markdown-preview.nvim. Let's see if it's working
+- Now trying markdown-preview.nvim. Let's see if it's working. Else [this] (https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- Configure pairs: (https://www.reddit.com/r/neovim/comments/1ha03xn/minipairs_handle_quotes_neigh_pattern_regex/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Configure markdown formatting:
   - LSP/lint/prettier
@@ -14,7 +16,6 @@
 # Keep an eye on
 
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
-- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
 # Documentation
