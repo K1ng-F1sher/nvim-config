@@ -1,10 +1,8 @@
 # (Want) to do
 
 - Snacks pickers!
-- Add [live-rename](https://github.com/saecki/live-rename.nvim)
 - Close floating windows with `<C-c>`
-- Now trying markdown-preview.nvim. Let's see if it's working. Else [this] (https://github.com/MeanderingProgrammer/render-markdown.nvim)
-- Configure pairs: (https://www.reddit.com/r/neovim/comments/1ha03xn/minipairs_handle_quotes_neigh_pattern_regex/)
+- Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Configure markdown formatting:
   - LSP/lint/prettier
@@ -29,6 +27,9 @@
 
 # Done (in reverse chronological order)
 
+- Configured pairs: [link](https://www.reddit.com/r/neovim/comments/1ha03xn/minipairs_handle_quotes_neigh_pattern_regex/)
+- Added [live-rename](https://github.com/saecki/live-rename.nvim)
+- Changed markdown viewer to [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - Set `vim.opt.undolevels = 10000`, watch if it will ensure undotree show history for a longer time
 - Added [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)
 - Added mapping for showing error messages: `gl`
