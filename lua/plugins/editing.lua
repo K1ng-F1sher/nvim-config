@@ -54,7 +54,18 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require('mini.ai').setup()
-      require("mini.pairs").setup()
+      require("mini.pairs").setup(
+        {
+          mappings = {
+            ['('] = { action = 'open', pair = '()', neigh_pattern = '[^%a\\].' },
+            ['['] = { action = 'open', pair = '[]', neigh_pattern = '[^%a\\].' },
+            ['{'] = { action = 'open', pair = '{}', neigh_pattern = '[^%a\\].' },
+
+            ['"'] = { action = 'closeopen', pair = '""', neigh_pattern = '[^%a\\].', register = { cr = false } },
+            ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^%a\\].', register = { cr = false } },
+          }
+        }
+      )
       require("mini.surround").setup()
     end,
   },
