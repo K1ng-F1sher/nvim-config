@@ -29,16 +29,23 @@ return {
   },
   {
     "folke/ts-comments.nvim",
-    opts = {},
     event = "VeryLazy",
-    enabled = vim.fn.has("nvim-0.10.2") == 1,
+    enabled = vim.fn.has("nvim-0.10.3") == 1,
+    opts = {},
+  },
+  {
+    "saecki/live-rename.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      Map("n", "<leader>rn", require("live-rename").map({ insert = true }), { desc = "LSP rename" })
+    end,
   },
   {
     "Wansmer/treesj",
     keys = {
       "<leader>m",
     },
-    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
   },
   {
