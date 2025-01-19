@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Snacks pickers!
 - Close floating windows with `<C-c>`
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
@@ -13,6 +12,9 @@
 
 # Keep an eye on
 
+- Snacks pickers
+  - Still an issue with live grep
+  - I'd like to have advanced_git_searchc
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 

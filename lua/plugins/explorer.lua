@@ -7,7 +7,6 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    lazy = false,
     cmd = "Neotree",
     opts = {
       filesystem = {
@@ -31,11 +30,15 @@ return {
         },
       },
 
-      Map("n", "<leader>e", function()
-        vim.cmd("Neotree reveal position=current")
-        vim.cmd("set rnu")
-      end),
+      -- Map("n", "<leader>e", function()
+      --   vim.cmd("Neotree reveal position=current")
+      --   vim.cmd("set rnu")
+      -- end),
     },
+    keys = { { "<leader>e", function()
+      vim.cmd("Neotree reveal position=current")
+      vim.cmd("set rnu")
+    end } }
   },
 
   {
