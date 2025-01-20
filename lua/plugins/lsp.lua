@@ -87,7 +87,7 @@ return {
       Map("n", "]d", function()
         vim.diagnostics.goto_prev()
       end, opts)
-      Map("n", "<leader>ca", function()
+      Map("n", "<leader>vc", function()
         vim.lsp.buf.code_action()
       end, opts)
       Map("n", "<leader>vh", function()
