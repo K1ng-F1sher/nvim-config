@@ -1,6 +1,8 @@
 # (Want) to do
 
 - Close floating windows with `<C-c>`
+- Clean plugins: commented out, unused (hop)
+- Can harpoon go back to the last position the cursor was, instead when the mark was made?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Configure markdown formatting:
