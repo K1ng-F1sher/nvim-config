@@ -34,13 +34,6 @@ return {
     opts = {},
   },
   {
-    "saecki/live-rename.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      Map("n", "<leader>rn", require("live-rename").map({ insert = true }), { desc = "LSP rename" })
-    end,
-  },
-  {
     "Wansmer/treesj",
     keys = {
       "<leader>m",
