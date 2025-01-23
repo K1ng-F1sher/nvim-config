@@ -1,7 +1,7 @@
 # (Want) to do
 
-- Close floating windows with `<C-c>`
-- Clean plugins: commented out, unused (hop)
+- Clean plugins: commented out, unused 
+- Map for committing the current buffer only.
 - Can harpoon go back to the last position the cursor was, instead when the mark was made?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
@@ -17,7 +17,7 @@
 
 - Snacks pickers
   - Still an issue with live grep
-  - I'd like to have advanced_git_searchc
+  - I'd like to have advanced_git_search
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
@@ -32,8 +32,9 @@
 
 # Done (in reverse chronological order)
 
+- Nothing more clever than `<C-w>:q` for closing floating windows.
 - Configured pairs: [link](https://www.reddit.com/r/neovim/comments/1ha03xn/minipairs_handle_quotes_neigh_pattern_regex/)
-- Added [live-rename](https://github.com/saecki/live-rename.nvim)
+- Added [live-rename](https://github.com/saecki/live-rename.nvim). Removed again, didn't like it. Doesn't add much.
 - Changed markdown viewer to [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - Set `vim.opt.undolevels = 10000`, watch if it will ensure undotree show history for a longer time
 - Added [Telescope live_grep with args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim)

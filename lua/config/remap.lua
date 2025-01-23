@@ -13,7 +13,6 @@ Map("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 -----------------
 --- Clipboard ---
 -----------------
-Map("n", "<C-a>", "ggVG")
 Map("v", "y", "ygv<esc>", { remap = true, desc = "stay in visual mode after yanking" })
 Map("n", "gy", "[v]", { desc = 'select recently pasted, yanked or changed text' })
 Map({ "n", "v" }, "<leader>y", '"+y', { desc = "copy to system clipboard" })

@@ -7,8 +7,8 @@ local state = {
 
 local function create_floating_window(opts)
   opts = opts or {}
-  local width = opts.width or math.floor(vim.o.columns * 0.6)
-  local height = opts.height or math.floor(vim.o.lines * 0.6)
+  local width = opts.width or math.floor(vim.o.columns * 0.9)
+  local height = opts.height or math.floor(vim.o.lines * 0.8)
 
   -- Calculate the position to center the window
   local col = math.floor((vim.o.columns - width) / 2)
@@ -19,7 +19,7 @@ local function create_floating_window(opts)
   if vim.api.nvim_buf_is_valid(opts.buf) then
     buf = opts.buf
   else
-    buf = vim.api.nvim_create_buf(false, true)     -- No file, scratch buffer
+    buf = vim.api.nvim_create_buf(false, true) -- No file, scratch buffer
   end
 
   -- Define window configuration
@@ -29,7 +29,7 @@ local function create_floating_window(opts)
     height = height,
     col = col,
     row = row,
-    style = "minimal",     -- No borders or extra UI elements
+    style = "minimal", -- No borders or extra UI elements
     border = "rounded",
   }
 
