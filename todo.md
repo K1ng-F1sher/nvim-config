@@ -1,10 +1,10 @@
 # (Want) to do
 
-- Clean plugins: commented out, unused 
+- Clean plugins: commented out, unused
+- Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)
 - Can harpoon go back to the last position the cursor was, instead when the mark was made?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
-- Add feature for sorting references
 - Configure markdown formatting:
   - LSP/lint/prettier
 - mini.clue / which-key?
@@ -14,9 +14,6 @@
 
 # Keep an eye on
 
-- Snacks pickers
-  - Still an issue with live grep
-  - I'd like to have advanced_git_search
 - [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
