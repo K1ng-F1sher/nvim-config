@@ -27,12 +27,14 @@ return {
       })
     end,
   },
+
   {
     "folke/ts-comments.nvim",
     event = "VeryLazy",
     enabled = vim.fn.has("nvim-0.10.3") == 1,
     opts = {},
   },
+
   {
     "Wansmer/treesj",
     keys = {
@@ -41,6 +43,30 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
   },
+
+
+  {
+    "mbbill/undotree",
+    lazy = true,
+    cmd = { "UndotreeToggle", "UndotreeShow" },
+    keys = {
+      {
+        "<leader>u",
+        vim.cmd.UndotreeToggle,
+        desc = "Undotree: Toggle Undotree",
+      },
+    },
+    config = function(_, _)
+      vim.g.undotree_SetFocusWhenToggle = 1
+      vim.g.undotree_DiffAutoOpen = 0
+      vim.g.undotree_SplitWidth = 36
+
+      if vim.fn.has("win32") == 1 then
+        vim.g.undotree_DiffCommand = "FC"
+      end
+    end,
+  },
+
   {
     'echasnovski/mini.nvim',
     version = "*",
@@ -64,8 +90,7 @@ return {
           },
           -- skip autopair when next character is one of these
           skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-          -- skip autopair when next character is closing pair
-          -- and there are more closing pairs than opening pairs
+          -- skip autopair when next character is closing pair and there are more closing pairs than opening pairs
           skip_unbalanced = true,
           -- better deal with markdown code blocks
           markdown = true,
@@ -74,4 +99,5 @@ return {
       require("mini.surround").setup()
     end,
   },
+
 }
