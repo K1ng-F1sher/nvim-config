@@ -1,9 +1,7 @@
 # (Want) to do
 
-- Clean plugins: commented out, unused
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)
 - Do I want Diffview?
-- Can harpoon go back to the last position the cursor was, instead when the mark was made?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
 - Configure markdown formatting:
@@ -29,6 +27,8 @@
 
 # Done (in reverse chronological order)
 
+- Can harpoon go back to the last position the cursor was, instead when the mark was made? [YES!](https://www.reddit.com/r/neovim/comments/1apuied/harpoon_go_to_last_cursor_position/?rdt=40866)
+- Reorganized plugins.
 - Nothing more clever than `<C-w>:q` for closing floating windows.
 - Configured pairs: [link](https://www.reddit.com/r/neovim/comments/1ha03xn/minipairs_handle_quotes_neigh_pattern_regex/)
 - Added [live-rename](https://github.com/saecki/live-rename.nvim). Removed again, didn't like it. Doesn't add much.

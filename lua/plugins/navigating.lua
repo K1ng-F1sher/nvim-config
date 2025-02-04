@@ -11,11 +11,31 @@ return {
       local harpoon = require("harpoon")
 
       -- REQUIRED
-      harpoon:setup()
+      harpoon:setup({
+        settings = {
+          sync_on_ui_close = false,
+        }
+      })
 
       Map("n", "<C-c>", function()
         harpoon.ui:close_menu()
       end)
+
+      -- Create an autocmd that saves the last line number for harpooned buffers
+      vim.api.nvim_create_autocmd({ "BufLeave", "ExitPre" }, {
+        pattern = "*",
+        callback = function()
+          local filename = vim.fn.expand("%:p:.")
+          local harpoon_marks = harpoon:list().items
+          for _, mark in ipairs(harpoon_marks) do
+            if mark.value == filename then
+              mark.context.row = vim.fn.line(".")
+              mark.context.col = vim.fn.col(".")
+              return
+            end
+          end
+        end,
+      })
     end,
     keys = {
       {
