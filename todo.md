@@ -1,6 +1,7 @@
 # (Want) to do
 
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)
+- try out snacks explorer
 - Do I want Diffview?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
