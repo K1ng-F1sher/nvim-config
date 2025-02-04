@@ -4,6 +4,71 @@ end
 
 return {
   {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local harpoon = require("harpoon")
+
+      -- REQUIRED
+      harpoon:setup()
+
+      Map("n", "<C-c>", function()
+        harpoon.ui:close_menu()
+      end)
+    end,
+    keys = {
+      {
+        "<leader>a",
+        function() require("harpoon"):list():add() end,
+        desc = "Add buffer to harpoon window",
+      },
+      { "<C-h>", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end },
+      { "<C-j>", function() list(1) end },
+      { "<C-k>", function() list(2) end },
+      { "<C-l>", function() list(3) end },
+      { "<C-m>", function() list(4) end },
+      { "<C-n>", function() list(5) end },
+    },
+  },
+
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      Map('n', 'S', '<Plug>(leap)')
+    end,
+    keys = {
+      'S',
+    },
+  },
+
+  {
+    "echasnovski/mini.files",
+    version = "*",
+    opts = {
+      mappings = {
+        close = "<C-c>",
+        go_in_plus = "<CR>",
+      },
+      options = {
+        use_as_default_explorer = false,
+      },
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "MiniFilesWindowUpdate",
+        callback = function(args)
+          vim.wo[args.data.win_id].relativenumber = true
+        end,
+      }),
+    },
+    keys = {
+      {
+        "-",
+        "<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>",
+      },
+    },
+  },
+
+  {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
@@ -34,59 +99,4 @@ return {
     end } }
   },
 
-  {
-    "echasnovski/mini.files",
-    version = "*",
-    opts = {
-      mappings = {
-        close = "<C-c>",
-        go_in_plus = "<CR>",
-      },
-      options = {
-        use_as_default_explorer = false,
-      },
-
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "MiniFilesWindowUpdate",
-        callback = function(args)
-          vim.wo[args.data.win_id].relativenumber = true
-        end,
-      }),
-    },
-    keys = {
-      {
-        "-",
-        "<cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0), true)<CR>",
-      },
-    },
-  },
-
-  {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      local harpoon = require("harpoon")
-
-      -- REQUIRED
-      harpoon:setup()
-
-      Map("n", "<C-c>", function()
-        harpoon.ui:close_menu()
-      end)
-    end,
-    keys = {
-      {
-        "<leader>a",
-        function() require("harpoon"):list():add() end,
-        desc = "Add buffer to harpoon window",
-      },
-      { "<C-h>", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end },
-      { "<C-j>", function() list(1) end },
-      { "<C-k>", function() list(2) end },
-      { "<C-l>", function() list(3) end },
-      { "<C-m>", function() list(4) end },
-      { "<C-n>", function() list(5) end },
-    },
-  },
 }
