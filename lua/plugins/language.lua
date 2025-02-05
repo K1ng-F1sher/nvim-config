@@ -78,6 +78,7 @@ return {
         Map("n", "]d", function() vim.diagnostics.goto_prev() end, opts)
         Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end, opts)
         Map("n", "<leader>vh", function() vim.lsp.buf.signature_help() end, opts)
+        Map("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
       end)
 
       lsp.setup()
