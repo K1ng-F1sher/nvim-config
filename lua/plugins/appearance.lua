@@ -97,6 +97,7 @@ return {
         },
       },
       picker = {
+        matcher = { frecency = true },
         win = {
           input = {
             keys = {
@@ -120,6 +121,7 @@ return {
       { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
       ---- git
       { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" },
+      { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
       { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
       ---- search
       { "<leader>lg", function() Snacks.picker.grep() end,                 desc = "Live Grep" },
