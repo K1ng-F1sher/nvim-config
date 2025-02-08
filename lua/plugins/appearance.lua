@@ -121,7 +121,7 @@ return {
       { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
       ---- git
       { "<leader>gh", function() Snacks.picker.git_grep() end,             desc = "Git History" },
-      { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" },
+      -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>GT instead
       { "<leader>gf", function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
       { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
       { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
