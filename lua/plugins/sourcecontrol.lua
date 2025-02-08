@@ -1,4 +1,4 @@
-return {
+hhsreturn {
   {
     "tpope/vim-fugitive",
     -- Can't use opts for fugitive, because it's not written in lua.
@@ -7,7 +7,7 @@ return {
       Map("n", "<leader>gc", ":G commit -m ''<Left>")
       Map("n", "<leader>gq", ":G commit . -m ''<Left>", { desc = "Remember by 'Git Quick commit'." })
       Map("n", "<leader>gp", ":G push<CR>", { silent = true })
-      -- Map("n", "<leader>gl", ":G pull<CR>", { silent = true })
+      Map("n", "<leader>gl", ":G pull<CR>", { silent = true })
       Map(
         "n",
         "<leader>gt",
@@ -66,7 +66,7 @@ return {
     end,
     keys = {
       {
-        "<leader>gh",
+        "<leader>gH",
         "<cmd>AdvancedGitSearch search_log_content<cr>",
         desc = "AdvancedGitSearch through git commit history",
       }
