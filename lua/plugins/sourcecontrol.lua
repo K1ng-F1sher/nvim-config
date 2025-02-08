@@ -1,4 +1,4 @@
-hhsreturn {
+return {
   {
     "tpope/vim-fugitive",
     -- Can't use opts for fugitive, because it's not written in lua.
