@@ -120,14 +120,15 @@ return {
       { "<leader>ls", function() Snacks.picker.buffers() end,              desc = "Buffers" },
       { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
       ---- git
+      { "<leader>gh", function() Snacks.picker.git_grep() end,             desc = "Git History" },
       { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" },
       { "<leader>gf", function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
       { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
       { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
       ---- search
       { "<leader>lg", function() Snacks.picker.grep() end,                 desc = "Live Grep" },
-      { "<leader>sj", function() Snacks.picker.jumps() end,                desc = "Search Jumps" },
-      { "<leader>sq", function() Snacks.picker.qflist() end,               desc = "Quickfix List" },
+      { "<leader>jl", function() Snacks.picker.jumps() end,                desc = "Jump List" },
+      { "<leader>qf", function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
       ---- LSP
       { "gd",         function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
       { "gr",         function() Snacks.picker.lsp_references() end,       nowait = true,                desc = "References" },
