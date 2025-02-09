@@ -66,7 +66,7 @@ return {
     end,
     keys = {
       {
-        "<leader>gH",
+        "<leader>gh",
         "<cmd>AdvancedGitSearch search_log_content<cr>",
         desc = "AdvancedGitSearch through git commit history",
       }
