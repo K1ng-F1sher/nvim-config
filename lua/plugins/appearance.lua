@@ -111,6 +111,7 @@ return {
           }
         }
       },
+      image = {},
       words = {},
     },
     keys = {
