@@ -1,7 +1,15 @@
 # (Want) to do
 
+- WSL:
+  - Install [C compiler]:
+
+```
+sudo apt-get update
+sudo apt-get install build-essential
+```
+
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)
-- try out snacks explorer
+- Try out snacks explorer
 - Do I want Diffview?
 - Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly: log file in `..\AppData\Local\nvim-data`
