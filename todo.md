@@ -36,6 +36,7 @@ sudo apt-get install build-essential
 
 # Done (in reverse chronological order)
 
+- Added decent `.mdx` filetype highlighting.
 - Can harpoon go back to the last position the cursor was, instead when the mark was made? [YES!](https://www.reddit.com/r/neovim/comments/1apuied/harpoon_go_to_last_cursor_position/?rdt=40866)
 - Reorganized plugins.
 - Nothing more clever than `<C-w>:q` for closing floating windows.
