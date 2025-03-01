@@ -154,7 +154,7 @@ return {
       },
 
       -- experimental signature help support
-      -- signature = { enabled = true },
+      signature = { enabled = true },
 
       sources = {
         -- adding any nvim-cmp sources here will enable them
