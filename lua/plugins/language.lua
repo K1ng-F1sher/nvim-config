@@ -157,14 +157,7 @@ return {
       signature = {
         enabled = true,
         window = {
-          completion = {
-            border = "rounded",
-            -- winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
-          },
-          documentation = {
-            border = "rounded",
-            -- winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
-          },
+          border = "rounded",
           max_width = 160,
           max_height = 30,
           scrollbar = true,
