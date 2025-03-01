@@ -22,6 +22,7 @@ return {
         lua_ls = true,
         rust_analyzer = true,
         cssls = true,
+        csharp_ls = true,
 
         -- Probably want to disable formatting for this lang server
         ts_ls = true,
