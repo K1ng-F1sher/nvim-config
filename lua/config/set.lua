@@ -1,4 +1,4 @@
-------------------------
+----------------------
 --- General settings ---
 ------------------------
 vim.g.mapleader = " "
@@ -46,19 +46,21 @@ vim.g.loaded_netrwPlugin = 1
 ----------------------
 --- Shell settings ---
 ----------------------
-if vim.fn.executable('pwsh') == 1 then
-  vim.o.shell = 'pwsh'
-else
-  vim.o.shell = 'powershell'
+if string.find(string.lower(vim.loop.os_uname().sysname), 'windows') then
+  if vim.fn.executable('pwsh') == 1 then
+    vim.o.shell = 'pwsh'
+  else
+    vim.o.shell = 'powershell'
+  end
+
+  vim.o.shellcmdflag =
+  '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
+
+  vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
+  vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
+  vim.o.shellquote = ''
+  vim.o.shellxquote = ''
 end
-
-vim.o.shellcmdflag =
-'-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
-
-vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
-vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
-vim.o.shellquote = ''
-vim.o.shellxquote = ''
 
 --------------------
 --- LSP settings ---
