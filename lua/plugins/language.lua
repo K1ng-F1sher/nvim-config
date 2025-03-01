@@ -154,7 +154,22 @@ return {
       },
 
       -- experimental signature help support
-      signature = { enabled = true },
+      signature = {
+        enabled = true,
+        window = {
+          completion = {
+            border = "rounded",
+            -- winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
+          },
+          documentation = {
+            border = "rounded",
+            -- winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
+          },
+          max_width = 160,
+          max_height = 30,
+          scrollbar = true,
+        },
+      },
 
       sources = {
         -- adding any nvim-cmp sources here will enable them
