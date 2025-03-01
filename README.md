@@ -1,9 +1,14 @@
 # Neovim config
 
-This is my current neovim config. It uses neovim 0.10.2.
-Default config location on Windows: "~/AppData/Local/nvim/"
+This is my current neovim config. I'm on neovim 0.10.4.
+Default config location on:
+
+- Windows: "~/AppData/Local/nvim/init.lua"
+- Linux: "~/.config/nvim/init.lua"
 
 Tools required:
+
 - [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
-- [C-compiler](https://github.com/skeeto/w64devkit)
-- make: `choco install make`
+- a C-compiler:
+  - [Windows](https://github.com/skeeto/w64devkit)
+  - [Linux (build-essential)](https://www.linux.org/threads/installing-c-compiler.48017/):
