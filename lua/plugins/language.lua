@@ -32,7 +32,6 @@ return {
           "ts_ls",
           "eslint",
           "lua_ls",
-          "powershell_es",
         },
         automatic_installation = true,
         handlers = {
