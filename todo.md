@@ -1,5 +1,7 @@
 # (Want) to do
 
+- test out blink during work. 
+    - make buf.hover (`<S-k>`) bordered.
 - nvim.pairs instead of mini.pairs
 - Try out snacks explorer
 - Do I want Diffview?
