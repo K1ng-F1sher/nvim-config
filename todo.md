@@ -1,8 +1,6 @@
 # (Want) to do
 
-- WSL:
-  - Only set PS as shell when on windows
-- nvim.pairs instead of mini.pairs?
+- nvim.pairs instead of mini.pairs
 - Try out snacks explorer
 - Do I want Diffview?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
@@ -30,7 +28,8 @@
 
 # Done (in reverse chronological order)
 
-- Final chance for mini.pairs, now I have the same config as Lazyvim. But for now, it's too much frustration.
+- mini.pairs is out. Too much frustration.
+- Only set PS as shell when on windows
 - Added decent `.mdx` filetype highlighting.
 - Can harpoon go back to the last position the cursor was, instead when the mark was made? [YES!](https://www.reddit.com/r/neovim/comments/1apuied/harpoon_go_to_last_cursor_position/?rdt=40866)
 - Reorganized plugins.
