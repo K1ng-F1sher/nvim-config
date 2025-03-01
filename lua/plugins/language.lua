@@ -160,7 +160,7 @@ return {
           border = "rounded",
           max_width = 160,
           max_height = 30,
-          scrollbar = true,
+          scrollbar = false,
         },
       },
 
