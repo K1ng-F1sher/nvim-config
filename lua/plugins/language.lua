@@ -3,30 +3,20 @@ return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      -- LSP wrapper for vtsls.
-      'yioneko/nvim-vtsls',
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       'saghen/blink.cmp'
     },
     config = function()
       local capabilities = nil
-      if pcall(require, "cmp_nvim_lsp") then
-        capabilities = require("cmp_nvim_lsp").default_capabilities()
-      end
-
       local lspconfig = require "lspconfig"
 
       local servers = {
         bashls = true,
         lua_ls = true,
-        rust_analyzer = true,
         cssls = true,
         csharp_ls = true,
-
-        -- Probably want to disable formatting for this lang server
         ts_ls = true,
-
         jsonls = {
           settings = {
             json = {
@@ -36,24 +26,15 @@ return {
         },
       }
 
-      local servers_to_install = vim.tbl_filter(function(key)
-        local t = servers[key]
-        if type(t) == "table" then
-          return not t.manual_install
-        else
-          return t
-        end
-      end, vim.tbl_keys(servers))
-
       require("mason").setup({
         ensure_installed = {
           "ts_ls",
           "eslint",
           "lua_ls",
+          "cssls",
         },
         automatic_installation = true,
         handlers = {
-
           powershell_es = function()
             local lspconfig = require("lspconfig")
             lspconfig.powershell_es.setup({
@@ -86,15 +67,16 @@ return {
           local bufnr = args.buf
           local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
 
-          Map("n", "K", function() vim.lsp.buf.hover() end, opts)
-          Map("n", "gl", function() vim.diagnostic.open_float() end, opts)
-          Map("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-          Map("n", "<leader>vd", function() vim.diagnostics.open_float() end, opts)
-          Map("n", "[d", function() vim.diagnostics.goto_next() end, opts)
-          Map("n", "]d", function() vim.diagnostics.goto_prev() end, opts)
-          Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end, opts)
-          Map("n", "<leader>vh", function() vim.lsp.buf.signature_help() end, opts)
-          Map("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
+          Map("n", "K", function() vim.lsp.buf.hover() end)
+          Map("n", "gl", function() vim.diagnostic.open_float() end)
+          Map("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
+          Map("n", "<leader>vd", function() vim.diagnostics.open_float() end)
+          Map("n", "[d", function() vim.diagnostics.goto_next() end)
+          Map("n", "]d", function() vim.diagnostics.goto_prev() end)
+          Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end)
+          Map("n", "<leader>vh", function() vim.lsp.buf.signature_help() end)
+          Map("n", "<leader>rn", function() vim.lsp.buf.rename() end)
+
           local filetype = vim.bo[bufnr].filetype
           if disable_semantic_tokens[filetype] then
             client.server_capabilities.semanticTokensProvider = nil
@@ -109,18 +91,10 @@ return {
     version = "*",
     dependencies = {
       "rafamadriz/friendly-snippets",
-      -- add blink.compat to dependencies
-      {
-        "saghen/blink.compat",
-        optional = true, -- make optional so it's only enabled if any extras need it
-        opts = {},
-        version = "*",
-      },
     },
     event = "InsertEnter",
 
     ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
     opts = {
       appearance = {
         -- sets the fallback highlight groups to nvim-cmp's highlight groups
@@ -166,9 +140,6 @@ return {
       },
 
       sources = {
-        -- adding any nvim-cmp sources here will enable them
-        -- with blink.compat
-        compat = {},
         default = { "lsp", "path", "snippets", "buffer" },
       },
 
@@ -185,69 +156,6 @@ return {
         ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
       },
     },
-
-    ---@param opts blink.cmp.Config | { sources: { compat: string[] } }
-    config = function(_, opts)
-      -- setup compat sources
-      local enabled = opts.sources.default
-      for _, source in ipairs(opts.sources.compat or {}) do
-        opts.sources.providers[source] = vim.tbl_deep_extend(
-          "force",
-          { name = source, module = "blink.compat.source" },
-          opts.sources.providers[source] or {}
-        )
-        if type(enabled) == "table" and not vim.tbl_contains(enabled, source) then
-          table.insert(enabled, source)
-        end
-      end
-
-      -- add ai_accept to <Tab> key
-      if not opts.keymap["<Tab>"] then
-        if opts.keymap.preset == "super-tab" then -- super-tab
-          opts.keymap["<Tab>"] = {
-            require("blink.cmp.keymap.presets")["super-tab"]["<Tab>"][1],
-            "fallback",
-          }
-        else -- other presets
-          opts.keymap["<Tab>"] = {
-            "fallback",
-          }
-        end
-      end
-
-      -- Unset custom prop to pass blink.cmp validation
-      opts.sources.compat = nil
-
-      -- check if we need to override symbol kinds
-      for _, provider in pairs(opts.sources.providers or {}) do
-        ---@cast provider blink.cmp.SourceProviderConfig|{kind?:string}
-        if provider.kind then
-          local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
-          local kind_idx = #CompletionItemKind + 1
-
-          CompletionItemKind[kind_idx] = provider.kind
-          ---@diagnostic disable-next-line: no-unknown
-          CompletionItemKind[provider.kind] = kind_idx
-
-          ---@type fun(ctx: blink.cmp.Context, items: blink.cmp.CompletionItem[]): blink.cmp.CompletionItem[]
-          local transform_items = provider.transform_items
-          ---@param ctx blink.cmp.Context
-          ---@param items blink.cmp.CompletionItem[]
-          provider.transform_items = function(ctx, items)
-            items = transform_items and transform_items(ctx, items) or items
-            for _, item in ipairs(items) do
-              item.kind = kind_idx or item.kind
-            end
-            return items
-          end
-
-          -- Unset custom prop to pass blink.cmp validation
-          provider.kind = nil
-        end
-      end
-
-      require("blink.cmp").setup(opts)
-    end,
   },
 
   {
