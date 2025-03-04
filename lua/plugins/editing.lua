@@ -30,6 +30,14 @@ return {
   },
 
   {
+    "stevearc/quicker.nvim",
+    event = "FileType qf",
+    ---@module "quicker"
+    ---@type quicker.SetupOptions
+    opts = {},
+  },
+
+  {
     'echasnovski/mini.nvim',
     version = "*",
     event = { "BufReadPre", "BufNewFile" },

@@ -40,7 +40,6 @@ return {
         automatic_installation = true,
         handlers = {
           powershell_es = function()
-            local lspconfig = require("lspconfig")
             lspconfig.powershell_es.setup({
               on_attach = function(client, bufnr)
                 vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")

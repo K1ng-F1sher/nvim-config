@@ -1,23 +1,18 @@
 # (Want) to do
 
-- test out blink during work. 
-    - make buf.hover (`<S-k>`) bordered.
-    - make sass cmp work again.
+- test out blink during work.
+  - make buf.hover (`<S-k>`) bordered.
 - nvim.pairs instead of mini.pairs
 - Try out snacks explorer
 - Do I want Diffview?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
-- Have a go at decreasing startup time with [this link](https://rootknecht.net/blog/debloating-neovim-config/)
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
-- Configure markdown formatting:
-  - LSP/lint/prettier
 - mini.clue / which-key?
 - Read into quickfix list
 - C#/JS/TS snippets
 
 # Keep an eye on
 
-- [blink.cmp](https://github.com/Saghen/blink.cmp) | [TJ's video](https://www.youtube.com/watch?v=Q0cvzaPJJas)
 - [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
 # Documentation
@@ -31,6 +26,7 @@
 
 # Done (in reverse chronological order)
 
+- Testing out blink.cmp. Sass wasn't giving autocomplete, but fixed it by configuring the capabilities correctly.
 - mini.pairs is out. Too much frustration.
 - Only set PS as shell when on windows
 - Added decent `.mdx` filetype highlighting.
