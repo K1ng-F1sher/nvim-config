@@ -8,7 +8,11 @@ return {
       'saghen/blink.cmp'
     },
     config = function()
-      local capabilities = nil
+      local capabilities = vim.tbl_deep_extend(
+        "force",
+        {},
+        vim.lsp.protocol.make_client_capabilities(),
+        require("blink.cmp").get_lsp_capabilities())
       local lspconfig = require "lspconfig"
 
       local servers = {
@@ -52,7 +56,7 @@ return {
           config = {}
         end
         config = vim.tbl_deep_extend("force", {}, {
-          capabilities = capabilities,
+          capabilities = capabilities
         }, config)
 
         lspconfig[name].setup(config)
