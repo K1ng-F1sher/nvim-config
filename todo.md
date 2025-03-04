@@ -8,7 +8,6 @@
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
 - mini.clue / which-key?
-- Read into quickfix list
 - C#/JS/TS snippets
 
 # Keep an eye on
@@ -26,7 +25,9 @@
 
 # Done (in reverse chronological order)
 
+- Added quicker.nvim
 - Testing out blink.cmp. Sass wasn't giving autocomplete, but fixed it by configuring the capabilities correctly.
+  - Used [TJ](https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/lsp.lua) and [MariaSolos](https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/lua/plugins/lspconfig.lua)' githubs as inspiration.
 - mini.pairs is out. Too much frustration.
 - Only set PS as shell when on windows
 - Added decent `.mdx` filetype highlighting.

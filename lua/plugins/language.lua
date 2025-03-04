@@ -8,11 +8,6 @@ return {
       'saghen/blink.cmp'
     },
     config = function()
-      local capabilities = vim.tbl_deep_extend(
-        "force",
-        {},
-        vim.lsp.protocol.make_client_capabilities(),
-        require("blink.cmp").get_lsp_capabilities())
       local lspconfig = require "lspconfig"
 
       local servers = {
@@ -50,6 +45,12 @@ return {
         },
       })
 
+      local capabilities = vim.tbl_deep_extend(
+        "force",
+        {},
+        vim.lsp.protocol.make_client_capabilities(),
+        require("blink.cmp").get_lsp_capabilities())
+
       for name, config in pairs(servers) do
         if config == true then
           config = {}
@@ -85,6 +86,21 @@ return {
             client.server_capabilities.semanticTokensProvider = nil
           end
         end,
+      })
+
+      require('lspconfig.ui.windows').default_options.border = 'rounded'
+      vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+        vim.lsp.handlers.hover,
+        { border = 'rounded' }
+      )
+      vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+        vim.lsp.handlers.signature_help,
+        { border = 'rounded' }
+      )
+      vim.diagnostic.config({
+        float = {
+          border = 'rounded',
+        },
       })
     end,
   },
