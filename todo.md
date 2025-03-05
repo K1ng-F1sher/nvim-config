@@ -1,6 +1,7 @@
 # (Want) to do
 
 - nvim.pairs instead of mini.pairs
+    - Also, try out [ts-autotags](https://github.com/windwp/nvim-ts-autotag)
 - Try out snacks explorer
 - Do I want Diffview?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
