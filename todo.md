@@ -1,8 +1,5 @@
 # (Want) to do
 
-- test out blink during work.
-- nvim.pairs instead of mini.pairs
-    - Also, try out [ts-autotags](https://github.com/windwp/nvim-ts-autotag)
 - Try out snacks explorer
 - Do I want Diffview?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
@@ -27,7 +24,7 @@
 
 - Added quicker.nvim
 - Testing out blink.cmp. Sass wasn't giving autocomplete, but fixed it by configuring the capabilities correctly.
-  - Used [TJ](https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/lsp.lua) and [MariaSolos](https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/lua/plugins/lspconfig.lua)' githubs as inspiration.
+  - Used [TJ](https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/lsp.lua)' and [MariaSolos](https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/lua/plugins/lspconfig.lua)' githubs as inspiration.
 - mini.pairs is out. Too much frustration.
 - Only set PS as shell when on windows
 - Added decent `.mdx` filetype highlighting.
