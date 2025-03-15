@@ -96,6 +96,7 @@ return {
           { section = "startup" },
         },
       },
+      explorer = {},
       picker = {
         matcher = { frecency = true },
         win = {
@@ -117,14 +118,46 @@ return {
     keys = {
       -- picker
       ---- find
-      { "<C-p>",      function() Snacks.picker.files() end,                desc = "Find Files" },
-      { "<leader>ls", function() Snacks.picker.buffers() end,              desc = "Buffers" },
-      { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
+      { "<C-p>",      function() Snacks.picker.files() end,        desc = "Find Files" },
+      { "<leader>ls", function() Snacks.picker.buffers() end,      desc = "Buffers" },
+      { ";",          function() Snacks.picker.resume() end,       desc = "Resume" },
       ---- git
       -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>gt instead
-      { "<leader>gf", function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
-      { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
-      { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
+      { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+      { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
+      { "<leader>gs", function() Snacks.picker.git_status() end,   desc = "Git Status" },
+      {
+        "<leader>e",
+        function()
+          Snacks.explorer({
+            auto_close = true,
+            jump = { close = true },
+            win = {
+              list = {
+                keys = {
+                  ["<C-c>"] = { "close", mode = { "n", "i" } },
+                }
+              }
+            },
+            layout = {
+              preview = false,
+              layout = {
+                backdrop = false,
+                row = 1,
+                width = 0.5,
+                min_width = 80,
+                height = 0.8,
+                border = "rounded",
+                box = "vertical",
+                { win = "input",   height = 1,          border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+                { win = "list",    border = "hpad" },
+                { win = "preview", title = "{preview}", border = "rounded" },
+              },
+            }
+          })
+        end,
+        desc = "File Explorer"
+      },
       ---- search
       { "<leader>lg", function() Snacks.picker.grep() end,                 desc = "Live Grep" },
       { "<leader>jl", function() Snacks.picker.jumps() end,                desc = "Jump List" },
