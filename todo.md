@@ -1,6 +1,6 @@
 # (Want) to do
 
-- Try out snacks explorer
+- Open diff when pressing `<CR>` from the `<leader>gs` picker.
 - Do I want Diffview?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
@@ -22,6 +22,7 @@
 
 # Done (in reverse chronological order)
 
+- Try out snacks explorer
 - Added quicker.nvim
 - Testing out blink.cmp. Sass wasn't giving autocomplete, but fixed it by configuring the capabilities correctly.
   - Used [TJ](https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/lsp.lua)' and [MariaSolos](https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/lua/plugins/lspconfig.lua)' githubs as inspiration.
