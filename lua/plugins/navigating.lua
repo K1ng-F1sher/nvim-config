@@ -87,36 +87,4 @@ return {
       },
     },
   },
-
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    cmd = "Neotree",
-    opts = {
-      filesystem = {
-        hijack_netrw_behavior = "open_current",
-        window = {
-          mappings = {
-            ["-"] = "navigate_up",
-            ["<bs>"] = "noop",
-            ["Z"] = "expand_all_nodes",
-          },
-        },
-        follow_current_file = {
-          enabled = true,
-          leave_dirs_open = false,
-        },
-      },
-    },
-    keys = { { "<leader>e", function()
-      vim.cmd("Neotree reveal position=current")
-      vim.cmd("set rnu")
-    end } }
-  },
-
 }
