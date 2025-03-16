@@ -80,25 +80,41 @@ return {
           { section = "header" },
           { section = "keys", padding = 1 },
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          -- {
-          --   icon = " ",
-          --   title = "Git Status",
-          --   section = "terminal",
-          --   enabled = function()
-          --     return Snacks.git.get_root() ~= nil
-          --   end,
-          --   cmd = "git status --short --branch --renames",
-          --   height = 5,
-          --   padding = 1,
-          --   ttl = 5 * 60,
-          --   indent = 3,
-          -- },
           { section = "startup" },
         },
       },
       explorer = {},
       picker = {
         matcher = { frecency = true },
+        sources = {
+          explorer = {
+            auto_close = true,
+            jump = { close = true },
+            win = {
+              list = {
+                keys = { ["<C-c>"] = { "close", mode = { "n", "i" } }, },
+                wo = { number = true, relativenumber = true, cursorline = true },
+              }
+            },
+            layout = {
+              preview = false,
+              layout = {
+                backdrop = false,
+                row = 1,
+                number = false,
+                relativenumber = false,
+                width = 0.6,
+                min_width = 80,
+                height = 0.8,
+                border = "rounded",
+                box = "vertical",
+                { win = "input",   height = 1,          border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+                { win = "list",    border = "hpad" },
+                { win = "preview", title = "{preview}", border = "rounded" },
+              },
+            }
+          }
+        },
         win = {
           input = {
             keys = {
@@ -112,52 +128,20 @@ return {
           }
         }
       },
-      image = {},
       words = {},
     },
     keys = {
       -- picker
       ---- find
-      { "<C-p>",      function() Snacks.picker.files() end,        desc = "Find Files" },
-      { "<leader>ls", function() Snacks.picker.buffers() end,      desc = "Buffers" },
-      { ";",          function() Snacks.picker.resume() end,       desc = "Resume" },
+      { "<C-p>",      function() Snacks.picker.files() end,                desc = "Find Files" },
+      { "<leader>ls", function() Snacks.picker.buffers() end,              desc = "Buffers" },
+      { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
       ---- git
       -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>gt instead
-      { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
-      { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
-      { "<leader>gs", function() Snacks.picker.git_status() end,   desc = "Git Status" },
-      {
-        "<leader>e",
-        function()
-          Snacks.explorer({
-            auto_close = true,
-            jump = { close = true },
-            win = {
-              list = {
-                keys = {
-                  ["<C-c>"] = { "close", mode = { "n", "i" } },
-                }
-              }
-            },
-            layout = {
-              preview = false,
-              layout = {
-                backdrop = false,
-                row = 1,
-                width = 0.5,
-                min_width = 80,
-                height = 0.8,
-                border = "rounded",
-                box = "vertical",
-                { win = "input",   height = 1,          border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
-                { win = "list",    border = "hpad" },
-                { win = "preview", title = "{preview}", border = "rounded" },
-              },
-            }
-          })
-        end,
-        desc = "File Explorer"
-      },
+      { "<leader>gf", function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
+      { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
+      { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
+      { "<leader>e",  function() Snacks.explorer() end,                    desc = "File Explorer" },
       ---- search
       { "<leader>lg", function() Snacks.picker.grep() end,                 desc = "Live Grep" },
       { "<leader>jl", function() Snacks.picker.jumps() end,                desc = "Jump List" },
