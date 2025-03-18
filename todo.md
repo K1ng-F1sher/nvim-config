@@ -1,9 +1,16 @@
 # (Want) to do
 
+- remap `:W` to `:w`.
+- Implement smart delete [source](https://www.reddit.com/r/neovim/comments/1janrmf/smart_delete/)
+- Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
+- Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Open diff when pressing `<CR>` from the `<leader>gs` picker.
 - Do I want Diffview?
+  - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
+- Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
+  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
 - mini.clue / which-key?
 - C#/JS/TS snippets
 
