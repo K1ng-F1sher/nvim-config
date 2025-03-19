@@ -38,6 +38,16 @@ Map("n", "n", "nzzzv")
 Map("n", "N", "Nzzzv")
 
 ----------------
+--- Commands ---
+----------------
+CreateCommand("W", "w", { desc = "case insensitive write command" })
+CreateCommand("Wq", "wq", { desc = "case insensitive write-quit command" })
+CreateCommand("Wa", "wa", { desc = "case insensitive write-all command" })
+CreateCommand("Bd", "bd", { desc = "case insensitive buffer-delete command" })
+CreateCommand("Q", "q", { desc = "case insensitive quit command" })
+CreateCommand("E", "e", { desc = "case insensitive edit command" })
+
+----------------
 --- Viewport ---
 ----------------
 Map("n", "<leader>rc", "<cmd>set conceallevel=0<CR>", { desc = "Reset Conceallevel" })
