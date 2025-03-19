@@ -97,25 +97,25 @@ return {
     keys = {
       -- picker
       ---- find
-      { "<C-p>",      function() Snacks.picker.files() end,                desc = "Find Files" },
-      { "<leader>ls", function() Snacks.picker.buffers() end,              desc = "Buffers" },
-      { ";",          function() Snacks.picker.resume() end,               desc = "Resume" },
+      { "<C-p>",            function() Snacks.picker.files() end,                desc = "Find Files" },
+      { "<leader>ls",       function() Snacks.picker.buffers() end,              desc = "Buffers" },
+      { "<leader><leader>", function() Snacks.picker.resume() end,               desc = "Resume" },
       ---- git
       -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>gt instead
-      { "<leader>gf", function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
-      { "<leader>gL", function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
-      { "<leader>gs", function() Snacks.picker.git_status() end,           desc = "Git Status" },
-      { "<leader>e",  function() Snacks.explorer() end,                    desc = "File Explorer" },
+      { "<leader>gf",       function() Snacks.picker.git_log_file() end,         desc = "Git Log File" },
+      { "<leader>gL",       function() Snacks.picker.git_log_line() end,         desc = "Git Log Line" },
+      { "<leader>gs",       function() Snacks.picker.git_status() end,           desc = "Git Status" },
+      { "<leader>e",        function() Snacks.explorer() end,                    desc = "File Explorer" },
       ---- search
-      { "<leader>lg", function() Snacks.picker.grep() end,                 desc = "Live Grep" },
-      { "<leader>jl", function() Snacks.picker.jumps() end,                desc = "Jump List" },
-      { "<leader>qf", function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
+      { "<leader>lg",       function() Snacks.picker.grep() end,                 desc = "Live Grep" },
+      { "<leader>jl",       function() Snacks.picker.jumps() end,                desc = "Jump List" },
+      { "<leader>qf",       function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
       ---- LSP
-      { "gd",         function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
-      { "gr",         function() Snacks.picker.lsp_references() end,       nowait = true,                desc = "References" },
-      { "gi",         function() Snacks.picker.lsp_implementations() end,  desc = "Goto Implementation" },
-      { "gt",         function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition" },
-      { "gs",         function() Snacks.picker.lsp_symbols() end,          desc = "LSP Symbols" },
+      { "gd",               function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
+      { "gr",               function() Snacks.picker.lsp_references() end,       nowait = true,                desc = "References" },
+      { "gi",               function() Snacks.picker.lsp_implementations() end,  desc = "Goto Implementation" },
+      { "gt",               function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition" },
+      { "gs",               function() Snacks.picker.lsp_symbols() end,          desc = "LSP Symbols" },
 
       -- words
       {

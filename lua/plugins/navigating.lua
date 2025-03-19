@@ -63,6 +63,10 @@ return {
   },
 
   {
+    "unblevable/quick-scope",
+  },
+
+  {
     "echasnovski/mini.files",
     version = "*",
     opts = {

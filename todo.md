@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Implement smart delete [source](https://www.reddit.com/r/neovim/comments/1janrmf/smart_delete/)
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Open diff when pressing `<CR>` from the `<leader>gs` picker.
@@ -28,7 +27,8 @@
 
 # Done (in reverse chronological order)
 
-- remap `:W` to `:w`.
+- Added quickscope.
+- Remap `:W` to `:w`, and its friends.
 - Removed snippet support from blink, not using it atm.
 - Try out snacks explorer
 - Added quicker.nvim
