@@ -27,6 +27,7 @@
 
 # Done (in reverse chronological order)
 
+- Always use relative path might fix exit errors? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
 - Open fugitive on the bottom half by default.
 - Added quickscope.
 - Remap `:W` to `:w`, and its friends.
