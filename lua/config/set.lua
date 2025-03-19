@@ -97,3 +97,48 @@ augroup END
 
 -- Workaround for Shada files not being cleared:
 vim.cmd("autocmd VimLeavePre * ClearShada")
+
+-- Always open paths relative to the cwd [source]()https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560
+---@param bufnr number
+local open_file_buf_relative_path = function(bufnr)
+  local bufname = vim.fn.bufname(bufnr)
+  -- if bufname starts with c: or ~ then its a full path and want to open relative
+  if bufname:sub(1, 2):lower() == 'c:' or bufname:sub(1, 1) == '~' then
+    local cwd = vim.uv.cwd() or '.'
+    local root = vim.fs.normalize(vim.uv.fs_realpath(cwd) or '.') .. '/'
+    local norm_path = vim.fs.normalize(vim.uv.fs_realpath(bufname) or bufname)
+    if norm_path:find(root, 1, true) ~= 1 then
+      -- NOTE: not changing if not part of root path (cwd)
+      root = ''
+    end
+    if root == '' or root == nil then
+      return
+    end
+    local relative_path = norm_path:sub(#root + 1)
+    vim.schedule(function()
+      vim.notify('Setting buffer name to relative path: ' ..
+        relative_path .. ' for bufnr: ' .. bufnr)
+      if vim.bo[bufnr].modified then
+        vim.notify('Buffer is modified, saving before setting relative path: ' .. bufname)
+        vim.api.nvim_set_current_buf(bufnr)
+        vim.cmd('w')
+        vim.api.nvim_buf_set_name(bufnr, relative_path)
+        vim.cmd('e')
+      else
+        vim.api.nvim_set_current_buf(bufnr)
+        vim.api.nvim_buf_set_name(bufnr, relative_path)
+        vim.cmd('e')
+      end
+    end)
+  end
+end
+
+vim.api.nvim_create_autocmd({
+  'BufWinEnter',
+  'BufWritePost',
+}, {
+  pattern = '*',
+  callback = function(event)
+    open_file_buf_relative_path(event.buf)
+  end,
+})
