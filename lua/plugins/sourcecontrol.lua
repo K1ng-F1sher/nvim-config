@@ -3,15 +3,16 @@ return {
     "tpope/vim-fugitive",
     -- Can't use opts for fugitive, because it's not written in lua.
     config = function()
-      Map("n", "<leader>ga", ":G add .<CR>")
-      Map("n", "<leader>gc", ":G commit -m ''<Left>")
-      Map("n", "<leader>gq", ":G commit . -m ''<Left>", { desc = "Remember by 'Git Quick commit'." })
-      Map("n", "<leader>gp", ":G push<CR>", { silent = true })
-      Map("n", "<leader>gl", ":G pull<CR>", { silent = true })
+      CreateCommand("G", "below Git", { desc = "Open fugitive on a bottom half split" })
+      Map("n", "<leader>ga", ":Git add .<CR>")
+      Map("n", "<leader>gc", ":Git commit -m ''<Left>")
+      Map("n", "<leader>gq", ":Git commit . -m ''<Left>", { desc = "Remember by 'Git Quick commit'." })
+      Map("n", "<leader>gp", ":Git push<CR>", { silent = true })
+      Map("n", "<leader>gl", ":Git pull<CR>", { silent = true })
       Map(
         "n",
         "<leader>gt",
-        ":G log --all --graph --decorate --oneline<CR><C-w>o",
+        ":Git log --all --graph --decorate --oneline<CR><C-w>o",
         { silent = true, desc = "Show a tree of commit history" }
       )
       Map("n", "<leader>gd", ":Gvdiffsplit<CR><C-w>l", {

@@ -27,6 +27,7 @@
 
 # Done (in reverse chronological order)
 
+- Open fugitive on the bottom half by default.
 - Added quickscope.
 - Remap `:W` to `:w`, and its friends.
 - Removed snippet support from blink, not using it atm.
