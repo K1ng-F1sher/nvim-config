@@ -51,7 +51,7 @@ local toggle_fugitive = function()
   end
 end
 
-vim.api.nvim_create_user_command("FloatingGit", toggle_fugitive, {})
+CreateCommand("FloatingGit", toggle_fugitive, {})
 Map("n", "<C-g>", toggle_fugitive)
 
 ----------------
@@ -69,5 +69,5 @@ local toggle_terminal = function()
   end
 end
 
-vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
+CreateCommand("Floaterminal", toggle_terminal, {})
 Map({ "n", "t" }, "<C-t>", toggle_terminal)

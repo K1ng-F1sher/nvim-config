@@ -17,7 +17,7 @@ DisableItalics()
 --- SHADA ---
 -------------
 -- Workaround for deleting old SHADA files. [ref](https://github.com/neovim/neovim/issues/8587)
-vim.api.nvim_create_user_command("ClearShada", function()
+CreateCommand("ClearShada", function()
   local shada_path = vim.fn.expand(vim.fn.stdpath("data") .. "/shada")
   local files = vim.fn.glob(shada_path .. "/*", false, true)
   local all_success = 0

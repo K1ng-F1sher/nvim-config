@@ -73,7 +73,7 @@ return {
       options = {
         use_as_default_explorer = false,
       },
-      vim.api.nvim_create_autocmd("User", {
+      CreateCommand("User", {
         pattern = "MiniFilesWindowUpdate",
         callback = function(args)
           vim.wo[args.data.win_id].relativenumber = true
