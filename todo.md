@@ -29,6 +29,7 @@
 
 # Done (in reverse chronological order)
 
+- Removed snippet support from blink, not using it atm.
 - Try out snacks explorer
 - Added quicker.nvim
 - Testing out blink.cmp. Sass wasn't giving autocomplete, but fixed it by configuring the capabilities correctly.
