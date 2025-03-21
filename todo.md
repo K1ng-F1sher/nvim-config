@@ -29,7 +29,8 @@
 
 - Always use relative path might fix exit errors? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
 - Open fugitive on the bottom half by default.
-- Added quickscope.
+- Added quickscope, but removed again. Too much visual clutter. Replaced with eyeliner.nvim, due to easier config.
+    - Noticed an issue with using `<S-o>` and when the blink menu spawns.  
 - Remap `:W` to `:w`, and its friends.
 - Removed snippet support from blink, not using it atm.
 - Try out snacks explorer

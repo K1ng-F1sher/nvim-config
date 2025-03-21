@@ -62,9 +62,17 @@ return {
     },
   },
 
-  -- {
-  --   "unblevable/quick-scope",
-  -- },
+  {
+    "jinh0/eyeliner.nvim",
+    opts =
+    {
+      highlight_on_key = false,
+      --disabled_filetypes = {},
+      disabled_buftypes = { "nofile", "nowrite", "terminal" },
+      vim.api.nvim_set_hl(0, 'EyelinerPrimary', { underline = true }),
+      vim.api.nvim_set_hl(0, 'EyelinerSecondary', { italic = true })
+    }
+  },
 
   {
     "echasnovski/mini.files",
