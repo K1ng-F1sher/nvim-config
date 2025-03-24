@@ -31,6 +31,7 @@
 - Open fugitive on the bottom half by default.
 - Added quickscope, but removed again. Too much visual clutter. Replaced with eyeliner.nvim, due to easier config.
     - Noticed an issue with using `<S-o>` and when the blink menu spawns.  
+    - Readded quickscope, seems to be the sturdier plugin of the two.
 - Remap `:W` to `:w`, and its friends.
 - Removed snippet support from blink, not using it atm.
 - Try out snacks explorer

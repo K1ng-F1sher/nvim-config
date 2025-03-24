@@ -84,7 +84,7 @@ for type, icon in pairs(signs) do
 end
 
 ----------------------
---- Other settings ---
+--- Style settings ---
 ----------------------
 
 -- Show short highlight when yanking
@@ -94,6 +94,16 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
 augroup END
 ]])
+
+-- Set highlighting styles for quickscope
+vim.cmd([[
+  highlight QuickScopePrimary gui=underline cterm=underline
+  highlight QuickScopeSecondary gui=italic cterm=italic
+]])
+
+-------------------
+--- Workarounds ---
+-------------------
 
 -- Workaround for Shada files not being cleared:
 vim.cmd("autocmd VimLeavePre * ClearShada")

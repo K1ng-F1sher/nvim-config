@@ -1,9 +1,9 @@
 Map = vim.keymap.set
 CreateCommand = vim.api.nvim_create_user_command
 
+require("config.functions")
 require("config.set")
 require("config.remap")
-require("config.functions")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
