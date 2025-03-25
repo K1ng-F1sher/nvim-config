@@ -1,5 +1,6 @@
 # (Want) to do
 
+- Exclude harpoon window from quickscope.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Open diff when pressing `<CR>` from the `<leader>gs` picker.
@@ -30,8 +31,8 @@
 - Always use relative path might fix exit errors? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
 - Open fugitive on the bottom half by default.
 - Added quickscope, but removed again. Too much visual clutter. Replaced with eyeliner.nvim, due to easier config.
-    - Noticed an issue with using `<S-o>` and when the blink menu spawns.  
-    - Readded quickscope, seems to be the sturdier plugin of the two.
+  - Noticed an issue with using `<S-o>` and when the blink menu spawns.
+  - Readded quickscope, seems to be the sturdier plugin of the two.
 - Remap `:W` to `:w`, and its friends.
 - Removed snippet support from blink, not using it atm.
 - Try out snacks explorer
