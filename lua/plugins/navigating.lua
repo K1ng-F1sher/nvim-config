@@ -64,8 +64,12 @@ return {
 
   {
     "unblevable/quick-scope",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
-      vim.g.qs_buftype_blacklist = { 'terminal', 'nofile', 'nowrite', 'acwrite' }
+      -- Find out buftype with `:lua print(vim.bo.buftype)`
+      vim.g.qs_buftype_blacklist = { 'terminal', 'nofile', 'nowrite' }
+      -- Find filetype with `:set filetype?`
+      vim.g.qs_filetype_blacklist = { 'harpoon' }
     end
   },
 
