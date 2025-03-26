@@ -65,7 +65,7 @@ return {
   {
     "unblevable/quick-scope",
     config = function()
-      vim.g.qs_buftype_blacklist = { 'terminal', 'nofile', 'nowrite' }
+      vim.g.qs_buftype_blacklist = { 'terminal', 'nofile', 'nowrite', 'acwrite' }
     end
   },
 
