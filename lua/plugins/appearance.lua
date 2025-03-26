@@ -110,6 +110,7 @@ return {
       { "<leader>lg",       function() Snacks.picker.grep() end,                 desc = "Live Grep" },
       { "<leader>jl",       function() Snacks.picker.jumps() end,                desc = "Jump List" },
       { "<leader>qf",       function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
+      { "<leader>ch",       function() Snacks.picker.command_history() end,      desc = "Command History" },
       ---- LSP
       { "gd",               function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
       { "gr",               function() Snacks.picker.lsp_references() end,       nowait = true,                desc = "References" },
