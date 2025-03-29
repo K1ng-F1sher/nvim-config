@@ -71,9 +71,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     severity = { min = vim.diagnostic.severity.INFO },
   },
   underline = {
-    severity = { min = vim.diagnostic.severity.INFO },
-  },
-  virtual_text = {
     severity = { min = vim.diagnostic.severity.WARN },
   },
 })
@@ -87,7 +84,13 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = '󰌶',
     }
   },
-  virtual_lines = true,
+  virtual_lines = {
+    format = function(diag)
+      if diag.severity == vim.diagnostic.severity.ERROR then
+        return diag.message;
+      end
+    end
+  },
 })
 
 ----------------------
