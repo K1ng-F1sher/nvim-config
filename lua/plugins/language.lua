@@ -74,9 +74,6 @@ return {
           Map("n", "K", function() vim.lsp.buf.hover() end)
           Map("n", "gl", function() vim.diagnostic.open_float() end)
           Map("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
-          Map("n", "<leader>vd", function() vim.diagnostics.open_float() end)
-          Map("n", "[d", function() vim.diagnostics.goto_next() end)
-          Map("n", "]d", function() vim.diagnostics.goto_prev() end)
           Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end)
           Map("n", "<leader>vh", function() vim.lsp.buf.signature_help() end)
           Map("n", "<leader>rn", function() vim.lsp.buf.rename() end)
@@ -89,19 +86,6 @@ return {
       })
 
       require('lspconfig.ui.windows').default_options.border = 'rounded'
-      vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-        vim.lsp.handlers.hover,
-        { border = 'rounded' }
-      )
-      vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-        vim.lsp.handlers.signature_help,
-        { border = 'rounded' }
-      )
-      vim.diagnostic.config({
-        float = {
-          border = 'rounded',
-        },
-      })
     end,
   },
 

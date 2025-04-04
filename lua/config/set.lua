@@ -66,17 +66,9 @@ end
 --------------------
 --- LSP settings ---
 --------------------
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  signs = {
-    severity = { min = vim.diagnostic.severity.INFO },
-  },
-  underline = {
-    severity = { min = vim.diagnostic.severity.WARN },
-  },
-})
-
 vim.diagnostic.config({
   signs = {
+    severity = { min = vim.diagnostic.severity.INFO },
     text = {
       [vim.diagnostic.severity.ERROR] = '󰅚',
       [vim.diagnostic.severity.WARN] = '󰀪',
@@ -84,13 +76,18 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = '󰌶',
     }
   },
-  virtual_lines = {
-    format = function(diag)
-      if diag.severity == vim.diagnostic.severity.ERROR then
-        return diag.message;
-      end
-    end
+  underline = {
+    severity = { min = vim.diagnostic.severity.WARN },
   },
+  update_in_insert = false, -- false so diags are updated on InsertLeave
+  virtual_text = { current_line = false, severity = { min = "WARN" } },
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    source = true,
+    header = nil
+  }
 })
 
 ----------------------
