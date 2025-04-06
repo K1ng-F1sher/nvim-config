@@ -42,7 +42,7 @@ return {
         handlers = {
           powershell_es = function()
             lspconfig.powershell_es.setup({
-              on_attach = function(client, bufnr)
+              on_attach = function(_, bufnr)
                 vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
               end,
               settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
@@ -193,17 +193,4 @@ return {
     end
   },
 
-  {
-    'folke/trouble.nvim',
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    cmd = "Trouble",
-    keys = { -- '{' for prev and '}' for next
-      {
-        "<leader>tt",
-        "<cmd>Trouble diagnostics toggle focus=true<cr>",
-        desc = "Diagnostics (Trouble)",
-      },
-    }
-  }
 }
