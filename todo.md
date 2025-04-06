@@ -27,7 +27,7 @@
 
 # Done (in reverse chronological order)
 
-- Implemented new diagnostics config. Trying out virtual lines for errors.
+- Implemented new diagnostics config. Trying out virtual lines for errors. Reverted to virtual text, virtual lines are not for me.
 - Removed zen mode. Never use.
 - Exclude harpoon window from quickscope.
 - Always use relative path might fix exit errors? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)

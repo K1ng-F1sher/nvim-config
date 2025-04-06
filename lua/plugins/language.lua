@@ -12,10 +12,8 @@ return {
 
       local servers = {
         bashls = true,
-        lua_ls = true,
-        cssls = true,
         csharp_ls = true,
-        ts_ls = true,
+        cssls = true,
         jsonls = {
           settings = {
             json = {
@@ -23,14 +21,22 @@ return {
             },
           },
         },
+        lua_ls = {
+          settings = {
+            server_capabilities = {
+              semanticTokensProvider = vim.NIL,
+            },
+          }
+        },
+        ts_ls = true,
       }
 
       require("mason").setup({
         ensure_installed = {
-          "ts_ls",
+          "cssls",
           "eslint",
           "lua_ls",
-          "cssls",
+          "ts_ls",
         },
         automatic_installation = true,
         handlers = {
