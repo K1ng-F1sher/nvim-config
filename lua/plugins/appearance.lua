@@ -127,6 +127,7 @@ return {
       { "<leader>qf",       function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
       { "<leader>ch",       function() Snacks.picker.command_history() end,      desc = "Command History" },
       { "<leader>tt",       function() Snacks.picker.diagnostics() end,          desc = "Toggle Trouble (Diagnostics)" },
+      { "<leader>nh",       function() Snacks.picker.notifications() end,        desc = "Notification History" },
       ---- LSP
       { "gd",               function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
       { "gr",               function() Snacks.picker.lsp_references() end,       nowait = true,                        desc = "References" },
