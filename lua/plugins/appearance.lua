@@ -39,12 +39,26 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
+      bigfile = {},
       dashboard = {
         sections = {
-          { section = "header" },
+          {
+            text =
+            [[
+                                         
+      ████ ██████           █████      ██                 btw
+ ███████████             █████ 
+    █████████ ███████████████████ ███   ███████████
+   █████████  ███    █████████████ █████ ██████████████
+  █████████ ██████████ █████████ █████ █████ ████ █████
+ ███████████ ███    ███ █████████ █████ █████ ████ █████
+██████  █████████████████████ ████ █████ █████ ████ ██████
+]],
+          },
+          { section = "startup", padding = 1 },
           { section = "keys", padding = 1 },
-          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          { section = "startup" },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 2 },
+          { section = "terminal", cmd = "curl -s 'wttr.in/?0'", padding = 1, height = 8 },
         },
       },
       explorer = {},
@@ -92,6 +106,7 @@ return {
           }
         }
       },
+      quickfile = {},
       words = {},
     },
     keys = {
