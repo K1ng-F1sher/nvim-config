@@ -7,6 +7,7 @@
   - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
+- Implement [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
 - mini.clue / which-key?
@@ -27,6 +28,9 @@
 
 # Done (in reverse chronological order)
 
+- Configured folds natively.
+- Added quickfile and bigfile Snacks modules.
+- Replaced `Trouble` with the Snacks diagnostics picker.
 - Added lazydev for lua completion for nvim development.
 - Tried to make the snacks dashboard appear when closing the last open buffer [ref](https://www.reddit.com/r/neovim/comments/re07pk/close_neovim_if_last_buffer/). Harder than it sounds, there are some mysterious (to me) buffers going around.
 - Implemented new diagnostics config. Trying out virtual lines for errors. Reverted to virtual text, virtual lines are not for me.
