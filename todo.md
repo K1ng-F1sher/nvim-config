@@ -27,6 +27,8 @@
 
 # Done (in reverse chronological order)
 
+- Added lazydev for lua completion for nvim development.
+- Tried to make the snacks dashboard appear when closing the last open buffer [ref](https://www.reddit.com/r/neovim/comments/re07pk/close_neovim_if_last_buffer/). Harder than it sounds, there are some mysterious (to me) buffers going around.
 - Implemented new diagnostics config. Trying out virtual lines for errors. Reverted to virtual text, virtual lines are not for me.
 - Removed zen mode. Never use.
 - Exclude harpoon window from quickscope.

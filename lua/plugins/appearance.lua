@@ -39,12 +39,26 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
+      bigfile = {},
       dashboard = {
         sections = {
-          { section = "header" },
+          {
+            text =
+            [[
+                                         
+      ████ ██████           █████      ██                 btw
+ ███████████             █████ 
+    █████████ ███████████████████ ███   ███████████
+   █████████  ███    █████████████ █████ ██████████████
+  █████████ ██████████ █████████ █████ █████ ████ █████
+ ███████████ ███    ███ █████████ █████ █████ ████ █████
+██████  █████████████████████ ████ █████ █████ ████ ██████
+]],
+          },
+          { section = "startup", padding = 1 },
           { section = "keys", padding = 1 },
-          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          { section = "startup" },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 2 },
+          { section = "terminal", cmd = "curl -s 'wttr.in/?0'", padding = 1, height = 8 },
         },
       },
       explorer = {},
@@ -92,7 +106,10 @@ return {
           }
         }
       },
+      quickfile = {},
       words = {},
+
+
     },
     keys = {
       -- picker
@@ -111,9 +128,11 @@ return {
       { "<leader>jl",       function() Snacks.picker.jumps() end,                desc = "Jump List" },
       { "<leader>qf",       function() Snacks.picker.qflist() end,               desc = "QuickFix list" },
       { "<leader>ch",       function() Snacks.picker.command_history() end,      desc = "Command History" },
+      { "<leader>tt",       function() Snacks.picker.diagnostics() end,          desc = "Toggle Trouble (Diagnostics)" },
+      { "<leader>nh",       function() Snacks.picker.notifications() end,        desc = "Notification History" },
       ---- LSP
       { "gd",               function() Snacks.picker.lsp_definitions() end,      desc = "Goto Definition" },
-      { "gr",               function() Snacks.picker.lsp_references() end,       nowait = true,                desc = "References" },
+      { "gr",               function() Snacks.picker.lsp_references() end,       nowait = true,                        desc = "References" },
       { "gi",               function() Snacks.picker.lsp_implementations() end,  desc = "Goto Implementation" },
       { "gt",               function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition" },
       { "gs",               function() Snacks.picker.lsp_symbols() end,          desc = "LSP Symbols" },

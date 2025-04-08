@@ -42,7 +42,7 @@ return {
         handlers = {
           powershell_es = function()
             lspconfig.powershell_es.setup({
-              on_attach = function(client, bufnr)
+              on_attach = function(_, bufnr)
                 vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
               end,
               settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
@@ -96,6 +96,18 @@ return {
   },
 
   {
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
+    opts = {
+      library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
+  {
     'saghen/blink.cmp',
     version = "*",
     event = "InsertEnter",
@@ -145,7 +157,15 @@ return {
       },
 
       sources = {
-        default = { "lsp", "path", "buffer" },
+        default = { "lazydev", "lsp", "path", "buffer" },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            -- make lazydev completions top priority (see `:h blink.cmp`)
+            score_offset = 100,
+          },
+        },
       },
 
       cmdline = {
@@ -193,17 +213,4 @@ return {
     end
   },
 
-  {
-    'folke/trouble.nvim',
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    cmd = "Trouble",
-    keys = { -- '{' for prev and '}' for next
-      {
-        "<leader>tt",
-        "<cmd>Trouble diagnostics toggle focus=true<cr>",
-        desc = "Diagnostics (Trouble)",
-      },
-    }
-  }
 }
