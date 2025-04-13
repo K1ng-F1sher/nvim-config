@@ -28,6 +28,14 @@ return {
   },
 
   {
+    'brenoprata10/nvim-highlight-colors',
+    ft = { "css", "scss" },
+    opts = {
+      render = 'virtual',
+    },
+  },
+
+  {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
     cmd = { "RenderMarkdown" },

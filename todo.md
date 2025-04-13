@@ -1,5 +1,7 @@
 # (Want) to do
 
+- Apply `dd` for quickfixlist: [ref](https://stackoverflow.com/questions/42905008/quickfix-list-how-to-add-and-remove-entries)
+- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration)
 - Make command history dropdown bordered.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
@@ -25,9 +27,11 @@
 - [Vimcasts on fugitive](http://vimcasts.org/categories/git/)
 - [Awesome Neovim (list of plugins per feature)](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#terminal-integration)
 - [vimconf 2024](https://www.youtube.com/watch?v=TUzdcB_PFJA&list=PLhlaLyAlbLlq9xWf2xm_9p422GgqvATXk)
+- [Integralist](https://www.integralist.co.uk/posts/vim-advanced/)
 
 # Done (in reverse chronological order)
 
+- Added nvim-highlight-colors.
 - Configured folds natively.
 - Added quickfile and bigfile Snacks modules.
 - Replaced `Trouble` with the Snacks diagnostics picker.
