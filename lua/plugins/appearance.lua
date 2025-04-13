@@ -128,7 +128,7 @@ return {
       { "<leader>lg",       function() Snacks.picker.grep() end,                     desc = "Live Grep" },
       { "<leader>jl",       function() Snacks.picker.jumps() end,                    desc = "Jump List" },
       { '<leader>rl',       function() Snacks.picker.registers() end,                desc = "Register List" },
-      { "<leader>qf",       function() Snacks.picker.qflist() end,                   desc = "QuickFix list" },
+      -- { "<leader>qf",       function() Snacks.picker.qflist() end,                   desc = "QuickFix list" },
       { "<leader>ch",       function() Snacks.picker.command_history(ivyLayout) end, desc = "Command History" },
       { "<leader>nh",       function() Snacks.picker.notifications() end,            desc = "Notification History" },
       { "<leader>tt",       function() Snacks.picker.diagnostics() end,              desc = "Toggle Trouble (diagnostics)" },
