@@ -124,12 +124,6 @@ return {
         nerd_font_variant = "mono",
       },
       completion = {
-        accept = {
-          -- experimental auto-brackets support
-          auto_brackets = {
-            enabled = true,
-          },
-        },
         menu = {
           border = 'rounded',
           draw = {
