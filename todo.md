@@ -1,7 +1,6 @@
 # (Want) to do
 
-- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration)
-- Make command history dropdown bordered.
+- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on th first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Do I want Diffview?
@@ -10,7 +9,7 @@
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
 - Implement [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
-  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560)
+  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019)
 - mini.clue / which-key?
 - C#/JS/TS snippets
 
@@ -32,6 +31,7 @@
 
 - Added nvim-highlight-colors.
 - Configured folds natively.
+- Changed menu type for command history. 
 - Added quickfile and bigfile Snacks modules.
 - Replaced `Trouble` with the Snacks diagnostics picker.
 - Added lazydev for lua completion for nvim development.
