@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Apply `dd` for quickfixlist: [ref](https://stackoverflow.com/questions/42905008/quickfix-list-how-to-add-and-remove-entries)
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration)
 - Make command history dropdown bordered.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
