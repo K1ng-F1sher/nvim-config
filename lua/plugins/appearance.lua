@@ -102,7 +102,6 @@ return {
               list = {
                 keys = {
                   ["<C-c>"] = { "close", mode = { "n", "i" } },
-                  ["<a-l>"] = { "toggle_live", mode = { "i", "n" } },
                 },
                 wo = { number = true, relativenumber = true, cursorline = true },
               }
@@ -157,6 +156,7 @@ return {
       { "<leader>e",        function() Snacks.explorer() end,                        desc = "file Explorer" },
       ---- search
       { "<leader>lg",       function() Snacks.picker.grep() end,                     desc = "Live Grep" },
+      { "<leader>rg",       function() Snacks.picker.grep({ live = false }) end,     desc = "RipGrep" },
       { "<leader>jl",       function() Snacks.picker.jumps() end,                    desc = "Jump List" },
       { '<leader>rl',       function() Snacks.picker.registers() end,                desc = "Register List" },
       -- { "<leader>qf",       function() Snacks.picker.qflist() end,                   desc = "QuickFix list" },
