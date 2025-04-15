@@ -10,7 +10,6 @@
 - Implement [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css)?
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019)
-- mini.clue / which-key?
 - C#/JS/TS snippets
 
 # Keep an eye on
@@ -29,6 +28,7 @@
 
 # Done (in reverse chronological order)
 
+- Added which-key. Disabled it for now, don't want it to always pop up.
 - Added nvim-highlight-colors.
 - Configured folds natively.
 - Changed menu type for command history. 
