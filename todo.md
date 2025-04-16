@@ -1,5 +1,6 @@
 # (Want) to do
 
+- Have a look at [just-google-it](https://www.reddit.com/r/neovim/comments/1jtld9w/just_google_it/).
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on th first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
@@ -31,7 +32,7 @@
 - Added which-key. Disabled it for now, don't want it to always pop up.
 - Added nvim-highlight-colors.
 - Configured folds natively.
-- Changed menu type for command history. 
+- Changed menu type for command history.
 - Added quickfile and bigfile Snacks modules.
 - Replaced `Trouble` with the Snacks diagnostics picker.
 - Added lazydev for lua completion for nvim development.
