@@ -1,7 +1,9 @@
 # (Want) to do
 
-- Have a look at [just-google-it](https://www.reddit.com/r/neovim/comments/1jtld9w/just_google_it/).
-- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on th first try.
+- Implement line wrap in markdown only.
+- Solve warnings for treesitter and blink.
+- Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
+- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Do I want Diffview?
@@ -29,6 +31,7 @@
 
 # Done (in reverse chronological order)
 
+- Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover), but it doesn't seem to work.
 - Added which-key. Disabled it for now, don't want it to always pop up.
 - Added nvim-highlight-colors.
 - Configured folds natively.

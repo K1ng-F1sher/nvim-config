@@ -37,6 +37,21 @@ Map("n", "<C-u>", "<C-u>zz")
 Map("n", "n", "nzzzv")
 Map("n", "N", "Nzzzv")
 
+-- Add #j and #k movements to the jumplist, so I can `<C-o>` back [source](https://www.reddit.com/r/neovim/comments/1k3lhac/tiny_quality_of_life_rebind_make_j_and_k/).
+Map('n', 'j', function()
+  if vim.v.count > 0 then
+    return "m'" .. vim.v.count .. 'j'
+  end
+  return 'j'
+end, { expr = true })
+
+Map('n', 'k', function()
+  if vim.v.count > 0 then
+    return "m'" .. vim.v.count .. 'k'
+  end
+  return 'k'
+end, { expr = true })
+
 ----------------
 --- Commands ---
 ----------------
