@@ -11,6 +11,7 @@
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
 - Implement [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css)?
+- Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main);
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019)
 - C#/JS/TS snippets
