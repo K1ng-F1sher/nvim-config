@@ -1,16 +1,15 @@
 # (Want) to do
 
-- Implement line wrap in markdown only.
 - Solve warnings for treesitter and blink.
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
+- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me.
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Do I want Diffview?
   - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
-- Implement [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css)?
 - Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main);
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019)
@@ -32,6 +31,8 @@
 
 # Done (in reverse chronological order)
 
+- Implement line wrap in markdown only.
+- Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
 - Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover), but it doesn't seem to work.
 - Added which-key. Disabled it for now, don't want it to always pop up.
 - Added nvim-highlight-colors.

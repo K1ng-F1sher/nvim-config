@@ -17,7 +17,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -144,6 +144,30 @@ vim.cmd([[
   highlight QuickScopePrimary gui=underline cterm=underline
   highlight QuickScopeSecondary gui=italic cterm=italic
 ]])
+
+-- Enable word wrap in markdown files.
+vim.api.nvim_create_autocmd('BufWinEnter', {
+  pattern = { '*.md' },
+  callback = function()
+    vim.opt.wrap = true
+    Map({ "n", "o", "x" }, "j", "gj", {})
+    Map({ "n", "o", "x" }, "k", "gk", {})
+    Map({ "n", "o", "x" }, "H", "g0", {})
+    Map({ "n", "o", "x" }, "L", "g$", {})
+  end,
+})
+
+-- Disable word wrap outside of markdown files.
+vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
+  pattern = { '*.md' },
+  callback = function()
+    vim.opt.wrap = false
+    Map({ "n", "o", "x" }, "j", "j", {})
+    Map({ "n", "o", "x" }, "k", "k", {})
+    Map({ "n", "o", "x" }, "H", "0", {})
+    Map({ "n", "o", "x" }, "L", "$", {})
+  end,
+})
 
 -------------------
 --- Workarounds ---
