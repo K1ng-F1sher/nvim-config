@@ -108,14 +108,6 @@ return {
   },
 
   {
-    ft = { "typescript", "typescriptreact" },
-    'Sebastian-Nielsen/better-type-hover',
-    config = function()
-      require("better-type-hover").setup()
-    end,
-  },
-
-  {
     'saghen/blink.cmp',
     version = "*",
     event = "InsertEnter",
