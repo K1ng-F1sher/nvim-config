@@ -31,11 +31,7 @@ return {
     "folke/which-key.nvim",
     enabled = false,
     event = "VeryLazy",
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
+    opts = {},
     keys = {
       {
         "<leader>?",
@@ -59,7 +55,7 @@ return {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
     cmd = { "RenderMarkdown" },
-    event = { "BufReadPre", "BufNewFile" },
+    ft = { "markdown" },
     ---@module 'render-markdown'
     opts = {},
   },

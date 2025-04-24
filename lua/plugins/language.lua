@@ -113,11 +113,9 @@ return {
   {
     ft = { "typescript", "typescriptreact" },
     'Sebastian-Nielsen/better-type-hover',
-    config = function()
-      require("better-type-hover").setup({
-        openTypeDocKeymap = '<S-k>',
-      })
-    end,
+    opts = {
+      openTypeDocKeymap = '<S-k>',
+    }
   },
 
   {
