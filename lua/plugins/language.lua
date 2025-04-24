@@ -45,6 +45,7 @@ return {
         handlers = {
           powershell_es = function()
             lspconfig.powershell_es.setup({
+              bundle_path = "~/AppData/Local/nvim-data/mason/packages/powershell-editor-services",
               on_attach = function(_, bufnr)
                 vim.api.nvim_buf_set_option_value("omnifunc", "v:lua.vim.lsp.omnifunc", { buf = bufnr })
               end,
