@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Solve warnings for treesitter and blink.
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
@@ -10,9 +9,9 @@
   - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?
 - Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
-- Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main);
+- Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
-  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019)
+  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though.
 - C#/JS/TS snippets
 
 # Keep an eye on
@@ -31,6 +30,7 @@
 
 # Done (in reverse chronological order)
 
+- Solved warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
 - Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
 - Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover).

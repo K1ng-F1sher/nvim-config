@@ -26,6 +26,9 @@ return {
             server_capabilities = {
               semanticTokensProvider = vim.NIL,
             },
+            Lua = {
+              diagnostics = { disable = { 'missing-fields' } }
+            }
           }
         },
         ts_ls = true,
@@ -43,7 +46,7 @@ return {
           powershell_es = function()
             lspconfig.powershell_es.setup({
               on_attach = function(_, bufnr)
-                vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+                vim.api.nvim_buf_set_option_value("omnifunc", "v:lua.vim.lsp.omnifunc", { buf = bufnr })
               end,
               settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
             })
@@ -118,7 +121,7 @@ return {
 
   {
     'saghen/blink.cmp',
-    version = "*",
+    version = "1.*",
     event = "InsertEnter",
 
     ---@module 'blink.cmp'
@@ -134,6 +137,7 @@ return {
       },
       completion = {
         menu = {
+          auto_show = true,
           border = 'rounded',
           draw = {
             treesitter = { "lsp" },
