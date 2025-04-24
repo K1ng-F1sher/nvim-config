@@ -31,16 +31,16 @@
 
 # Done (in reverse chronological order)
 
-- Implement line wrap in markdown only.
+- Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
-- Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover), but it doesn't seem to work.
+- Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover).
 - Added which-key. Disabled it for now, don't want it to always pop up.
 - Added nvim-highlight-colors.
 - Configured folds natively.
 - Changed menu type for command history.
 - Added quickfile and bigfile Snacks modules.
 - Replaced `Trouble` with the Snacks diagnostics picker.
-- Added lazydev for lua completion for nvim development.
+- Added lazydev for lua completion during nvim development.
 - Tried to make the snacks dashboard appear when closing the last open buffer [ref](https://www.reddit.com/r/neovim/comments/re07pk/close_neovim_if_last_buffer/). Harder than it sounds, there are some mysterious (to me) buffers going around.
 - Implemented new diagnostics config. Trying out virtual lines for errors. Reverted to virtual text, virtual lines are not for me.
 - Removed zen mode. Never use.
