@@ -77,7 +77,6 @@ return {
           local bufnr = args.buf
           local client = assert(vim.lsp.get_client_by_id(args.data.client_id), "must have valid client")
 
-          Map("n", "K", function() vim.lsp.buf.hover() end)
           Map("n", "gl", function() vim.diagnostic.open_float() end)
           Map("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
           Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end)
@@ -105,6 +104,16 @@ return {
         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
       },
     },
+  },
+
+  {
+    ft = { "typescript", "typescriptreact" },
+    'Sebastian-Nielsen/better-type-hover',
+    config = function()
+      require("better-type-hover").setup({
+        openTypeDocKeymap = '<S-k>',
+      })
+    end,
   },
 
   {
