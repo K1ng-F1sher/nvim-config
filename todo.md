@@ -3,7 +3,8 @@
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
-- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me.
+- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
+  - Judge is still out, but at first glance they seem to perform about the same.
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 - Do I want Diffview?
   - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?

@@ -74,6 +74,15 @@ return {
   },
 
   {
+    {
+      "ibhagwan/fzf-lua",
+      dependencies = { "echasnovski/mini.icons" },
+      enabled = false,
+      opts = {}
+    }
+  },
+
+  {
     "echasnovski/mini.files",
     version = "*",
     opts = {
