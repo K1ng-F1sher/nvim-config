@@ -65,6 +65,13 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
+      styles = {
+        notification_history = {
+          keys = {
+            ["<C-c>"] = { "close" },
+          },
+        }
+      },
       bigfile = {},
       dashboard = {
         sections = {
@@ -84,7 +91,7 @@ return {
           { section = "startup", padding = 1 },
           { section = "keys", padding = 1 },
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 2 },
-          { section = "terminal", cmd = "curl -s 'wttr.in/?0'", padding = 1, height = 8 },
+          { section = "terminal", cmd = "curl -s 'wttr.in/{Veghel,Eindhoven}?format=4'", padding = 1, height = 2 },
         },
       },
       explorer = {},
@@ -134,6 +141,10 @@ return {
           }
         }
       },
+      notifier = {
+        top_down = false,
+        margin = { bottom = 1 }
+      },
       quickfile = {},
       words = {},
 
@@ -165,6 +176,14 @@ return {
       { "gi",               function() Snacks.picker.lsp_implementations() end,      desc = "Goto Implementation" },
       { "gt",               function() Snacks.picker.lsp_type_definitions() end,     desc = "Goto Type definition" },
       { "gs",               function() Snacks.picker.lsp_symbols() end,              desc = "Goto lsp Symbols" },
+
+      -- notifier
+      {
+        '<leader>nl',
+        function()
+          Snacks.notifier.show_history()
+        end,
+      },
 
       -- words
       {
