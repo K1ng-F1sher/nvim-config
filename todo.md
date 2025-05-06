@@ -1,5 +1,6 @@
 # (Want) to do
 
+- Get a working alternative for VScode's git graph.
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
