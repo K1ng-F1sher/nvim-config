@@ -1,10 +1,12 @@
 # (Want) to do
 
-- Get a working alternative for VScode's git graph.
+- Get a working alternative for VScode's git graph. Flog is too slow for me.
+- Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
+- Have a look at [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
-    - Judge is still out, but at first glance they seem to perform about the same.
+  - Judge is still out, but at first glance they seem to perform about the same.
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
