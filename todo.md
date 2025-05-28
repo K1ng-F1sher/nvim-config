@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Get a working alternative for VScode's git graph.
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
@@ -30,6 +29,7 @@
 # Done (in reverse chronological order)
 
 - Implemented Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
+    - Removed Flog and replaced it with [gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim). Much faster.
 - Solved warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
 - Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
