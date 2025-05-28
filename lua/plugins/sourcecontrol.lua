@@ -41,6 +41,18 @@ return {
   },
 
   {
+    "rbong/vim-flog",
+    lazy = true,
+    cmd = { "Flog", "Flogsplit", "Floggit" },
+    dependencies = {
+      "tpope/vim-fugitive",
+    },
+    config = function()
+      vim.g.flog_permanent_default_opts = { date = 'short', max_count = 1000 }
+    end
+  },
+
+  {
     "aaronhallaert/advanced-git-search.nvim",
     cmd = { "AdvancedGitSearch" },
     dependencies = {

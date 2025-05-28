@@ -3,19 +3,15 @@
 - Get a working alternative for VScode's git graph.
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
+- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
+    - Judge is still out, but at first glance they seem to perform about the same.
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
-- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
-  - Judge is still out, but at first glance they seem to perform about the same.
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
-- Do I want Diffview?
-  - including [dir diff](https://www.reddit.com/r/neovim/comments/1j9ypsl/git_difftool_dirdiff_integration/)?
-- Implement [BoilerSharp](https://github.com/DestopLine/boilersharp.nvim)?
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
 - Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though.
-- C#/JS/TS snippets
 
 # Keep an eye on
 
@@ -33,6 +29,7 @@
 
 # Done (in reverse chronological order)
 
+- Implemented Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
 - Solved warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
 - Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
