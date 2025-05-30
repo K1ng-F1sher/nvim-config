@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Get a working alternative for VScode's git graph. Flog is too slow for me.
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
@@ -32,6 +31,7 @@
 # Done (in reverse chronological order)
 
 - Implemented Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
+  - Removed Flog and replaced it with [gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim). Much faster.
 - Solved warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
 - Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
