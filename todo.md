@@ -31,9 +31,9 @@
 
 # Done (in reverse chronological order)
 
-- Implemented Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
+- Tried Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
   - Removed Flog and replaced it with [gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim). Much faster.
-- Solved warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
+- Solved lua warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)
 - Implemented line wrap in markdown only.
 - Tried [HTML-CSS support](https://github.com/Jezda1337/nvim-html-css), but it wouldn't work. Errors all the way with default config.
 - Added [better-type-hover](https://github.com/Sebastian-Nielsen/better-type-hover).
