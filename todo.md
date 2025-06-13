@@ -32,6 +32,7 @@
 
 # Done (in reverse chronological order)
 
+- Installed [vim-razor](https://github.com/jlcrochet/vim-razor). Try it out.
 - Tried Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
   - Removed Flog and replaced it with [gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim). Much faster.
 - Solved lua warnings for treesitter and blink [source](https://www.reddit.com/r/neovim/comments/15onr5j/trying_to_suppress_lua_missingfields_warning/)

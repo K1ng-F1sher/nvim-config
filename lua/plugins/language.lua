@@ -119,6 +119,10 @@ return {
   },
 
   {
+    "jlcrochet/vim-razor"
+  },
+
+  {
     'saghen/blink.cmp',
     version = "1.*",
     event = "InsertEnter",
