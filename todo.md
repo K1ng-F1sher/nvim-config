@@ -1,6 +1,5 @@
 # (Want) to do
 
-- Visual tracker for dual coding.
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
@@ -32,6 +31,7 @@
 
 # Done (in reverse chronological order)
 
+- Added visual tracker for dual coding: [smear-cursor](https://github.com/sphamba/smear-cursor.nvim). Disabled by default, enable with `:SmearCursorToggle`.
 - Installed [vim-razor](https://github.com/jlcrochet/vim-razor). Try it out.
 - Tried Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
   - Removed Flog and replaced it with [gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim). Much faster.
