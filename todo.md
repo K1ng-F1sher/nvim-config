@@ -1,11 +1,15 @@
 # (Want) to do
 
+- Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
+- Make a [c-matrix](https://github.com/abishekvashok/cmatrix) pane on the opening dashboard.
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
-- Try out [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
-- Have a look at [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
-- Have a look at [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
+- Have a look at:
+  - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
+  - [floaterm](https://github.com/nvzone/floaterm).
+  - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
+  - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
   - Judge is still out, but at first glance they seem to perform about the same.
 - Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
