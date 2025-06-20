@@ -138,6 +138,7 @@ return {
         -- adjusts spacing to ensure icons are aligned
         nerd_font_variant = "mono",
       },
+      auto_brackets = {},
       completion = {
         menu = {
           auto_show = true,
