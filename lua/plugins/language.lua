@@ -138,7 +138,7 @@ return {
         -- adjusts spacing to ensure icons are aligned
         nerd_font_variant = "mono",
       },
-      auto_brackets = {},
+      -- auto_brackets = {},
       completion = {
         menu = {
           auto_show = true,
@@ -154,7 +154,11 @@ return {
         ghost_text = {
           enabled = vim.g.ai_cmp,
         },
+        accept = {
+          auto_brackets = { enabled = false }
+        },
       },
+
 
       -- experimental signature help support
       signature = {
