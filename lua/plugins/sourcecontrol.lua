@@ -78,13 +78,13 @@ return {
     "aaronhallaert/advanced-git-search.nvim",
     cmd = { "AdvancedGitSearch" },
     dependencies = {
-      "nvim-telescope/telescope.nvim",
+      "folke/snacks.nvim",
       "tpope/vim-fugitive",
       "tpope/vim-rhubarb",
       "cedarbaum/fugitive-azure-devops.vim",
     },
     config = function()
-      require("telescope").setup({
+      require("advanced_git_search.snacks").setup {
         browse_command = "GBrowse {commit_hash}",
         diff_plugin = "fugitive",                -- one of fugitive or diffview
         show_builtin_git_pickers = false,
@@ -95,8 +95,7 @@ return {
           copy_commit_hash = "<C-y>",
           show_entire_commit = "<C-e>",
         },
-      })
-      require("telescope").load_extension("advanced_git_search")
+      }
     end,
     keys = {
       {

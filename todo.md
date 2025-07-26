@@ -1,22 +1,16 @@
 # (Want) to do
 
-- Blink: disabkle auto brackets.
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
-- Make a [c-matrix](https://github.com/abishekvashok/cmatrix) pane on the opening dashboard.
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
-- Implement [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)?
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [floaterm](https://github.com/nvzone/floaterm).
   - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
-- Investigate whether [fzf-lua](https://github.com/ibhagwan/fzf-lua) is something for me. It would be the fuzzy live_grep pursueing me, together with advanced-git-search compatibility.
-  - Judge is still out, but at first glance they seem to perform about the same.
-- Apply cmp for colours: [ref](https://github.com/brenoprata10/nvim-highlight-colors?tab=readme-ov-file#blinkcmp-integration). Couldn't get it to work on the first try.
+  - [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
-- Check out [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though.
 
@@ -36,6 +30,9 @@
 
 # Done (in reverse chronological order)
 
+- Implemented the snacks picker for advanced-git-search.
+- Implemented [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)
+- Blink: disabkle auto brackets.
 - Added visual tracker for dual coding: [smear-cursor](https://github.com/sphamba/smear-cursor.nvim). Disabled by default, enable with `:SmearCursorToggle`.
 - Installed [vim-razor](https://github.com/jlcrochet/vim-razor). Try it out.
 - Tried Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
