@@ -1,12 +1,11 @@
 # (Want) to do
 
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
-- Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
-  - [floaterm](https://github.com/nvzone/floaterm).
-  - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/).
+  - [floaterm](https://github.com/nvzone/floaterm)
+  - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
@@ -30,9 +29,9 @@
 
 # Done (in reverse chronological order)
 
+- Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/). Enabled search highlighting for this cause, added `<leader>cs` remap to clear the search highlight.
 - Implemented the snacks picker for advanced-git-search.
-- Implemented [Garbage collection](https://github.com/Zeioth/garbage-day.nvim?tab=readme-ov-file)
-- Blink: disabkle auto brackets.
+- Blink: disable auto brackets.
 - Added visual tracker for dual coding: [smear-cursor](https://github.com/sphamba/smear-cursor.nvim). Disabled by default, enable with `:SmearCursorToggle`.
 - Installed [vim-razor](https://github.com/jlcrochet/vim-razor). Try it out.
 - Tried Flog as a counterpart for Git Graph in VScode. It's not too fast on my personal laptop, check if I can live with it.
