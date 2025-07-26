@@ -59,6 +59,9 @@ Map('n', 'k', function()
   return 'k'
 end, { expr = true })
 
+Map({ "n", "t" }, "<C-t>", function()
+  require("floaterm").open()
+end)
 ----------------
 --- Commands ---
 ----------------

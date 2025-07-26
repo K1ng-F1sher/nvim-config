@@ -4,7 +4,6 @@
 - Find a way that csharp-ls stops giving so many messages that I have to confirm.
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
-  - [floaterm](https://github.com/nvzone/floaterm)
   - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
@@ -29,6 +28,7 @@
 
 # Done (in reverse chronological order)
 
+- Added [floaterm](https://github.com/nvzone/floaterm)
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/). Enabled search highlighting for this cause, added `<leader>cs` remap to clear the search highlight.
 - Implemented the snacks picker for advanced-git-search.
 - Blink: disable auto brackets.
