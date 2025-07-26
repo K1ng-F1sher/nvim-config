@@ -233,7 +233,6 @@ return {
           end)
         end,
       },
-
     },
     cmd = "FloatermToggle",
   },
