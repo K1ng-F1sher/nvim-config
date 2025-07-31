@@ -1,7 +1,8 @@
 # (Want) to do
 
+- Add a remap for adv git search for current file.
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
-- Find a way that csharp-ls stops giving so many messages that I have to confirm.
+- Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp?
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/)
@@ -9,8 +10,6 @@
   - [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
-- Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
-  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though.
 
 # Keep an eye on
 
@@ -28,6 +27,8 @@
 
 # Done (in reverse chronological order)
 
+- Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
+  - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though. Fine for now.
 - Added [floaterm](https://github.com/nvzone/floaterm)
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/). Enabled search highlighting for this cause, added `<leader>cs` remap to clear the search highlight.
 - Implemented the snacks picker for advanced-git-search.
