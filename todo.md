@@ -1,14 +1,17 @@
 # (Want) to do
 
 - Add a remap for adv git search for current file.
+- Reconsider current file explorer, as it's buggy sometimes.
+  - oil.nvim
+  - vim dirvish
+  - neo-/nvim-tree
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
-- Configure native hex [colors highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/)
-- Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp?
+- Configure native hex [colors highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
+- Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp? It seems to be caused when running `dotnet watch`.
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
-  - [namu](https://github.com/bassamsdata/namu.nvim/tree/main) for symbol navigation
 - Make better use of [opts in lazy](https://www.reddit.com/r/neovim/comments/1j86rgd/cant_get_how_lazynvim_opts_work/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
