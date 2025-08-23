@@ -83,7 +83,7 @@ return {
 
           Map("n", "gl", function() vim.diagnostic.open_float() end)
           Map("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
-          Map("n", "<leader>vc", function() vim.lsp.buf.code_action() end)
+          Map({ "n", "v" }, "<leader>vc", function() vim.lsp.buf.code_action() end)
           Map("n", "<leader>vh", function() vim.lsp.buf.signature_help() end)
           Map("n", "<leader>rn", function() vim.lsp.buf.rename() end)
 
