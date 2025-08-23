@@ -31,6 +31,7 @@
 
 # Done (in reverse chronological order)
 
+- Added python lsp.
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though. Fine for now.
 - Added [floaterm](https://github.com/nvzone/floaterm)

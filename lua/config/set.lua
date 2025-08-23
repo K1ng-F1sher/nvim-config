@@ -86,7 +86,7 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = '󰌶',
     }
   },
-  underline = {
+  undercurl = {
     severity = { min = vim.diagnostic.severity.WARN },
   },
   update_in_insert = false, -- false so diags are updated on InsertLeave
