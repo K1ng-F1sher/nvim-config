@@ -31,6 +31,7 @@ return {
             }
           }
         },
+        pylsp = true,
         ts_ls = true,
       }
 
