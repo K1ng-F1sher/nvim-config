@@ -191,14 +191,6 @@ return {
       { "gt",               function() Snacks.picker.lsp_type_definitions() end,                                desc = "Goto Type definition" },
       { "gs",               function() Snacks.picker.lsp_symbols() end,                                         desc = "Goto lsp Symbols" },
 
-      -- notifier
-      {
-        '<leader>nl',
-        function()
-          Snacks.notifier.show_history()
-        end,
-      },
-
       -- words
       {
         ']]',
