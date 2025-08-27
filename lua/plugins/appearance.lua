@@ -170,7 +170,7 @@ return {
       { "<leader>ls",       function() Snacks.picker.buffers() end,                                             desc = "buffers" },
       { "<leader><leader>", function() Snacks.picker.resume() end,                                              desc = "resume" },
       ---- git
-      -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>gt instead
+      { "<leader>gl",       function() Snacks.picker.git_log() end,                                             desc = "Git Log" },
       { "<leader>gf",       function() Snacks.picker.git_log_file() end,                                        desc = "Git log File" },
       { "<leader>gL",       function() Snacks.picker.git_log_line() end,                                        desc = "Git log Line" },
       { "<leader>gs",       function() Snacks.picker.git_status() end,                                          desc = "Git Status" },

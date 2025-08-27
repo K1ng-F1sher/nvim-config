@@ -7,7 +7,6 @@ return {
       Map("n", "<leader>gc", ":G commit -m ''<Left>")
       Map("n", "<leader>gq", ":G commit . -m ''<Left>", { desc = "Git Quick commit" })
       Map("n", "<leader>gp", ":G push<CR>", { silent = true })
-      Map("n", "<leader>gl", ":G pull<CR>", { silent = true })
       Map(
         "n",
         "<leader>gt",
