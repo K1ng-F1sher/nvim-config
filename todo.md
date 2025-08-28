@@ -1,5 +1,6 @@
 # (Want) to do
 
+- Add toml support.
 - Add a remap for adv git search for current file.
 - Reconsider current file explorer, as it's buggy sometimes.
   - oil.nvim
