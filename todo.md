@@ -2,7 +2,7 @@
 
 - Git graph: on enter show diff split instead of 1 page diff.
 - Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
-- Add toml ls.
+- Add toml ls, xml ls for formatting
 - Add a remap for adv git search for current file.
 - Reconsider current file explorer, as it's buggy sometimes.
   - oil.nvim
