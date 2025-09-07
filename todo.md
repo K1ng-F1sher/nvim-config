@@ -1,6 +1,6 @@
 # (Want) to do
 
-- Blink: disabkle auto brackets.
+- Blink: disable auto brackets.
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
 - Make a [c-matrix](https://github.com/abishekvashok/cmatrix) pane on the opening dashboard.
 - Search within selection: [here](https://www.reddit.com/r/neovim/comments/1kv7som/search_within_selection_in_neovim/)
