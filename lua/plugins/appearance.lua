@@ -67,7 +67,7 @@ return {
 
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
     cmd = { "RenderMarkdown" },
     ft = { "markdown" },
     ---@module 'render-markdown'

@@ -76,14 +76,14 @@ return {
   {
     {
       "ibhagwan/fzf-lua",
-      dependencies = { "echasnovski/mini.icons" },
+      dependencies = { "nvim-mini/mini.icons" },
       enabled = false,
       opts = {}
     }
   },
 
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     version = "*",
     opts = {
       mappings = {
