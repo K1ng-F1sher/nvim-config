@@ -2,7 +2,7 @@
 
 - Git graph: on enter show diff split instead of 1 page diff.
 - Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
-- Add toml ls, xml ls for formatting
+- Add xml formatting.
 - Look into [fundo](https://github.com/kevinhwang91/nvim-fundo).
 - Configure omnisharp instead of csharp-ls: [lazyvim example](https://www.lazyvim.org/extras/lang/omnisharp) / [omnisharp extended repo](https://github.com/Hoffs/omnisharp-extended-lsp.nvim)
 - Reconsider current file explorer, as it's buggy sometimes.
