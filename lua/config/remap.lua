@@ -11,6 +11,13 @@ Map("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "find and RePlace word under cursor" })
 
 -----------------
+--- Searching ---
+-----------------
+Map('x', '/', '<C-\\><C-n>`</\\%V', { desc = 'Search forward within visual selection' })
+Map('x', '?', '<C-\\><C-n>`>?\\%V', { desc = 'Search backward within visual selection' })
+Map('n', '<leader>cs', ':let @/ = ""<CR>', { silent = true, desc = 'Clear last search highlighting' })
+
+-----------------
 --- Clipboard ---
 -----------------
 Map("v", "y", "ygv<esc>", { remap = true, desc = "stay in visual mode after yanking" })
@@ -52,6 +59,9 @@ Map('n', 'k', function()
   return 'k'
 end, { expr = true })
 
+Map({ "n", "t" }, "<C-t>", function()
+  require("floaterm").open()
+end)
 ----------------
 --- Commands ---
 ----------------

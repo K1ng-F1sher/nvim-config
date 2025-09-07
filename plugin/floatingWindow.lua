@@ -70,4 +70,3 @@ local toggle_terminal = function()
 end
 
 CreateCommand("Floaterminal", toggle_terminal, {})
-Map({ "n", "t" }, "<C-t>", toggle_terminal)

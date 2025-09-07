@@ -170,7 +170,7 @@ return {
       { "<leader>ls",       function() Snacks.picker.buffers() end,                                             desc = "buffers" },
       { "<leader><leader>", function() Snacks.picker.resume() end,                                              desc = "resume" },
       ---- git
-      -- { "<leader>gl", function() Snacks.picker.git_log() end,              desc = "Git Log" }, use <leader>gt instead
+      { "<leader>gl",       function() Snacks.picker.git_log() end,                                             desc = "Git Log" },
       { "<leader>gf",       function() Snacks.picker.git_log_file() end,                                        desc = "Git log File" },
       { "<leader>gL",       function() Snacks.picker.git_log_line() end,                                        desc = "Git log Line" },
       { "<leader>gs",       function() Snacks.picker.git_status() end,                                          desc = "Git Status" },
@@ -191,14 +191,6 @@ return {
       { "gt",               function() Snacks.picker.lsp_type_definitions() end,                                desc = "Goto Type definition" },
       { "gs",               function() Snacks.picker.lsp_symbols() end,                                         desc = "Goto lsp Symbols" },
 
-      -- notifier
-      {
-        '<leader>nl',
-        function()
-          Snacks.notifier.show_history()
-        end,
-      },
-
       -- words
       {
         ']]',
@@ -217,6 +209,24 @@ return {
         desc = 'Prev reference',
       },
     }
+  },
+
+  {
+    "nvzone/floaterm",
+    dependencies = "nvzone/volt",
+    opts = {
+      border = false,
+      size = { h = 90, w = 90 },
+
+      mappings = {
+        term = function()
+          vim.keymap.set({ "n", "t" }, "<C-t>", function()
+            vim.cmd("FloatermToggle")
+          end)
+        end,
+      },
+    },
+    cmd = "FloatermToggle",
   },
 
   ---------------
