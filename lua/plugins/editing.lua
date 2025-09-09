@@ -14,6 +14,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
+        toml = { "prettier" },
         markdown = { "prettier" },
         graphql = { "prettier" },
         cs = { "csharpier" },
@@ -61,7 +62,7 @@ return {
   },
 
   {
-    'echasnovski/mini.nvim',
+    'nvim-mini/mini.nvim',
     version = "*",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
@@ -105,6 +106,13 @@ return {
         vim.g.undotree_DiffCommand = "FC"
       end
     end,
+  },
+
+  {
+    'kevinhwang91/nvim-fundo',
+    lazy = true,
+    dependencies = { 'kevinhwang91/promise-async' },
+    run = { function() require('fundo').install() end }
   },
 
 }

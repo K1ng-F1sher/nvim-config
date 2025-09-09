@@ -1,8 +1,7 @@
 # (Want) to do
 
 - Git graph: on enter show diff split instead of 1 page diff.
-- Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
-- Add toml ls, xml ls for formatting
+- Add xml formatting.
 - Look into [fundo](https://github.com/kevinhwang91/nvim-fundo).
 - Configure omnisharp instead of csharp-ls: [lazyvim example](https://www.lazyvim.org/extras/lang/omnisharp) / [omnisharp extended repo](https://github.com/Hoffs/omnisharp-extended-lsp.nvim)
 - Reconsider current file explorer, as it's buggy sometimes.
@@ -34,6 +33,7 @@
 
 # Done (in reverse chronological order)
 
+- Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
 - Added python lsp.
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
   - Always use relative path might fix it? [source](https://github.com/neovim/neovim/issues/8587#issuecomment-2576033560) and [source2](https://github.com/neovim/neovim/issues/33019) It definitely improves the issue, not always though. Fine for now.
