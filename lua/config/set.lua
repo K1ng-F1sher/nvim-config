@@ -64,13 +64,18 @@ if string.find(string.lower(vim.loop.os_uname().sysname), 'windows') then
     vim.o.shell = 'powershell'
   end
 
-  vim.o.shellcmdflag =
-  '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
+  -- Code below was removed to make xml formatting work
+  -- vim.o.shellcmdflag =
+  -- '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[\'Out-File:Encoding\']=\'utf8\';'
+  -- vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
+  -- vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
 
-  vim.o.shellredir = '2>&1 | %{ "$_" } | Out-File %s; exit $LastExitCode'
-  vim.o.shellpipe = '2>&1 | %{ "$_" } | Tee-Object %s; exit $LastExitCode'
-  vim.o.shellquote = ''
-  vim.o.shellxquote = ''
+  vim.opt.shellcmdflag =
+  "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+  vim.opt.shellquote = ""
+  vim.opt.shellxquote = ""
+  vim.opt.shellpipe = "| Out-File -Encoding UTF8 %s"
+  vim.opt.shellredir = "| Out-File -Encoding UTF8 %s"
 end
 
 --------------------

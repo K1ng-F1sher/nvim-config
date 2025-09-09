@@ -25,7 +25,7 @@ DisableItalics()
 --- SHADA ---
 -------------
 -- Workaround for deleting old SHADA files. [ref](https://github.com/neovim/neovim/issues/8587)
-CreateCommand("ClearShada", function()
+vim.api.nvim_create_user_command("ClearShada", function()
   local shada_path = vim.fn.expand(vim.fn.stdpath("data") .. "/shada")
   local files = vim.fn.glob(shada_path .. "/*", false, true)
   local all_success = 0
@@ -46,3 +46,33 @@ CreateCommand("ClearShada", function()
     vim.print("Successfully deleted all temporary shada files")
   end
 end, { desc = "Clears all the .tmp shada files" })
+
+----------------------
+--- XML formatting ---
+----------------------
+
+vim.api.nvim_create_user_command("FormatXml", function(opts)
+  local tempfile = vim.fn.tempname() .. ".py"
+  local f = io.open(tempfile, "w")
+
+  f:write([[
+import sys, xml.dom.minidom
+
+xml = xml.dom.minidom.parse(sys.stdin)
+txt = xml.toprettyxml(indent="  ")
+# remove empty lines
+print("\n".join([line for line in txt.splitlines() if line.strip()]))
+]])
+  f:close()
+
+  if opts.range and opts.range > 0 then
+    vim.cmd(opts.line1 .. "," .. opts.line2 .. "!python3 " .. tempfile)
+  else
+    vim.cmd("%!python3 " .. tempfile)
+  end
+
+  os.remove(tempfile)
+end, {
+  range = true,
+  desc = "Format buffer or visual selection as XML without extra blank lines",
+})

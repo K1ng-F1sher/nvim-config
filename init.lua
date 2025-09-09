@@ -1,5 +1,4 @@
 Map = vim.keymap.set
-CreateCommand = vim.api.nvim_create_user_command
 
 require("config.functions")
 require("config.set")
