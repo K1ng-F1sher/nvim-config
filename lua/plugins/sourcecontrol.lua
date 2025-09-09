@@ -22,6 +22,10 @@ return {
   },
 
   {
+    'sindrets/diffview.nvim'
+  },
+
+  {
     -- Enables `:GB` for Github
     "tpope/vim-rhubarb",
     event = { "BufReadPre", "BufNewFile" },
@@ -52,12 +56,16 @@ return {
       },
       hooks = {
         on_select_commit = function(commit)
-          vim.notify('Open diff ' .. commit.hash)
-          vim.cmd(':silent vert Git diff ' .. commit.hash .. '~' .. ' ' .. commit.hash)
+          -- vim.notify('Open diff ' .. commit.hash)
+          -- vim.cmd(':silent vert Git diff ' .. commit.hash .. '~' .. ' ' .. commit.hash)
+          vim.notify('DiffviewOpen ' .. commit.hash .. '^!')
+          vim.cmd(':DiffviewOpen ' .. commit.hash .. '^!')
         end,
         on_select_range_commit = function(from, to)
-          vim.notify('Open diff between ' .. from.hash .. ' and ' .. to.hash)
-          vim.cmd(':silent vert Git diff ' .. from.hash .. ' ' .. to.hash)
+          -- vim.notify('Open diff between ' .. from.hash .. ' and ' .. to.hash)
+          -- vim.cmd(':silent vert Git diff ' .. from.hash .. ' ' .. to.hash)
+          vim.notify('DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
+          vim.cmd(':DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
         end,
       },
     },

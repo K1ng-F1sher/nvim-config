@@ -1,7 +1,5 @@
 # (Want) to do
 
-- Git graph: on enter show diff split instead of 1 page diff.
-- Add xml formatting.
 - Configure omnisharp instead of csharp-ls: [lazyvim example](https://www.lazyvim.org/extras/lang/omnisharp) / [omnisharp extended repo](https://github.com/Hoffs/omnisharp-extended-lsp.nvim)
 - Reconsider current file explorer, as it's buggy sometimes.
   - oil.nvim
@@ -32,7 +30,9 @@
 
 # Done (in reverse chronological order)
 
-- Look into [fundo](https://github.com/kevinhwang91/nvim-fundo). Installed and disabled for now.
+- Git graph: on enter show diff split instead of 1 page diff.
+- Added xml formatting command: `FormatXml`.
+- Look into [fundo](https://github.com/kevinhwang91/nvim-fundo).
 - Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
 - Added python lsp.
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
