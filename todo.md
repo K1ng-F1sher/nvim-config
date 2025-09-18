@@ -1,22 +1,12 @@
 # (Want) to do
 
-- Configure omnisharp instead of csharp-ls: [lazyvim example](https://www.lazyvim.org/extras/lang/omnisharp) / [omnisharp extended repo](https://github.com/Hoffs/omnisharp-extended-lsp.nvim)
-- Reconsider current file explorer, as it's buggy sometimes.
-  - oil.nvim
-  - vim dirvish
-  - neo-/nvim-tree
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
 - Configure native hex [colors highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
-- Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp? It seems to be caused when running `dotnet watch`.
+- Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp? It seems to be caused when running `dotnet watch`. Or the best way might be to check the ls repo itself and see if I can make an issue/PR.
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
-  - [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
-
-# Keep an eye on
-
-- [ashen theme](https://github.com/ficcdaf/ashen.nvim)
 
 # Documentation
 
@@ -30,6 +20,9 @@
 
 # Done (in reverse chronological order)
 
+- Disabled better-type-hover, as it was buggy with other LSPs sometimes.
+- Added [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/), to try it out.
+- Readded neo-tree for snacks explorer. The snacks variant was a bit buggy sometimes.
 - Git graph: on enter show diff split instead of 1 page diff.
 - Added xml formatting command: `FormatXml`.
 - Look into [fundo](https://github.com/kevinhwang91/nvim-fundo).

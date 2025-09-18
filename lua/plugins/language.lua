@@ -111,13 +111,12 @@ return {
     },
   },
 
-  -- {
-  --   ft = { "typescript", "typescriptreact" },
-  --   'Sebastian-Nielsen/better-type-hover',
-  --   opts = {
-  --     openTypeDocKeymap = '<S-k>',
-  --   }
-  -- },
+  {
+    "Kurren123/mssql.nvim",
+    opts = {
+      keymap_preix = "<leader>s"
+    },
+  },
 
   {
     "jlcrochet/vim-razor"
