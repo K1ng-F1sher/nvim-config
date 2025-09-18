@@ -111,13 +111,13 @@ return {
     },
   },
 
-  {
-    ft = { "typescript", "typescriptreact" },
-    'Sebastian-Nielsen/better-type-hover',
-    opts = {
-      openTypeDocKeymap = '<S-k>',
-    }
-  },
+  -- {
+  --   ft = { "typescript", "typescriptreact" },
+  --   'Sebastian-Nielsen/better-type-hover',
+  --   opts = {
+  --     openTypeDocKeymap = '<S-k>',
+  --   }
+  -- },
 
   {
     "jlcrochet/vim-razor"
