@@ -3,6 +3,7 @@
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
 - Configure native hex [colors highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
 - Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp? It seems to be caused when running `dotnet watch`. Or the best way might be to check the ls repo itself and see if I can make an issue/PR.
+  - Error message: `LSP[csharp_ls][Info] csharp-ls: change to .sln detected, will reload solution`
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)

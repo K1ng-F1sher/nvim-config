@@ -114,7 +114,7 @@ return {
   {
     "Kurren123/mssql.nvim",
     opts = {
-      keymap_preix = "<leader>s"
+      keymap_prefix = "<leader>s"
     },
   },
 
