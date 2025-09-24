@@ -70,7 +70,8 @@ return {
           capabilities = capabilities
         }, config)
 
-        lspconfig[name].setup(config)
+        vim.lsp.config(name, config)
+        vim.lsp.enable(name)
       end
 
       local disable_semantic_tokens = {
@@ -114,7 +115,7 @@ return {
         -- See the configuration section for more details
         -- Load luvit types when the `vim.uv` word is found
         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-        { path = 'wezterm-types', mods = { 'wezterm' } },
+        { path = 'wezterm-types',      mods = { 'wezterm' } },
       },
     },
   },
