@@ -12,8 +12,10 @@ return {
 
       local servers = {
         bashls = true,
-        csharp_ls = true,
+        -- csharp_ls = true,
         cssls = true,
+        roslyn = true,
+        rzls = true,
         jsonls = {
           settings = {
             json = {
@@ -36,6 +38,10 @@ return {
       }
 
       require("mason").setup({
+        registries = {
+          "github:mason-org/mason-registry",
+          "github:Crashdummyy/mason-registry",
+        },
         ensure_installed = {
           "cssls",
           "eslint",
@@ -121,14 +127,21 @@ return {
   },
 
   {
-    "Kurren123/mssql.nvim",
+    "seblyng/roslyn.nvim",
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
+    ft = { "cs", "razor" },
     opts = {
-      keymap_prefix = "<leader>s"
+      -- your configuration comes here; leave empty for default settings
     },
   },
 
   {
-    "jlcrochet/vim-razor"
+    "Kurren123/mssql.nvim",
+    cmd = { 'MSSQL' },
+    opts = {
+      keymap_prefix = "<leader>s"
+    },
   },
 
   {

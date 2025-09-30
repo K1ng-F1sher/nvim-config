@@ -53,40 +53,55 @@ return {
   },
 
   {
-    {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
-      },
-      lazy = false,
-      cmd = "Neotree",
-      opts = {
-        filesystem = {
-          hijack_netrw_behavior = "open_current",
-          window = {
-            mappings = {
-              ["-"] = "navigate_up",
-              ["<bs>"] = "noop",
-              ["Z"] = "expand_all_nodes",
-            },
-          },
-          follow_current_file = {
-            enabled = true,
-            leave_dirs_open = true,
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    lazy = false,
+    cmd = "Neotree",
+    opts = {
+      filesystem = {
+        hijack_netrw_behavior = "open_current",
+        window = {
+          mappings = {
+            ["-"] = "navigate_up",
+            ["<bs>"] = "noop",
+            ["Z"] = "expand_all_nodes",
           },
         },
-  
-        Map("n", "<leader>e", function()
-          vim.cmd("Neotree reveal position=float")
-          vim.cmd("set rnu")
-        end),
-        Map("n", "<C-c>", function()
-          vim.cmd("Neotree close")
-        end)
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = true,
+        },
       },
+
+      Map("n", "<leader>e", function()
+        vim.cmd("Neotree reveal position=float")
+        vim.cmd("set rnu")
+      end),
+      Map("n", "<C-c>", function()
+        vim.cmd("Neotree close")
+      end)
+    },
+  },
+
+  {
+    "A7Lavinraj/fyler.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    branch = "stable",
+    opts = {
+      icon_provider = "nvim_web_devicons",
+      track_current_buffer = true,
+      win = {
+        kind = 'float',
+        kind_presets = { float = { width = "0.8rel", height = "0.8rel" } }
+      },
+      Map("n", '<leader>x', function()
+        require('fyler').open({ kind = 'float' })
+      end)
     },
   },
 

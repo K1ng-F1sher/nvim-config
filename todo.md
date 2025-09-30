@@ -4,6 +4,7 @@
 - Configure native hex [colors highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
 - Find a way that csharp-ls stops giving so many messages that I have to confirm. Perhaps use omnisharp? It seems to be caused when running `dotnet watch`. Or the best way might be to check the ls repo itself and see if I can make an issue/PR.
   - Error message: `LSP[csharp_ls][Info] csharp-ls: change to .sln detected, will reload solution`
+  - Also install razor support.
 - Have a look at:
   - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
@@ -21,6 +22,8 @@
 
 # Done (in reverse chronological order)
 
+- Installed Roslyn, try it out.
+- Trying out Fyler.
 - Disabled better-type-hover, as it was buggy with other LSPs sometimes.
 - Added [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/), to try it out.
 - Readded neo-tree for snacks explorer. The snacks variant was a bit buggy sometimes.
