@@ -190,6 +190,7 @@ return {
       { "gi",               function() Snacks.picker.lsp_implementations() end,                                 desc = "Goto Implementation" },
       { "gt",               function() Snacks.picker.lsp_type_definitions() end,                                desc = "Goto Type definition" },
       { "gs",               function() Snacks.picker.lsp_symbols() end,                                         desc = "Goto lsp Symbols" },
+      { "gw",               function() Snacks.picker.lsp_workspace_symbols() end,                               desc = "LSP Workspace Symbols" },
 
       -- words
       {
