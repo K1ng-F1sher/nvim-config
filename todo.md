@@ -23,6 +23,7 @@
 # Done (in reverse chronological order)
 
 - Installed Roslyn. Works well, but no support for .net framework.
+  - I can still use csharp_ls, but it gives an error atm: A directory or directories in "msbuildSearchPaths" do not exist.
 - Trying out (Fyler)[https://github.com/A7Lavinraj/fyler.nvim/]. Bit too slow atm.
 - Disabled better-type-hover, as it was buggy with other LSPs sometimes.
 - Added [mssql.nvim](https://www.reddit.com/r/neovim/comments/1kf8j6j/mssqlnvim_an_sql_server_plugin_for_neovim/), to try it out. The output isn't formatted neatly when a lot of columns are queried. Perhaps [dbout](https://github.com/zongben/dbout.nvim) provides a solution, as it posts the results as json.
