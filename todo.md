@@ -5,8 +5,8 @@
   - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
   - [Undotree](https://www.reddit.com/r/neovim/comments/1o0uo9q/feat_undotree_ui_merged_on_master/) inside nvim.
   - Better [folds](https://www.reddit.com/r/neovim/comments/1nxzz9i/new_foldinner_fillchar/#lightbox)
+  - Out of the box [diff tool](https://www.reddit.com/r/neovim/comments/1o4eo6s/new_difftool_command_added_to_neovim/)
 - Have a look at:
-  - [neonuget](https://www.reddit.com/r/neovim/comments/1ko1cxq/neonuget_v10_is_here_manage_your_net_nuget/)
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
