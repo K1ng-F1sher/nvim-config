@@ -8,6 +8,7 @@
   - Out of the box [diff tool](https://www.reddit.com/r/neovim/comments/1o4eo6s/new_difftool_command_added_to_neovim/)
 - Have a look at:
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
+  - [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
 # Documentation

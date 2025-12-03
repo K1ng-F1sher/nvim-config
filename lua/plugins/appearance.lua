@@ -174,7 +174,7 @@ return {
       { "<leader>gf",       function() Snacks.picker.git_log_file() end,                                        desc = "Git log File" },
       { "<leader>gL",       function() Snacks.picker.git_log_line() end,                                        desc = "Git log Line" },
       { "<leader>gs",       function() Snacks.picker.git_status() end,                                          desc = "Git Status" },
-      -- { "<leader>e",        function() Snacks.explorer() end,                                                   desc = "file Explorer" },
+      { "<leader>e",        function() Snacks.explorer() end,                                                   desc = "file Explorer" },
       ---- search
       { "<leader>lg",       function() Snacks.picker.grep({ title = "live grep | <c-g> to disable live" }) end, desc = "Live Grep" },
       { "<leader>rg",       function() Snacks.picker.grep({ live = false }) end,                                desc = "RipGrep" },

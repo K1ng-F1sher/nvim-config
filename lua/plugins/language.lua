@@ -12,7 +12,6 @@ return {
 
       local servers = {
         bashls = true,
-        -- csharp_ls = true,
         cssls = true,
         roslyn = true,
         rzls = true,
@@ -181,6 +180,9 @@ return {
         },
       },
 
+      fuzzy = {
+        implementation = "prefer_rust"
+      },
 
       -- experimental signature help support
       signature = {
