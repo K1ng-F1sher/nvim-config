@@ -107,7 +107,7 @@ return {
 
   {
     "folke/lazydev.nvim",
-    ft = "lua", -- only load on lua files
+    ft = "lua",
     dependencies = {
       {
         'DrKJeff16/wezterm-types',
@@ -139,7 +139,7 @@ return {
     "Kurren123/mssql.nvim",
     cmd = { 'MSSQL' },
     opts = {
-      keymap_prefix = "<leader>s"
+      keymap_prefix = "<leader>m"
     },
   },
 
@@ -155,11 +155,8 @@ return {
         -- useful for when your theme doesn't support blink.cmp
         -- will be removed in a future release, assuming themes add support
         use_nvim_cmp_as_default = false,
-        -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        -- adjusts spacing to ensure icons are aligned
         nerd_font_variant = "mono",
       },
-      -- auto_brackets = {},
       completion = {
         menu = {
           auto_show = true,
@@ -184,7 +181,7 @@ return {
         implementation = "prefer_rust"
       },
 
-      -- experimental signature help support
+      -- experimental
       signature = {
         enabled = true,
         window = {
@@ -228,7 +225,7 @@ return {
     config = function()
       require 'nvim-treesitter.configs'.setup {
         -- A list of parser names, or "all" (the five listed parsers should always be installed)
-        ensure_installed = { "javascript", "c", "c_sharp", "html", "lua", "vim", "markdown", "markdown_inline" },
+        ensure_installed = { "javascript", "c", "css", "c_sharp", "html", "lua", "vim", "markdown", "markdown_inline" },
 
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,

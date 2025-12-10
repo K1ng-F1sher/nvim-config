@@ -23,6 +23,8 @@
 
 # Done (in reverse chronological order)
 
+- Installed mini.cmdline. Gets rid of some remaps that I used for typos in common commands, such as `:w`.
+- Cleaned up some unused plugins such as fyler, splitjoin, floaterm and neotree.
 - Installed Roslyn. Works well, but no support for .net framework.
   - I can still use csharp_ls, but it gives an error atm: A directory or directories in "msbuildSearchPaths" do not exist.
 - Trying out (Fyler)[https://github.com/A7Lavinraj/fyler.nvim/]. Bit too slow atm.

@@ -1,6 +1,6 @@
 # Neovim config
 
-This is my current neovim config. I'm on neovim 0.11.0.
+This is my current neovim config. I'm on neovim 0.11.5.
 Default config location on:
 
 - Windows: "~/AppData/Local/nvim/init.lua"

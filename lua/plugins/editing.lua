@@ -63,26 +63,18 @@ return {
 
   {
     'nvim-mini/mini.nvim',
-    version = "*",
+    version = false,
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require('mini.ai').setup()
       require("mini.surround").setup()
+      require('mini.cmdline').setup({})
     end,
   },
 
   {
     "folke/ts-comments.nvim",
     event = { "BufReadPre", "BufNewFile" },
-    opts = {},
-  },
-
-  {
-    "Wansmer/treesj",
-    keys = {
-      "<leader>m",
-    },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
   },
 
@@ -114,5 +106,4 @@ return {
     dependencies = { 'kevinhwang91/promise-async' },
     run = { function() require('fundo').install() end }
   },
-
 }

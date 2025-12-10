@@ -59,19 +59,6 @@ Map('n', 'k', function()
   return 'k'
 end, { expr = true })
 
-Map({ "n", "t" }, "<C-t>", function()
-  require("floaterm").open()
-end)
-----------------
---- Commands ---
-----------------
-vim.api.nvim_create_user_command("W", "w", { desc = "case insensitive write command" })
-vim.api.nvim_create_user_command("Wq", "wq", { desc = "case insensitive write-quit command" })
-vim.api.nvim_create_user_command("Wa", "wa", { desc = "case insensitive write-all command" })
-vim.api.nvim_create_user_command("Bd", "bd", { desc = "case insensitive buffer-delete command" })
-vim.api.nvim_create_user_command("Q", "q", { desc = "case insensitive quit command" })
-vim.api.nvim_create_user_command("E", "e", { desc = "case insensitive edit command" })
-
 ----------------
 --- Viewport ---
 ----------------

@@ -70,3 +70,4 @@ local toggle_terminal = function()
 end
 
 vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
+Map({ "n", "t" }, "<C-t>", toggle_terminal)

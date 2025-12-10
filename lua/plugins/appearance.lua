@@ -212,24 +212,6 @@ return {
     }
   },
 
-  {
-    "nvzone/floaterm",
-    dependencies = "nvzone/volt",
-    opts = {
-      border = false,
-      size = { h = 90, w = 90 },
-
-      mappings = {
-        term = function()
-          vim.keymap.set({ "n", "t" }, "<C-t>", function()
-            vim.cmd("FloatermToggle")
-          end)
-        end,
-      },
-    },
-    cmd = "FloatermToggle",
-  },
-
   ---------------
   --- THEMES ----
   ---------------
