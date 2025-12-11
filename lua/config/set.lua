@@ -40,6 +40,9 @@ vim.o.foldtext = ""
 vim.opt.foldcolumn = "0"
 vim.opt.fillchars:append({ fold = " " })
 
+vim.o.pumheight = 6
+--vim.o.pumborder = 'single'  -- Available from nvim v0.12
+
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8

@@ -60,6 +60,11 @@ Map('n', 'k', function()
 end, { expr = true })
 
 ----------------
+--- Commands ---
+----------------
+vim.api.nvim_create_user_command("Q", "q", { desc = "case insensitive quit command" })
+
+----------------
 --- Viewport ---
 ----------------
 Map("n", "<leader>rc", "<cmd>set conceallevel=0<CR>", { desc = "Reset Conceallevel" })
