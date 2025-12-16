@@ -1,6 +1,8 @@
 # (Want) to do
 
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
+- Mini.cmdline:
+  - Seems the plugin doesn't hide options which fall outside the typed characters. Try to fix.
 - When nvim 12 comes out:
   - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
   - [Undotree](https://www.reddit.com/r/neovim/comments/1o0uo9q/feat_undotree_ui_merged_on_master/) inside nvim.

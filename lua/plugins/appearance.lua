@@ -76,6 +76,7 @@ return {
 
   {
     "folke/snacks.nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     lazy = false,
     priority = 1000,
     opts = {
@@ -109,6 +110,7 @@ return {
         },
       },
       explorer = {},
+      image = {},
       picker = {
         matcher = { frecency = true },
         sources = {
