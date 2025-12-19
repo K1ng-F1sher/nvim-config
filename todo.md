@@ -1,6 +1,7 @@
 # (Want) to do
 
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
+  - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/).
 - Mini.cmdline:
   - Seems the plugin doesn't hide options which fall outside the typed characters. Try to fix.
 - When nvim 12 comes out:
@@ -26,6 +27,8 @@
 
 # Done (in reverse chronological order)
 
+- Installed nvim-ts-autotag. Works out of the box as expected for renaming tags in tsx files.
+- Applied treesitter incremental selection, [source](https://pawelgrzybek.com/nvim-incremental-selection/).
 - Installed mini.cmdline. Gets rid of some remaps that I used for typos in common commands, such as `:w`.
 - Cleaned up some unused plugins such as fyler, splitjoin, floaterm and neotree.
 - Installed Roslyn. Works well, but no support for .net framework.
@@ -36,7 +39,7 @@
 - Readded neo-tree for snacks explorer. The snacks variant was a bit buggy sometimes.
 - Git graph: on enter show diff split instead of 1 page diff.
 - Added xml formatting command: `FormatXml`.
-- Look into [fundo](https://github.com/kevinhwang91/nvim-fundo).
+- Look into [fundo](https://github.com/kevinhwang91/nvim-fundo). Installed, I don't see that much improvement on whether history is saved.
 - Update references to mini plugins: `recommended to adjust plugin installation to use nvim-mini/mini.xxx instead of previous echasnovski/mini.xxx`
 - Added python lsp.
 - Investigate vim not exiting correctly on Windows: log file in `..\AppData\Local\nvim-data`
