@@ -13,6 +13,7 @@
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [hotlines](https://github.com/tednguyendev/hotlines.nvim) highlight lines ran from localhost
   - [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
+  - [CSVview](https://github.com/hat0uma/csvview.nvim)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
 # Documentation
