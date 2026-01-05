@@ -79,6 +79,30 @@ return {
   },
 
   {
+    'danymat/neogen',
+    version = '*',
+    config = {
+      enabled = true,
+      languages = {
+        cs = {
+          template = {
+            annotation_convention = "xmldoc" -- for a full list of annotation_conventions, see supported-languages below,
+          }
+        },
+      }
+    },  
+    keys = {
+      {
+        "<leader>ca",
+        function()
+          require('neogen').generate()
+        end,
+        desc = "Create Summary",
+      }
+    },
+  },
+
+  {
     "folke/ts-comments.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {},

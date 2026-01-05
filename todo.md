@@ -27,6 +27,7 @@
 
 # Done (in reverse chronological order)
 
+- Added neogen for creating annotations.
 - Installed nvim-ts-autotag. Works out of the box as expected for renaming tags in tsx files.
 - Applied treesitter incremental selection, [source](https://pawelgrzybek.com/nvim-incremental-selection/).
 - Installed mini.cmdline. Gets rid of some remaps that I used for typos in common commands, such as `:w`.
