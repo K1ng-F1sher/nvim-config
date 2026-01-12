@@ -13,8 +13,7 @@ return {
       local servers = {
         bashls = true,
         cssls = true,
-        roslyn = true,
-        rzls = true,
+        cssmodules_ls = true,
         jsonls = {
           settings = {
             json = {
@@ -32,7 +31,8 @@ return {
             }
           }
         },
-        pylsp = true,
+        -- pylsp = true,
+        roslyn = true,
         ts_ls = true,
       }
 
@@ -72,7 +72,7 @@ return {
           config = {}
         end
         config = vim.tbl_deep_extend("force", {}, {
-          capabilities = capabilities
+          capabilities = capabilities,
         }, config)
 
         vim.lsp.config(name, config)
