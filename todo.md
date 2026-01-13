@@ -15,7 +15,7 @@
   - [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
   - [CSVview](https://github.com/hat0uma/csvview.nvim)
   - [bento buffer manager](https://www.reddit.com/r/neovim/comments/1q5wi8y/bento_a_minimalist_and_efficient_yet_powerful_and/)
-  - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/)
+  - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/) Need to find a way to integrate it in `<K>`.
   - [html css support](https://github.com/Jezda1337/nvim-html-css)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
