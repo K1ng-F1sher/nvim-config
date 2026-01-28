@@ -13,7 +13,11 @@ return {
       local servers = {
         bashls = true,
         cssls = true,
-        cssmodules_ls = true,
+        cssmodules_ls = {
+          cmd = { 'cssmodules-language-server' },
+          filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+          root_markers = { 'package.json' },
+        },
         jsonls = {
           settings = {
             json = {
