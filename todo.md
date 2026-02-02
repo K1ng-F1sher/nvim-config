@@ -2,8 +2,6 @@
 
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
   - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/)
-- Mini.cmdline:
-  - Seems the plugin doesn't hide options which fall outside the typed characters. Try to fix.
 - Fix sqlite download after every reboot: [link](https://github.com/folke/snacks.nvim/commit/b9900444d2ea494bba8857e5224059002ee8c465)
 - When nvim 12 comes out:
   - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released
@@ -16,6 +14,7 @@
   - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/) Need to find a way to integrate it in `<K>`.
   - [haunt](https://github.com/TheNoeTrevino/haunt.nvim) comment on your code without committing.
   - [dotrush](https://github.com/JaneySprings/DotRush)
+  - [blink-edit](https://github.com/BlinkResearchLabs/blink-edit.nvim) api for local LLM integration in nvim
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
 # Documentation
