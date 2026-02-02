@@ -90,7 +90,7 @@ return {
           }
         },
       }
-    },  
+    },
     keys = {
       {
         "<leader>ca",
@@ -109,25 +109,18 @@ return {
   },
 
   {
-    "mbbill/undotree",
-    lazy = true,
-    cmd = { "UndotreeToggle", "UndotreeShow" },
+    "XXiaoA/atone.nvim",
+    cmd = "Atone",
+    opts = {
+      ui = { compact = true }
+    },
     keys = {
       {
         "<leader>u",
-        vim.cmd.UndotreeToggle,
-        desc = "Undotree: Toggle Undotree",
+        "<cmd>Atone toggle<cr>",
+        desc = "Toggle Undotree",
       },
     },
-    config = function(_, _)
-      vim.g.undotree_SetFocusWhenToggle = 1
-      vim.g.undotree_DiffAutoOpen = 0
-      vim.g.undotree_SplitWidth = 36
-
-      if vim.fn.has("win32") == 1 then
-        vim.g.undotree_DiffCommand = "FC"
-      end
-    end,
   },
 
   {

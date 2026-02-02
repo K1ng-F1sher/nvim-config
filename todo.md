@@ -1,24 +1,20 @@
 # (Want) to do
 
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
-  - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/).
+  - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/)
 - Mini.cmdline:
   - Seems the plugin doesn't hide options which fall outside the typed characters. Try to fix.
 - Fix sqlite download after every reboot: [link](https://github.com/folke/snacks.nvim/commit/b9900444d2ea494bba8857e5224059002ee8c465)
 - When nvim 12 comes out:
-  - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
+  - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released
   - [Undotree](https://www.reddit.com/r/neovim/comments/1o0uo9q/feat_undotree_ui_merged_on_master/) inside nvim.
   - Better [folds](https://www.reddit.com/r/neovim/comments/1nxzz9i/new_foldinner_fillchar/#lightbox)
   - Out of the box [diff tool](https://www.reddit.com/r/neovim/comments/1o4eo6s/new_difftool_command_added_to_neovim/)
 - Have a look at:
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [hotlines](https://github.com/tednguyendev/hotlines.nvim) highlight lines ran from localhost
-  - [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
-  - [CSVview](https://github.com/hat0uma/csvview.nvim)
-  - [bento buffer manager](https://www.reddit.com/r/neovim/comments/1q5wi8y/bento_a_minimalist_and_efficient_yet_powerful_and/)
   - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/) Need to find a way to integrate it in `<K>`.
-  - [html css support](https://github.com/Jezda1337/nvim-html-css)
-  - [haunt](https://github.com/TheNoeTrevino/haunt.nvim)
+  - [haunt](https://github.com/TheNoeTrevino/haunt.nvim) comment on your code without committing.
   - [dotrush](https://github.com/JaneySprings/DotRush)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
@@ -35,6 +31,7 @@
 
 # Done (in reverse chronological order)
 
+- Added [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
 - Added neogen for creating annotations.
 - Installed nvim-ts-autotag. Works out of the box as expected for renaming tags in tsx files.
 - Applied treesitter incremental selection, [source](https://pawelgrzybek.com/nvim-incremental-selection/).
