@@ -15,6 +15,7 @@
   - [haunt](https://github.com/TheNoeTrevino/haunt.nvim) comment on your code without committing.
   - [dotrush](https://github.com/JaneySprings/DotRush)
   - [blink-edit](https://github.com/BlinkResearchLabs/blink-edit.nvim) api for local LLM integration in nvim
+  - [obsidian-nvim] (https://github.com/obsidian-nvim/obsidian.nvim)
 - Investigate security after darkman spoofing [source](https://www.reddit.com/r/neovim/comments/1j97igm/darkman_spoofing_malware_is_also_found/)
 
 # Documentation
