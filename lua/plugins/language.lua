@@ -9,6 +9,7 @@ return {
     },
     config = function()
       local lspconfig = require "lspconfig"
+      local util = require 'lspconfig.util'
 
       local servers = {
         bashls = true,
@@ -17,6 +18,14 @@ return {
           cmd = { 'cssmodules-language-server' },
           filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
           root_markers = { 'package.json' },
+        },
+        graphql = {
+          cmd = { 'graphql-lsp', 'server', '-m', 'stream' },
+          filetypes = { 'graphql', 'typescriptreact', 'javascriptreact', 'typescript', 'javascript', 'graphql.ts' },
+          root_dir = function(bufnr, on_dir)
+            local fname = vim.api.nvim_buf_get_name(bufnr)
+            on_dir(util.root_pattern('.graphqlrc*', '.graphql.config.*', 'graphql.config.*', 'package.json')(fname))
+          end,
         },
         jsonls = {
           settings = {
@@ -192,6 +201,7 @@ return {
           border = "rounded",
           max_width = 160,
           max_height = 30,
+
           scrollbar = false,
         },
       },
