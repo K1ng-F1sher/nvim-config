@@ -235,78 +235,54 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    -- init = function()
-    --   vim.env.CC = 'gcc'
-    -- end,
+    init = function()
+      vim.env.CC = 'gcc'
+    end,
     lazy = false,
     build = ":TSUpdate",
     config = function()
-        local ts = require 'nvim-treesitter'
-        local parsers = {
-             "javascript", "css", "c_sharp", "html", "lua", "vim", "markdown", "markdown_inline" 
-        }
+      local ts = require 'nvim-treesitter'
+      local parsers = {
+        "typescript", "tsx", "css", "c_sharp", "html", "lua", "markdown", "markdown_inline"
+      }
 
-        local group = vim.api.nvim_create_augroup("CustomTreesitter", { clear = true })
-			vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
-				group = group,
-				callback = function()
-					if vim.bo.buftype ~= "" then
-						return
-					end
+      local group = vim.api.nvim_create_augroup("CustomTreesitter", { clear = true })
+      vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+        group = group,
+        callback = function()
+          if vim.bo.buftype ~= "" then
+            return
+          end
 
-					pcall(vim.treesitter.start, 0)
-				end,
-			})
+          pcall(vim.treesitter.start, 0)
+        end,
+      })
 
-			vim.api.nvim_create_autocmd("User", {
-				group = group,
-				pattern = "VeryLazy",
-				once = true,
-				callback = function()
-					require("nvim-treesitter").install(parsers)
-				end,
-			})
+      vim.api.nvim_create_autocmd("User", {
+        group = group,
+        pattern = "VeryLazy",
+        once = true,
+        callback = function()
+          ts.install(parsers)
+        end,
+      })
     end,
 
-    },
-  --{
-  --  'nvim-treesitter/nvim-treesitter',
-  --  branch = 'main',
-  --  build = ':TSUpdate',
-  --  config = function()
-  --    require 'nvim-treesitter.configs'.setup {
-  --      -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  --      ensure_installed = { "javascript", "c", "css", "c_sharp", "html", "lua", "vim", "markdown", "markdown_inline" },
+  },
 
-  --      -- Install parsers synchronously (only applied to `ensure_installed`)
-  --      sync_install = false,
-
-  --      incremental_selection = {
-  --        enable = true,
-  --        keymaps = {
-  --          init_selection = "<A-o>",
-  --          node_incremental = "<A-o>",
-  --          scope_incremental = "<A-O>",
-  --          node_decremental = "<A-i>",
-  --        },
-  --      },
-
-  --      -- Automatically install missing parsers when entering buffer
-  --      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  --      auto_install = true,
-
-  --      highlight = {
-  --        enable = true,
-
-  --        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-  --        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-  --        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-  --        -- Instead of true it can also be a list of languages
-  --        additional_vim_regex_highlighting = false,
-  --      },
-  --    }
-
-  --  end
-  --},
-
+  {
+    "MeanderingProgrammer/treesitter-modules.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<A-o>",
+          node_incremental = "<A-o>",
+          scope_incremental = "<A-O>",
+          node_decremental = "<A-i>",
+        }
+      }
+    }
+  }
 }

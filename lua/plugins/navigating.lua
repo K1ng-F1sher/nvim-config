@@ -53,16 +53,6 @@ return {
   },
 
   {
-    "https://codeberg.org/andyg/leap.nvim",
-    config = function()
-      Map('n', 'S', '<Plug>(leap)')
-    end,
-    keys = {
-      'S',
-    },
-  },
-
-  {
     "unblevable/quick-scope",
     event = { "BufReadPre", "BufNewFile" },
     config = function()

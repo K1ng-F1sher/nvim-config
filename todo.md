@@ -1,10 +1,6 @@
 # (Want) to do
 
-- Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
-  - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/)
-- Fix sqlite download after every reboot: [link](https://github.com/folke/snacks.nvim/commit/b9900444d2ea494bba8857e5224059002ee8c465)
 - When nvim 12 comes out:
-  - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released
   - [Undotree](https://www.reddit.com/r/neovim/comments/1o0uo9q/feat_undotree_ui_merged_on_master/) inside nvim.
   - Better [folds](https://www.reddit.com/r/neovim/comments/1nxzz9i/new_foldinner_fillchar/#lightbox)
   - Out of the box [diff tool](https://www.reddit.com/r/neovim/comments/1o4eo6s/new_difftool_command_added_to_neovim/)
@@ -32,6 +28,9 @@
 
 # Done (in reverse chronological order)
 
+- Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released
+- Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)
+  - Also apply new variant of [incremental selection](https://pawelgrzybek.com/nvim-incremental-selection/)
 - Added [atone](https://github.com/XXiaoA/atone.nvim?tab=readme-ov-file)
 - Added neogen for creating annotations.
 - Installed nvim-ts-autotag. Works out of the box as expected for renaming tags in tsx files.
