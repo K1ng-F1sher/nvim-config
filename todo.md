@@ -28,7 +28,8 @@
 
 # Done (in reverse chronological order)
 
-- Added claude-code for nvim.
+- Use native incremental selection.
+- Removed claude code plugin.
 - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.
   - Removed nvim-highlight-colors as a result.
 - Migrate treesitter to `main` branch: [here](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)/[here](https://www.reddit.com/r/neovim/comments/1n0ylu0/windows_working_treesitter_config_on_main_branch/)

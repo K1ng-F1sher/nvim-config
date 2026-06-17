@@ -10,6 +10,29 @@ Map("n", "<leader>f", vim.lsp.buf.format)
 Map("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "find and RePlace word under cursor" })
 
+Map("n", "<leader>u", function()
+  require("undotree").open({
+    command = math.floor(vim.api.nvim_win_get_width(0) / 3) .. "vnew",
+  })
+end, { desc = "[U]ndotree toggle" })
+
+-- incremental selection treesitter/lsp
+Map({ "n", "x", "o" }, "<A-o>", function()
+  if vim.treesitter.get_parser(nil, nil, { error = false }) then
+    require("vim.treesitter._select").select_parent(vim.v.count1)
+  else
+    vim.lsp.buf.selection_range(vim.v.count1)
+  end
+end, { desc = "Select parent treesitter node or outer incremental lsp selections" })
+
+Map({ "n", "x", "o" }, "<A-i>", function()
+  if vim.treesitter.get_parser(nil, nil, { error = false }) then
+    require("vim.treesitter._select").select_child(vim.v.count1)
+  else
+    vim.lsp.buf.selection_range(-vim.v.count1)
+  end
+end, { desc = "Select child treesitter node or inner incremental lsp selections" })
+
 -----------------
 --- Searching ---
 -----------------

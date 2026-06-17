@@ -269,42 +269,4 @@ return {
     end,
 
   },
-
-  {
-    "MeanderingProgrammer/treesitter-modules.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<A-o>",
-          node_incremental = "<A-o>",
-          scope_incremental = "<A-O>",
-          node_decremental = "<A-i>",
-        }
-      }
-    }
-  },
-
-  {
-    "greggh/claude-code.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      require("claude-code").setup({
-        window = {
-          position = "float",
-          float = {
-            width = "90%",       -- Take up 90% of the editor width
-            height = "90%",      -- Take up 90% of the editor height
-            row = "center",      -- Center vertically
-            col = "center",      -- Center horizontally
-            relative = "editor",
-            border = "double",   -- Use double border style
-          },
-        },
-      })
-    end
-  }
 }
