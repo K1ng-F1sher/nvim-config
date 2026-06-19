@@ -4,7 +4,12 @@
   - [Undotree](https://www.reddit.com/r/neovim/comments/1o0uo9q/feat_undotree_ui_merged_on_master/) inside nvim.
   - Better [folds](https://www.reddit.com/r/neovim/comments/1nxzz9i/new_foldinner_fillchar/#lightbox)
   - Out of the box [diff tool](https://www.reddit.com/r/neovim/comments/1o4eo6s/new_difftool_command_added_to_neovim/)
+  - [Native LLM based completion](https://www.reddit.com/r/neovim/comments/1mzfb7g/neovim_now_natively_supports_llmbased_completion/?solution=3a2930a9db81ee4a3a2930a9db81ee4a&js_challenge=1&token=7afd7253fec22262ff1c52b1703fe9ec876452cb17911d7b46ff5d18bcd2f2ba&jsc_orig_r=)
 - Have a look at:
+  - Format JSON
+  - [Sidekick (AI)](https://www.reddit.com/r/neovim/comments/1nueuch/sidekicknvim_ai_cli_tools_and_copilots_next_edit/)
+  - [Codelens](https://www.reddit.com/r/neovim/comments/1n2c7s8/lenslinenvim_customizeable_codelens_for_nvim/)
+  - [Code window](https://github.com/starbaser/codewindow.nvim) for a scroll bar showing the file's contents
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [hotlines](https://github.com/tednguyendev/hotlines.nvim) highlight lines ran from localhost
   - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/) Need to find a way to integrate it in `<K>`.
