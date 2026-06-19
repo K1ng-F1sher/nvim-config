@@ -6,9 +6,9 @@ return {
       formatters_by_ft = {
         -- Conform will run the first available formatter
         javascript = { "prettier" },
-        typescript = { "prettier" },
+        typescript = { "prettier", "eslint_d", stop_after_first = false },
         javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
+        typescriptreact = { "prettier", "eslint_d", stop_after_first = false },
         css = { "prettier" },
         scss = { "prettier" },
         html = { "prettier" },

@@ -254,5 +254,18 @@ return {
 
       vim.cmd("colorscheme tokyonight")
     end
+  },
+
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    enabled = false,
+    opts = {
+      notify = { enabled = false }
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+    }
   }
 }

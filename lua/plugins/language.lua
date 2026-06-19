@@ -243,7 +243,7 @@ return {
     config = function()
       local ts = require 'nvim-treesitter'
       local parsers = {
-        "typescript", "tsx", "css", "c_sharp", "html", "lua", "markdown", "markdown_inline"
+        "typescript", "tsx", "css", "c_sharp", "html", "lua", "markdown", "markdown_inline", "vim", "regex"
       }
 
       local group = vim.api.nvim_create_augroup("CustomTreesitter", { clear = true })
