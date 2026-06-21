@@ -8,13 +8,9 @@
 - Have a look at:
   - Format JSON
   - [Sidekick (AI)](https://www.reddit.com/r/neovim/comments/1nueuch/sidekicknvim_ai_cli_tools_and_copilots_next_edit/)
-  - [Codelens](https://www.reddit.com/r/neovim/comments/1n2c7s8/lenslinenvim_customizeable_codelens_for_nvim/)
-  - [Code window](https://github.com/starbaser/codewindow.nvim) for a scroll bar showing the file's contents
   - [kulala REST client](https://www.reddit.com/r/neovim/comments/1k0hfmc/kulala_520_your_favourite_rest_client/)
   - [hotlines](https://github.com/tednguyendev/hotlines.nvim) highlight lines ran from localhost
   - [pretty-ts-errors](https://www.reddit.com/r/neovim/comments/1q75o6o/pretty_ts_errors_in_neovim/) Need to find a way to integrate it in `<K>`.
-  - [haunt](https://github.com/TheNoeTrevino/haunt.nvim) comment on your code without committing.
-  - [dotrush](https://github.com/JaneySprings/DotRush)
   - [blink-edit](https://github.com/BlinkResearchLabs/blink-edit.nvim) api for local LLM integration in nvim
   - [nvim-preview](https://github.com/barrettruth/preview.nvim) previewer for everything
   - [obsidian-nvim] (https://github.com/obsidian-nvim/obsidian.nvim)
@@ -33,6 +29,9 @@
 
 # Done (in reverse chronological order)
 
+- Added [lensline.nvim](https://github.com/oribarilan/lensline.nvim)
+- Added [code-window](https://github.com/starbaser/codewindow.nvim)
+- Added [tiny-cmdline](https://github.com/rachartier/tiny-cmdline.nvim)
 - Use native incremental selection.
 - Removed claude code plugin.
 - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.

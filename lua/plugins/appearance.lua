@@ -23,9 +23,51 @@ return {
         error_symbol = "󰅚",
         warning_symbol = "󰀪",
         information_symbol = "",
+
+        with_lsp_status = true,
+        with_progress_status = true,
+        with_search_count = true,
       }
     end
   },
+
+  {
+    'starbaser/codewindow.nvim',
+    config = function()
+      local codewindow = require('codewindow')
+      codewindow.setup({
+        auto_enable = true,
+        minimal_width = 6
+      })
+      codewindow.apply_default_keybinds()
+    end,
+  },
+
+  {
+    'oribarilan/lensline.nvim',
+    branch = 'release/2.x' ,
+    event = 'LspAttach',
+    config = function()
+      require("lensline").setup({
+        profiles = {
+          {
+            name = 'minimal',
+            style = {
+              placement = 'inline',
+              prefix = '',
+              render = "focused",
+            },
+          },
+        },
+      })
+    end,
+  }, 
+
+  {
+    "rachartier/tiny-cmdline.nvim",
+    init = function()
+    end,
+  }, 
 
   {
     "sphamba/smear-cursor.nvim",

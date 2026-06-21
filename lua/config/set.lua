@@ -57,7 +57,9 @@ vim.o.winborder = "rounded"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.cmdheight = 0
 vim.lsp.document_color.enable()
+require("vim._core.ui2").enable({})
 
 ----------------------
 --- Shell settings ---
