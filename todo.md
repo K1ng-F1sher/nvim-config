@@ -29,7 +29,7 @@
 
 # Done (in reverse chronological order)
 
-- Added [lensline.nvim](https://github.com/oribarilan/lensline.nvim)
+- Added [lensline.nvim](https://github.com/oribarilan/lensline.nvim). Removed again - too obtrusive.
 - Added [code-window](https://github.com/starbaser/codewindow.nvim)
 - Added [tiny-cmdline](https://github.com/rachartier/tiny-cmdline.nvim)
 - Use native incremental selection.
