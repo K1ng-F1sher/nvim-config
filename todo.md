@@ -30,8 +30,8 @@
 # Done (in reverse chronological order)
 
 - Added [lensline.nvim](https://github.com/oribarilan/lensline.nvim). Removed again - too obtrusive.
-- Added [code-window](https://github.com/starbaser/codewindow.nvim)
-- Added [tiny-cmdline](https://github.com/rachartier/tiny-cmdline.nvim)
+- Added [code-window](https://github.com/starbaser/codewindow.nvim). Removed - not useful and takes too many resources.
+- Added [tiny-cmdline](https://github.com/rachartier/tiny-cmdline.nvim). Don't want to get used to it.
 - Use native incremental selection.
 - Removed claude code plugin.
 - Configure native hex [color highlights](https://www.reddit.com/r/neovim/comments/1moxwv9/hexadecimal_colors_in_v012_ootb/) when nvim 12 is released.

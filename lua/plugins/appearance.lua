@@ -32,24 +32,6 @@ return {
   },
 
   {
-    'starbaser/codewindow.nvim',
-    config = function()
-      local codewindow = require('codewindow')
-      codewindow.setup({
-        auto_enable = true,
-        minimal_width = 6
-      })
-      codewindow.apply_default_keybinds()
-    end,
-  },
-
-  {
-    "rachartier/tiny-cmdline.nvim",
-    init = function()
-    end,
-  },
-
-  {
     "sphamba/smear-cursor.nvim",
     cmd = { "SmearCursorToggle" },
     opts = {
