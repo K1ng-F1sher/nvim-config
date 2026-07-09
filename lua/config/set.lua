@@ -41,7 +41,7 @@ vim.opt.foldcolumn = "0"
 vim.opt.fillchars:append({ fold = " " })
 
 vim.o.pumheight = 6
---vim.o.pumborder = 'single'  -- Available from nvim v0.12
+vim.o.pumborder = 'single'
 
 vim.opt.termguicolors = true
 
@@ -57,7 +57,6 @@ vim.o.winborder = "rounded"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.o.cmdheight = 0
 vim.lsp.document_color.enable()
 require("vim._core.ui2").enable({})
 
