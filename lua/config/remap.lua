@@ -38,7 +38,7 @@ end, { desc = "Select child treesitter node or inner incremental lsp selections"
 -----------------
 Map('x', '/', '<C-\\><C-n>`</\\%V', { desc = 'Search forward within visual selection' })
 Map('x', '?', '<C-\\><C-n>`>?\\%V', { desc = 'Search backward within visual selection' })
-Map('n', '<leader>cs', ':let @/ = ""<CR>', { silent = true, desc = 'Clear last search highlighting' })
+Map('n', '<leader>sc', ':let @/ = ""<CR>', { silent = true, desc = 'Clear last search highlighting' })
 
 -----------------
 --- Clipboard ---

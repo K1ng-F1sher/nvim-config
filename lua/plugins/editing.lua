@@ -86,18 +86,18 @@ return {
       languages = {
         cs = {
           template = {
-            annotation_convention = "xmldoc" -- for a full list of annotation_conventions, see supported-languages below,
+            annotation_convention = "xmldoc"
           }
         },
       }
     },
     keys = {
       {
-        "<leader>ca",
+        "<leader>sc",
         function()
           require('neogen').generate()
         end,
-        desc = "Create Summary",
+        desc = "Summary Create",
       }
     },
   },
@@ -106,6 +106,47 @@ return {
     "folke/ts-comments.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {},
+  },
+
+  {
+    'coder/claudecode.nvim',
+    dependencies = { "folke/snacks.nvim" },
+    config = true,
+    cmd = {
+      "ClaudeCode",
+      "ClaudeCodeFocus",
+      "ClaudeCodeSelectModel",
+      "ClaudeCodeAdd",
+      "ClaudeCodeSend",
+      "ClaudeCodeTreeAdd",
+      "ClaudeCodeStatus",
+      "ClaudeCodeStart",
+      "ClaudeCodeStop",
+      "ClaudeCodeOpen",
+      "ClaudeCodeClose",
+      "ClaudeCodeDiffAccept",
+      "ClaudeCodeDiffDeny",
+      "ClaudeCodeCloseAllDiffs",
+    },
+    keys = {
+      { "<leader>c",  nil,                              desc = "AI/Claude Code" },
+      { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
+      { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
+      { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
+      { "<leader>cm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
+      { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
+      { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                  desc = "Send to Claude" },
+      {
+        "<leader>cs",
+        "<cmd>ClaudeCodeTreeAdd<cr>",
+        desc = "Add file",
+        ft = { "NvimTree", "neo-tree", "oil", "minifiles", "netrw", "snacks_picker_list" },
+      },
+      -- Diff management
+      { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
+      { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
+    },
   },
 
   {
