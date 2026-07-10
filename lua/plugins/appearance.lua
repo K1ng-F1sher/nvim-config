@@ -26,7 +26,6 @@ return {
 
         with_lsp_status = true,
         with_progress_status = true,
-        with_search_count = true,
       }
     end
   },

@@ -111,7 +111,12 @@ return {
   {
     'coder/claudecode.nvim',
     dependencies = { "folke/snacks.nvim" },
-    config = true,
+    opts = {
+      terminal = {
+        split_width_percentage = 0.38,
+        diff_split_width_percentage = 0.15,
+      },
+    },
     cmd = {
       "ClaudeCode",
       "ClaudeCodeFocus",
@@ -134,9 +139,8 @@ return {
       { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
       { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
       { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-      { "<leader>cm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
       { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
-      { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                  desc = "Send to Claude" },
+      { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                 desc = "Send to Claude" },
       {
         "<leader>cs",
         "<cmd>ClaudeCodeTreeAdd<cr>",
