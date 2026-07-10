@@ -93,11 +93,11 @@ return {
     },
     keys = {
       {
-        "<leader>sc",
+        "<leader>sa",
         function()
           require('neogen').generate()
         end,
-        desc = "Summary Create",
+        desc = "Summary Add",
       }
     },
   },
